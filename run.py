@@ -11,6 +11,11 @@ from controllers.login import LoginHandler
 from controllers.goods import GoodsHandler
 from config import Config
 
+from tornado.options import define, options
+define("debug", default=False, help="debug=True|False")
+define("port", default=8888, help="port=8888")
+tornado.options.parse_command_line()
+
 
 class Application(tornado.web.Application):
     def __init__(self):
@@ -26,13 +31,13 @@ class Application(tornado.web.Application):
             "template_path": Config().template_path,
             "static_path": Config().static_path,
             "cookie_secret": "hcfHo1VmQ8z9kut.wMVwympjbM",
-            "debug": True,
+            "debug": options.debug,
         }
         tornado.web.Application.__init__(self, handlers, **settings)
 
 
 if __name__ == "__main__":
     app = Application()
-    app.listen(8888)
-    logging.warn("server has been listen at port 8888:")
+    app.listen(options.port)
+    logging.warn("server has been listen at port %s." % options.port)
     tornado.ioloop.IOLoop.current().start()
