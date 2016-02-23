@@ -31,6 +31,7 @@
 - 运行::
 
     $ cd <source code path>
+    $ mysql -u root < sql/create_db.sql
     $ python3 run.py
 
 API
