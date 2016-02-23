@@ -15,7 +15,7 @@ engine = create_engine(
         Config().mysql["password"],
         Config().mysql["host"],
         Config().mysql["db"],
-        echo=False,
+        echo=True,
     )
 )
 

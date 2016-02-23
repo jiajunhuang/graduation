@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import logging
 import tornado.ioloop
 import tornado.web
 
@@ -7,6 +8,7 @@ from controllers.index import IndexHandler
 from controllers.file_upload import FileHandler
 from controllers.users import UserHandler, RegisterHandler
 from controllers.login import LoginHandler
+from controllers.goods import GoodsHandler
 from config import Config
 
 
@@ -17,6 +19,7 @@ class Application(tornado.web.Application):
             (r"/upload/?", FileHandler),
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/new/?", RegisterHandler),
+            (r"/user/([0-9]+)/goods/?", GoodsHandler),
             (r"/login/?", LoginHandler),
         ]
         settings = {
@@ -31,4 +34,5 @@ class Application(tornado.web.Application):
 if __name__ == "__main__":
     app = Application()
     app.listen(8888)
+    logging.warn("server has been listen at port 8888:")
     tornado.ioloop.IOLoop.current().start()
