@@ -19,10 +19,11 @@ class UserHandler(BaseHandler):
                 name=user.name.decode("utf-8"),
             )
             if logined:
+                addresses=(user.addresses.decode("utf-8")).split(";")
                 result.update(dict(
                     register_at=user.register_at.strftime("%s"),
                     phone=user.phone.decode("utf-8"),
-                    address=[adrs for adrs in (user.addresses.decode("utf-8")).split(";")],
+                    addresses=[] if addresses == [""] else addresses
                 ))
             self.write(result)
         else:
