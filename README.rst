@@ -23,7 +23,7 @@
 
 - 安装依赖的包::
 
-    sudo pip install pymysql sqlalchemy tornado
+    sudo pip install sqlalchemy tornado mysqlclient
 
 - 运行::
 

@@ -19,6 +19,6 @@ class FileHandler(BaseHandler):
         fh.write(fileinfo['body'])
         self.finish(dict(
             status=0,
-            msg="",
+            msg="success",
             filename=cname,
         ))

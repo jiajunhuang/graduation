@@ -10,7 +10,7 @@ ORMBase = declarative_base()
 
 
 engine = create_engine(
-    "mysql+pymysql://{}:{}@{}/{}?charset=utf8&use_unicode=0".format(
+    "mysql://{}:{}@{}/{}?charset=utf8&use_unicode=0".format(
         Config().mysql["user"],
         Config().mysql["password"],
         Config().mysql["host"],
