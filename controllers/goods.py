@@ -22,19 +22,20 @@ def require_user_level(level):
 
 
 class GoodsHandler(BaseHandler):
+    def _get_good_info(self, good):
+        return dict(
+            id=good.id,
+            image=good.image.decode("utf-8"),
+            name=good.name.decode("utf-8"),
+            seller=good.seller,
+            create_at=good.create_at.strftime("%s"),
+            price=good.price,
+        )
+
     def get(self, uid):
         uid = int(uid)
 
-        goods = []
-        for good in Goods.get_goods_by_seller(self.orm_session, uid):
-            goods.append(dict(
-                id=good.id,
-                image=good.image,
-                name=good.name,
-                seller=good.seller,
-                create_at=good.create_at,
-                price=good.price,
-            ))
+        goods = list(map(self._get_good_info, Goods.get_goods_by_seller(self.orm_session, uid)))
 
         self.write(dict(
             status=0,
@@ -58,18 +59,10 @@ class GoodsHandler(BaseHandler):
 
         self.orm_session.add(good)
         self.orm_session.commit()
+        self.orm_session.refresh(good)
 
-        goods = Goods.get_goods_by_seller(self.orm_session, uid)
-
-        try:
-            good = goods[0]
-            self.write(dict(
-                status=1,
-                msg="success",
-                gid=good.id,
-            ))
-        except IndexError:
-            self.write(dict(
-                status=1,
-                msg='failed to add a good',
-            ))
+        self.write(dict(
+            status=1,
+            msg="success",
+            gid=good.id,
+        ))
