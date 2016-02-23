@@ -2,8 +2,8 @@
 
 import os
 import uuid
-from .base import BaseHandler
 from config import Config
+from .base import BaseHandler
 
 
 class FileHandler(BaseHandler):
@@ -19,5 +19,6 @@ class FileHandler(BaseHandler):
         fh.write(fileinfo['body'])
         self.finish(dict(
             status=0,
+            msg="",
             filename=cname,
         ))
