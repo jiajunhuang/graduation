@@ -8,12 +8,11 @@ import tornado.gen
 class BaseHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def prepare(self):
-        # from models.users import Users
-        # from models.goods import Goods
-        # from models.deals import Deals
-        # from models.orm import ORMBase, engine
-        # ORMBase.metadata.create_all(engine)
-        pass
+        from models.users import Users
+        from models.goods import Goods
+        from models.deals import Deals
+        from models.orm import ORMBase, engine
+        ORMBase.metadata.create_all(engine)
 
     @property
     def orm_session(self):
@@ -23,4 +22,5 @@ class BaseHandler(tornado.web.RequestHandler):
         return self.get_secure_cookie("logined")
 
     def on_finish(self):
-        self.orm_session.close()
+        if hasattr(self, "orm_session"):
+            self.orm_session.rollback()
