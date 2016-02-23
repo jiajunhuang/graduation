@@ -12,19 +12,7 @@ class UserHandler(BaseHandler):
         user = Users.get_user_info(self.orm_session, uid)
         logined = self.get_current_user()
         if user:
-            result = dict(
-                status=0,
-                msg="success",
-                avatar=user.avatar.decode("utf-8"),
-                name=user.name.decode("utf-8"),
-            )
-            if logined:
-                addresses=(user.addresses.decode("utf-8")).split(";")
-                result.update(dict(
-                    register_at=user.register_at.strftime("%s"),
-                    phone=user.phone.decode("utf-8"),
-                    addresses=[] if addresses == [""] else addresses
-                ))
+            result = self._get_user_info(user, logined)
             self.write(result)
         else:
             self.write(dict(

@@ -25,3 +25,29 @@ class BaseHandler(tornado.web.RequestHandler):
     def on_finish(self):
         if hasattr(self, "orm_session"):
             self.orm_session.close()
+
+    def _get_user_info(self, user, logined=False):
+        result = dict(
+            status=0,
+            msg="success",
+            avatar=user.avatar.decode("utf-8"),
+            name=user.name.decode("utf-8"),
+        )
+        if logined:
+            addresses=(user.addresses.decode("utf-8")).split(";")
+            result.update(dict(
+                register_at=user.register_at.strftime("%s"),
+                phone=user.phone.decode("utf-8"),
+                addresses=[] if addresses == [""] else addresses
+            ))
+        return result
+
+    def _get_good_info(self, good):
+        return dict(
+            id=good.id,
+            image=good.image.decode("utf-8"),
+            name=good.name.decode("utf-8"),
+            seller=good.seller,
+            create_at=good.create_at.strftime("%s"),
+            price=good.price,
+        )

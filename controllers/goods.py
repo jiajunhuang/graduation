@@ -22,16 +22,6 @@ def require_user_level(level):
 
 
 class GoodsHandler(BaseHandler):
-    def _get_good_info(self, good):
-        return dict(
-            id=good.id,
-            image=good.image.decode("utf-8"),
-            name=good.name.decode("utf-8"),
-            seller=good.seller,
-            create_at=good.create_at.strftime("%s"),
-            price=good.price,
-        )
-
     def get(self, uid):
         uid = int(uid)
 
