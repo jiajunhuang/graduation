@@ -48,6 +48,7 @@ class RegisterHandler(BaseHandler):
         self.orm_session.add(user)
         self.orm_session.commit()
 
+        user = Users.get_user_by_phone(self.orm_session, phone)
         if user:
             self.set_secure_cookie("logined", phone)
             self.write(dict(
