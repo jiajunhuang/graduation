@@ -33,3 +33,11 @@ class Users(ORMBase):
             Users.phone == phone,
             Users.is_deleted == False
         ).first()
+
+    @classmethod
+    def user_login(cls, session, phone, passwd):
+        return session.query(Users).filter(
+            Users.phone == phone,
+            Users.passwd == passwd,
+            Users.is_deleted == False
+        ).first()
