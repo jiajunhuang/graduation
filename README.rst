@@ -44,8 +44,8 @@ API
 .. code:: json
 
     {
-        "status": 0,  # 请求状态，0为成功，1为失败
-        "msg": "success",  # 对请求的描述或所发生错误的描述
+        "status": 0,  // 请求状态，0为成功，1为失败
+        "msg": "success",  // 对请求的描述或所发生错误的描述
     }
 
 文件操作
@@ -63,11 +63,11 @@ API
 .. code:: json
 
     {
-        "register_at": "1456225721",  # 注册时间戳
-        "address": ["address A", "address B"],  # 配送地址
-        "avatar": "",  # 头像url
-        "name": "10086",  # 用户名
-        "phone": "10086",  # 手机号码
+        "register_at": "1456225721",  // 注册时间戳
+        "address": ["address A", "address B"],  // 配送地址
+        "avatar": "",  // 头像url
+        "name": "10086",  // 用户名
+        "phone": "10086",  // 手机号码
     }
 
 
