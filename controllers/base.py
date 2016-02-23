@@ -1,8 +1,9 @@
 # coding=utf-8
 
-from models.orm import ORMSession
 import tornado.web
 import tornado.gen
+from models.orm import ORMSession
+from utils.cache import cached_property
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -14,7 +15,7 @@ class BaseHandler(tornado.web.RequestHandler):
         from models.orm import ORMBase, engine
         ORMBase.metadata.create_all(engine)
 
-    @property
+    @cached_property
     def orm_session(self):
         return ORMSession(autoflush=True)
 
@@ -23,4 +24,4 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def on_finish(self):
         if hasattr(self, "orm_session"):
-            self.orm_session.rollback()
+            self.orm_session.close()

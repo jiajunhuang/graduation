@@ -11,18 +11,17 @@ class UserHandler(BaseHandler):
         user = Users.get_user_info(self.orm_session, uid)
         logined = self.get_current_user()
         if user:
-            if not logined:
-                result = dict(
-                    status=0,
-                    msg="success",
-                    avatar=user.avatar.decode("utf-8"),
-                    name=user.name.decode("utf-8"),
-                )
-            else:
+            result = dict(
+                status=0,
+                msg="success",
+                avatar=user.avatar.decode("utf-8"),
+                name=user.name.decode("utf-8"),
+            )
+            if logined:
                 result.update(dict(
-                    register_at=user.register_at,
+                    register_at=user.register_at.strftime("%s"),
                     phone=user.phone.decode("utf-8"),
-                    address=[adrs for adrs in user.addresses.split(";")],
+                    address=[adrs for adrs in (user.addresses.decode("utf-8")).split(";")],
                 ))
             self.write(result)
         else:
@@ -47,6 +46,7 @@ class RegisterHandler(BaseHandler):
         )
         self.orm_session.add(user)
         self.orm_session.commit()
+        self.orm_session.refresh(user)
 
         if user:
             self.set_secure_cookie("logined", phone)
