@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import logging
 from .base import BaseHandler
 from models.users import Users
 
@@ -38,26 +39,28 @@ class RegisterHandler(BaseHandler):
         passwd = self.get_argument("passwd")
         name = self.get_argument("name", phone)
 
-        user = Users(
-            level=level,
-            phone=phone,
-            passwd=passwd,
-            name=name,
-        )
-        self.orm_session.add(user)
-        self.orm_session.commit()
-        self.orm_session.refresh(user)
+        try:
+            user = Users(
+                level=level,
+                phone=phone,
+                passwd=passwd,
+                name=name,
+            )
+            self.orm_session.add(user)
+            self.orm_session.commit()
+            self.orm_session.refresh(user)
 
-        user = Users.get_user_by_phone(self.orm_session, phone)
-        if user:
             self.set_secure_cookie("logined", phone)
             self.write(dict(
                 status=0,
                 msg="success",
                 uid=user.id,
             ))
-        else:
+        except Exception as e:
+            import traceback
+            traceback.print_stack()
+            logging.error(e)
             self.write(dict(
                 status=1,
-                msg="create new user failed",
+                msg="failed to register",
             ))
