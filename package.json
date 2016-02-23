@@ -1,0 +1,22 @@
+{
+  "name": "graduation",
+  "version": "1.0.0",
+  "description": "graduation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiajunhuang/graduation.git"
+  },
+  "keywords": [
+    "graduation"
+  ],
+  "author": "zzuieliyaoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiajunhuang/graduation/issues"
+  },
+  "homepage": "https://github.com/jiajunhuang/graduation#readme"
+}
