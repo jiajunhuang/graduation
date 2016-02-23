@@ -39,7 +39,6 @@ class RegisterHandler(BaseHandler):
             self.orm_session.commit()
             self.orm_session.refresh(user)
 
-            self.set_secure_cookie("logined", phone)
             self.write(dict(
                 status=0,
                 msg="success",

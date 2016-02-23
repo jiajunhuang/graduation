@@ -25,3 +25,28 @@ class LoginHandler(BaseHandler):
                 status=1,
                 msg="login failed, user not exists or password is wrong"
             ))
+
+
+class LogoutHandler(BaseHandler):
+    def get(self):
+        phone = self.get_current_user()
+        if not phone:
+            self.write(dict(
+                status=0,
+                msg="user not login",
+            ))
+            return
+
+        user = Users.get_user_by_phone(self.orm_session, phone)
+        if not user:
+            self.write(dict(
+                status=1,
+                msg="user does not exist",
+            ))
+            return
+
+        self.clear_cookie("logined")
+        self.write(dict(
+            status=1,
+            msg="success",
+        ))

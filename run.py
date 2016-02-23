@@ -7,7 +7,7 @@ import tornado.web
 from controllers.index import IndexHandler
 from controllers.file_upload import FileHandler
 from controllers.users import UserHandler, RegisterHandler
-from controllers.login import LoginHandler
+from controllers.login import LoginHandler, LogoutHandler
 from controllers.goods import GoodsHandler
 from config import Config
 
@@ -26,6 +26,7 @@ class Application(tornado.web.Application):
             (r"/user/new/?", RegisterHandler),
             (r"/user/([0-9]+)/goods/?", GoodsHandler),
             (r"/login/?", LoginHandler),
+            (r"/logout/?", LogoutHandler),
         ]
         settings = {
             "template_path": Config().template_path,
