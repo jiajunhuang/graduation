@@ -4,13 +4,15 @@ import tornado.ioloop
 import tornado.web
 
 from controllers.index import IndexHandler
+from controllers.file_upload import FileHandler
 from config import Config
 
 
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
-            (r"/", IndexHandler)
+            (r"/", IndexHandler),
+            (r"/upload", FileHandler)
         ]
         settings = {
             "template_path": Config().template_path,

@@ -22,3 +22,4 @@ class Config(object, metaclass=Singleton):
         self.mysql = self.__mysql_mapper[config_type]
         self.template_path = os.path.join(self.__dir_path, "templates")
         self.static_path = os.path.join(self.__dir_path, "static")
+        self.img_path = os.path.join(self.static_path, "img")
