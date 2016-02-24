@@ -52,7 +52,7 @@ class BaseHandler(tornado.web.RequestHandler):
         if _uid == user.id:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
-                register_at=user.register_at.strftime("%s"),
+                register_at=str(user.register_at),
                 phone=user.phone.decode("utf-8"),
                 addresses=[] if addresses == [""] else addresses
             ))
@@ -65,7 +65,7 @@ class BaseHandler(tornado.web.RequestHandler):
             image=food.image.decode("utf-8"),
             name=food.name.decode("utf-8"),
             seller=food.seller,
-            create_at=food.create_at.strftime("%s"),
+            create_at=str(food.create_at),
             price=food.price,
         )
 
@@ -77,6 +77,6 @@ class BaseHandler(tornado.web.RequestHandler):
             buyer=self._get_user_info(deal.buyer),
             address=deal.address.decode("utf-8"),
             phone=deal.phone.decode("utf-8"),
-            sell_at=deal.sell_at.strftime("%s"),
+            sell_at=str(deal.sell_at),
             food=self._get_food_info(deal.food),
         )
