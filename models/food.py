@@ -35,3 +35,4 @@ class Food(ORMBase):
             Food.id==gid,
             Food.seller==uid,
         ).delete()
+        session.commit()

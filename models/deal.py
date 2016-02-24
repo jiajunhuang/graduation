@@ -24,3 +24,10 @@ class Deal(ORMBase):
         return session.query(Deal).filter(
             Deal.buyer == buyer
         ).order_by(desc(Deal.sell_at)).all()
+
+    @classmethod
+    def delete(cls, session, did):
+        session.query(Deal).filter(
+            Deal.id == did
+        ).delete()
+        session.commit()

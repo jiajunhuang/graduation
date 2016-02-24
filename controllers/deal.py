@@ -39,3 +39,9 @@ class DealHandler(BaseHandler):
         self.write(dict(
             deal=deal.id,
         ))
+
+    @require_login
+    def delete(self, uid):
+        did = int(self.get_argument("did"))
+        Deal.delete(self.orm_session, did)
+        self.write({})
