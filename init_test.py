@@ -25,7 +25,7 @@ def main():
         user = User(
             phone=phone_base + i,
             passwd="123456",
-            level=random.choice([1, 2, 3]),
+            level=random.choice([1, 2, 0]),
             name=random.choice(["jhone", "张三", 'lisi', "a*b", "1@2"]),
             addresses=random.choice(["上海;北京", ""]),
         )

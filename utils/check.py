@@ -1,7 +1,6 @@
 # coding=utf-8
 
 from models.user import User
-from models.food import Food
 
 
 def require_user_level(level):
@@ -9,15 +8,6 @@ def require_user_level(level):
         def wrapper(obj, uid):
             uid = int(uid)
             user = User.get_instance_by_id(obj.orm_session, uid)
-
-            if user:
-                return func(obj, uid)
-            else:
-                obj.write(dict(
-                    status=1,
-                    msg="please login"
-                ))
-                return
 
             obj.seller = user
             if user.level == level:
@@ -36,8 +26,11 @@ def require_login(func):
     def wrapper(obj, uid):
             uid = int(uid)
             user = User.get_instance_by_id(obj.orm_session, uid)
+            logined = obj.get_current_user()
+            logined = logined.decode("utf-8") if logined else False
 
-            if user:
+            if logined and user.id == int(logined):
+                obj._logined = int(logined)
                 return func(obj, uid)
             else:
                 obj.write(dict(

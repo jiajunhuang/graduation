@@ -18,6 +18,7 @@ class FoodHandler(BaseHandler):
         ))
 
     @require_user_level(level=1)
+    @require_login
     def post(self, uid):
         image = self.get_argument("image", "")
         name = self.get_argument("name")
@@ -43,7 +44,7 @@ class FoodHandler(BaseHandler):
     @require_login
     def delete(self, uid):
         uid = int(uid)
-        user = User.get_food_by_id(self.orm_session, uid)
+        user = User.get_instance_by_id(self.orm_session, uid)
         fid = int(self.get_argument("fid"))
         if not user:
             self.write(dict(
@@ -60,11 +61,6 @@ class FoodHandler(BaseHandler):
     def put(self, uid):
         fid = int(self.get_argument("fid"))
         food = Food.get_instance_by_id(self.orm_session, fid)
-        if not food:
-            self.write(dict(
-                status=1,
-                msg="no such food",
-            ))
 
         to_change = {
             "image": self.get_argument("image", None),
@@ -77,3 +73,4 @@ class FoodHandler(BaseHandler):
             if value:
                 setattr(food, key, value)
         self.orm_session.commit()
+        self.write({})

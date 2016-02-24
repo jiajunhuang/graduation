@@ -15,7 +15,7 @@ class LoginHandler(BaseHandler):
         user = User.user_login(self.orm_session, phone, passwd)
 
         if user:
-            self.set_secure_cookie("logined", phone)
+            self.set_secure_cookie("logined", str(user.id))
         else:
             self.write(dict(
                 status=1,
@@ -38,7 +38,4 @@ class LogoutHandler(BaseHandler):
             return
 
         self.clear_cookie("logined")
-        self.write(dict(
-            status=1,
-            msg="success",
-        ))
+        self.write({})

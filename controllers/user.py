@@ -31,7 +31,7 @@ class UserHandler(BaseHandler):
             address=self.get_argument("addresses", None)
         )
 
-        user = User.get_instance_by_id(uid)
+        user = User.get_instance_by_id(self.orm_session, uid)
 
         for key, value in to_change.items():
             if value:
@@ -40,15 +40,7 @@ class UserHandler(BaseHandler):
 
     @require_login
     def delete(self, uid):
-        logined = self.get_current_user()
-        if not logined:
-            self.write(dict(
-                status=1,
-                msg="please login",
-            ))
-            return
-
-        User.delete(self.orm_session, logined)
+        User.delete(self.orm_session, uid)
         self.write({})
 
 

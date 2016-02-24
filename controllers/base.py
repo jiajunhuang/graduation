@@ -43,7 +43,9 @@ class BaseHandler(tornado.web.RequestHandler):
             name=user.name.decode("utf-8"),
         )
 
-        if self.get_current_user():
+        logined = self.get_current_user()
+        logined = logined.decode("utf-8") if logined else False
+        if logined and int(logined) == user.id:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
                 register_at=user.register_at.strftime("%s"),
