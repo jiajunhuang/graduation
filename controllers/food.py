@@ -3,7 +3,7 @@
 from .base import BaseHandler
 from models.food import Food
 from models.user import User
-from utils.check import require_user_level, check_fid
+from utils.check import require_user_level, require_login
 
 
 class FoodHandler(BaseHandler):
@@ -40,6 +40,7 @@ class FoodHandler(BaseHandler):
         ))
 
     @require_user_level(level=1)
+    @require_login
     def delete(self, uid):
         uid = int(uid)
         user = User.get_food_by_id(self.orm_session, uid)
@@ -55,10 +56,17 @@ class FoodHandler(BaseHandler):
         self.write({})
 
     @require_user_level(level=1)
-    @check_fid
+    @require_login
     def put(self, uid):
+        fid = int(self.get_argument("fid"))
+        food = Food.get_instance_by_id(self.orm_session, fid)
+        if not food:
+            self.write(dict(
+                status=1,
+                msg="no such food",
+            ))
+
         to_change = {
-            "fid": int(self.get_argument("fid")),
             "image": self.get_argument("image", None),
             "name": self.get_argument("name", None),
             "seller": int(self.get_argument("seller", 0)),
@@ -67,5 +75,5 @@ class FoodHandler(BaseHandler):
 
         for key, value in to_change.items():
             if value:
-                self._food[key] = value
+                setattr(food, key, value)
         self.orm_session.commit()

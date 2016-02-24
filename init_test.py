@@ -48,7 +48,7 @@ def main():
     for i in range(10):
         food = Food(
             name=random.choice(["炸酱面", "noddles", "rice", "烤鸭", "好吃的"]),
-            seller=99999,
+            seller=11,
             price=random.choice([0, 1.11, 2.22])
         )
         orm_session.add(food)

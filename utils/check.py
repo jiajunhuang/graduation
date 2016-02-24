@@ -62,18 +62,3 @@ def require_instance(atype):
             return func(obj, instance)
         return wrapper
     return real_decorator
-
-
-def check_fid(func):
-    def wrapper(obj):
-        fid = int(obj.get_argument("fid"))
-        food = Food.get_instance_by_id(int(fid))
-        if not food:
-            obj.write(dict(
-                status=1,
-                msg="no such food",
-            ))
-            return
-        obj._food = food
-        return func(obj)
-    return wrapper

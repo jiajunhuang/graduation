@@ -3,7 +3,6 @@
 import logging
 from .base import BaseHandler
 from models.user import User
-from models.food import Food
 from utils.check import require_login
 
 
@@ -22,6 +21,24 @@ class UserHandler(BaseHandler):
             ))
 
     @require_login
+    def put(self, uid):
+        to_change = dict(
+            avatar=self.get_argument("avatar", None),
+            level=int(self.get_argument("level", 0)),
+            passwd=self.get_argument("passwd", None),
+            phone=self.get_argument("phone", None),
+            name=self.get_argument("name", None),
+            address=self.get_argument("addresses", None)
+        )
+
+        user = User.get_instance_by_id(uid)
+
+        for key, value in to_change.items():
+            if value:
+                setattr(user, key, value)
+        self.orm_session.commit()
+
+    @require_login
     def delete(self, uid):
         logined = self.get_current_user()
         if not logined:
@@ -31,7 +48,7 @@ class UserHandler(BaseHandler):
             ))
             return
 
-        User.delete_user(self.orm_session, logined)
+        User.delete(self.orm_session, logined)
         self.write({})
 
 

@@ -39,7 +39,7 @@ class User(ORMBase):
         ).first()
 
     @classmethod
-    def delete_user(cls, session, uid):
+    def delete(cls, session, uid):
         user = User.get_instance_by_id(session, int(uid))
         if user:
             user.delete()
