@@ -2,11 +2,17 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.declarative import as_declarative
 from config import Config
 
 
-ORMBase = declarative_base()
+@as_declarative()
+class ORMBase(object):
+    """
+    Reference:
+        https://github.com/zzzeek/sqlalchemy/blob/master/lib/sqlalchemy/ext/declarative/api.py#L336
+    """
+    __table_args__ = dict(mysql_charset="utf8")  # 默认utf-8
 
 
 engine = create_engine(
