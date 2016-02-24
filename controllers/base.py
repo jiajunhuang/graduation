@@ -9,9 +9,9 @@ from utils.cache import cached_property
 class BaseHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def prepare(self):
-        from models.user import User
-        from models.food import Food
-        from models.deal import Deal
+        from models.user import User  # NOQA
+        from models.food import Food  # NOQA
+        from models.deal import Deal  # NOQA
         from models.orm import ORMBase, engine
         ORMBase.metadata.create_all(engine)
 
@@ -59,5 +59,13 @@ class BaseHandler(tornado.web.RequestHandler):
             price=food.price,
         )
 
-    def _get_deal_info():
-        pass
+    def _get_deal_info(self, deal):
+        return dict(
+            did=deal.id,
+            seller=self._get_user_info(deal.seller),
+            buyer=self._get_user_info(deal.buyer),
+            address=deal.address,
+            phone=deal.phone,
+            sell_at=self.sell_at.strftime("%s"),
+            food=self._get_food_info(deal.food),
+        )

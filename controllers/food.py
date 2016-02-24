@@ -3,7 +3,7 @@
 from .base import BaseHandler
 from models.food import Food
 from models.user import User
-from utils.check import require_user_level
+from utils.check import require_user_level, require_login
 
 
 class FoodHandler(BaseHandler):
@@ -17,6 +17,7 @@ class FoodHandler(BaseHandler):
         ))
 
     @require_user_level(level=1)
+    @require_login
     def post(self, uid):
         image = self.get_argument("image", "")
         name = self.get_argument("name")
@@ -35,8 +36,6 @@ class FoodHandler(BaseHandler):
         self.orm_session.refresh(Food)
 
         self.write(dict(
-            status=1,
-            msg="success",
             gid=food.id,
         ))
 
