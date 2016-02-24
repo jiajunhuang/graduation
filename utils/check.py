@@ -26,11 +26,10 @@ def require_login(func):
     def wrapper(obj, uid):
             uid = int(uid)
             user = User.get_instance_by_id(obj.orm_session, uid)
-            logined = obj.get_current_user()
-            logined = logined.decode("utf-8") if logined else False
+            _uid = obj.get_current_user()
 
-            if logined and user.id == int(logined):
-                obj._logined = int(logined)
+            if user.id == _uid:
+                obj._uid= _uid
                 return func(obj, uid)
             else:
                 obj.write(dict(

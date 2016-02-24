@@ -21,7 +21,10 @@ class BaseHandler(tornado.web.RequestHandler):
         return ORMSession(autoflush=True)
 
     def get_current_user(self):
-        return self.get_secure_cookie("logined")
+        try:
+            return int(self.get_secure_cookie("logined").decode())
+        except AttributeError:
+            return None
 
     def on_finish(self):
         if hasattr(self, "orm_session"):
@@ -43,9 +46,10 @@ class BaseHandler(tornado.web.RequestHandler):
             name=user.name.decode("utf-8"),
         )
 
-        logined = self.get_current_user()
-        logined = logined.decode("utf-8") if logined else False
-        if logined and int(logined) == user.id:
+        # 这里没有用@require_login装饰，是因为用户信息区分简略和详细版
+        # 但不要求登录
+        _uid = self.get_current_user()
+        if _uid == user.id:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
                 register_at=user.register_at.strftime("%s"),
