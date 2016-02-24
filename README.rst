@@ -54,52 +54,6 @@ API
 
     详见 ``file_upload.html``
 
-用户
-~~~~~~
-
-- ``/user/([0-9]+)/?`` 获取用户信息，分为详细版（用户已登录）和简略版（未登录）(GET)::
-
-    {
-        "register_at": "1456225721",  // 注册时间戳
-        "address": ["address A", "address B"],  // 配送地址
-        "avatar": "",  // 头像url
-        "name": "10086",  // 用户名
-        "phone": "10086",  // 手机号码
-    }
-
-
-- ``/user/new/?`` 创建新用户(POST):
-
-  - level，用户等级，0为买家，1为卖家，2为管理员，选填，默认为0
-  - phone，手机号，注册时必填
-  - passwd，密码，必填
-  - name，用户名，选填，默认为手机号
-
-商品
-~~~~~
-
-- ``/user/([0-9]+)/goods/?`` 获取该用户名下的所有商品列表，按创建时间由近及远排序(GET)::
-
-    {
-        "goods": [{
-            "create_at": "1456247101",  // 上架时间戳
-            "id": 1,  // 商品id
-            "image": "",  // 图片url
-            "name": "hi",  // 商品名
-            "price": 0.0,  // 价格
-            "seller": 2  // 卖家id
-        }
-        ...
-        ],
-    }
-
-- ``/user/([0-9]+)/goods/?`` 新建商品，该API要求所给uid存在且等级为1(POST):
-
-  - image：图片路径，选填，默认为""
-  - price：价格，选填，默认为0.0
-  - name：商品名，必填
-  - seller：卖家id，必填
-
 登录登出
 ~~~~~~~~~
 
@@ -111,3 +65,115 @@ API
   - passwd: 注册的密码
 
 - ``/logout/?`` 注销当前登录用户
+
+用户
+~~~~~~
+
+- ``/user/([0-9]+)/?`` 获取用户信息，分为详细版（用户已登录）和简略版（未登录）(GET)::
+
+    {
+        "name": "路人甲",
+        "register_at": "1456317626",
+        "addresses": [],
+        "phone": "99999",
+        "avatar": ""
+    }
+
+
+- ``/user/new/?`` 创建新用户(POST):
+
+  - phone，手机号，必填
+  - passwd，密码，必填
+  - level，用户等级，0为买家，1为卖家，2为管理员，选填，默认为0
+  - name，用户名，选填，默认为手机号
+
+- ``/user/([0-9]+)/?`` 修改用户信息(PUT):
+
+    avatar,level,passwd,phone,name,address 选填
+
+- ``/user/([0-9]+)/?`` 删除用户(DELETE):
+
+    无需参数
+
+食品
+~~~~~
+
+- ``/user/([0-9]+)/foods/?`` 获取该用户名下的所有食品列表，按创建时间由近及远排序(GET)::
+
+    {
+    "foods": [
+        {
+            "fid": 4,
+            "price": 0,
+            "create_at": "1456317627",
+            "seller": 11,
+            "name": "炸酱面",
+            "image": ""
+        },
+        ...
+    ],
+    }
+
+- ``/user/([0-9]+)/foods/?`` 新建食品，该API要求所给uid存在且等级为1(POST):
+
+  - name：食品名，必填
+  - image：图片路径，选填，默认为""
+  - price：价格，选填，默认为0.0
+
+- ``/user/([0-9]+)/foods/?`` 修改食品(PUT):
+
+  - fid 食品id 必填
+  - image,name,seller,price 选填
+
+- ``/user/([0-9]+)/foods/?`` 删除食品(DELETE):
+
+  - fid 必填
+
+交易
+~~~~~
+
+- ``/user/([0-9]+)/deals/?`` 获取该用户所达成的所有交易(GET)::
+
+    {
+        "deals": [
+            {
+            "phone": "10086",
+            "seller": {
+                "addresses": [],
+                "register_at": "1456317626",
+                "name": "99999",
+                "phone": "99999",
+                "avatar": ""
+            },
+            "buyer": {
+                "addresses": [],
+                "register_at": "1456317626",
+                "name": "99999",
+                "phone": "99999",
+                "avatar": ""
+            },
+            "food": {
+                "fid": 5,
+                "price": 1.11,
+                "create_at": "1456317627",
+                "seller": 11,
+                "name": "好吃的",
+                "image": ""
+            },
+            "sell_at": "1456317627",
+            "address": "USA",
+            "did": 10
+            }
+        ],
+    }
+
+- ``/user/([0-9]+)/deals/?`` 提交新的订单(POST):
+
+  - seller 卖的人, 必填
+  - fid 商品id，必填
+  - address 配送地址，必填
+  - phone 手机号码，必填
+
+- ``/user/([0-9]+)/deals/?`` 删除订单(DELETE):
+
+  - did 订单id

@@ -18,15 +18,14 @@ class DealHandler(BaseHandler):
     @require_login
     def post(self, uid):
         seller = int(self.get_argument("seller"))
-        buyer = int(self.get_argument("buyer"))
-        food = int(self.get_argument("food"))
+        fid = int(self.get_argument("food"))
         address = self.get_argument("address")
         phone = self.get_argument("phone")
 
         deal = Deal(
             seller=seller,
-            buyer=buyer,
-            food=food,
+            buyer=uid,
+            food=fid,
             address=address,
             phone=phone,
         )
