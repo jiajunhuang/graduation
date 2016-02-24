@@ -17,4 +17,3 @@ class Deals(ORMBase):
     phone = Column(String(11), nullable=False)  # 联系方式
     sell_at = Column(DateTime, nullable=False, default=datetime.datetime.now())  # 售出时间
     price = Column(Float, nullable=False, default=0.00)  # 价格
-    is_deleted = Column(Boolean, nullable=False, default=False)  # 交易是否被删除

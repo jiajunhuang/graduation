@@ -3,7 +3,7 @@
 """商品"""
 
 import datetime
-from sqlalchemy import Column, String, Integer, DateTime, Boolean, Float, desc
+from sqlalchemy import Column, String, Integer, DateTime, Float, desc
 from .orm import ORMBase
 
 
@@ -16,11 +16,16 @@ class Goods(ORMBase):
     seller = Column(Integer, nullable=False, index=True)  # 售卖者
     create_at = Column(DateTime, nullable=False, default=datetime.datetime.now())  # 上架时间
     price = Column(Float, nullable=False, default=0.00)  # 价格
-    is_deleted = Column(Boolean, nullable=False, default=False)  # 商品是否被删除
 
     @classmethod
     def get_goods_by_seller(cls, session, uid):
         return session.query(Goods).filter(
             Goods.seller==uid,
-            Goods.is_deleted==False
         ).order_by(desc(Goods.create_at)).all()
+
+    @classmethod
+    def delete(cls, session, uid, gid):
+        session.query(Goods).filter(
+            Goods.id==gid,
+            Goods.seller==uid,
+        ).delete()
