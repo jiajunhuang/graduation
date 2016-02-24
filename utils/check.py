@@ -1,10 +1,12 @@
 # coding=utf-8
 
+import functools
 from models.user import User
 
 
 def require_user_level(level):
     def real_decorator(func):
+        @functools.wraps(func)
         def wrapper(obj, uid):
             uid = int(uid)
             user = User.get_instance_by_id(obj.orm_session, uid)
@@ -23,6 +25,7 @@ def require_user_level(level):
 
 
 def require_login(func):
+    @functools.wraps(func)
     def wrapper(obj, uid):
             uid = int(uid)
             user = User.get_instance_by_id(obj.orm_session, uid)
@@ -42,6 +45,7 @@ def require_login(func):
 
 def require_instance(atype):
     def real_decorator(func):
+        @functools.wraps(func)
         def wrapper(obj, instance):
             if not isinstance(instance, atype):
                 instance = atype.get_instance_by_id(obj.orm_session, instance)
