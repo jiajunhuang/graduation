@@ -57,7 +57,7 @@ def main():
     # add deal
     for i in range(10):
         deal = Deal(
-            seller=99999,
+            seller=11,
             buyer=random.choice([1, 2, 3, 4]),
             food=random.choice([1, 2, 3, 4, 5]),
             address=random.choice(["上海", "USA"]),
