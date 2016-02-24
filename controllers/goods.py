@@ -54,3 +54,15 @@ class GoodsHandler(BaseHandler):
             msg="success",
             gid=good.id,
         ))
+
+    @require_user_level(level=1)
+    def delete(self, uid):
+        uid = int(uid)
+        user = Users.get_user_info(self.orm_session, uid)
+        gid = int(self.get_argument("gid"))
+        if not user:
+            self.write({})
+            return
+
+        Goods.delete(self.orm_session, user.id, gid)
+        self.write({})
