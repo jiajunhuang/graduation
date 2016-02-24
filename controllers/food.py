@@ -10,10 +10,10 @@ class FoodHandler(BaseHandler):
     def get(self, uid):
         uid = int(uid)
 
-        food = list(map(self._get_food_info, Food.get_Food_by_seller(self.orm_session, uid)))
+        foods = list(map(self._get_food_info, Food.get_Food_by_seller(self.orm_session, uid)))
 
         self.write(dict(
-            food=food,
+            foods=foods,
         ))
 
     @require_user_level(level=1)
