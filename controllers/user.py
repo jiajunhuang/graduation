@@ -2,17 +2,17 @@
 
 import logging
 from .base import BaseHandler
-from models.users import Users
+from models.user import User
 
 
 class UserHandler(BaseHandler):
     """获取用户信息"""
     def get(self, uid):
         uid = int(uid)
-        user = Users.get_user_info(self.orm_session, uid)
+        user = User.get_user_by_id(self.orm_session, uid)
         logined = self.get_current_user()
         if user:
-            result = self._get_user_info(user, logined)
+            result = self._get_user_by_id(user, logined)
             self.write(result)
         else:
             self.write(dict(
@@ -23,7 +23,7 @@ class UserHandler(BaseHandler):
     def delete(self, uid):
         logined = self.get_current_user()
         if logined:
-            Users.delete_user(self.orm_session, logined)
+            User.delete_user(self.orm_session, logined)
         self.write({})
 
 
@@ -35,7 +35,7 @@ class RegisterHandler(BaseHandler):
         name = self.get_argument("name", phone)
 
         try:
-            user = Users(
+            user = User(
                 level=level,
                 phone=phone,
                 passwd=passwd,

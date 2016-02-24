@@ -6,9 +6,9 @@ import tornado.web
 
 from controllers.index import IndexHandler
 from controllers.file_upload import FileHandler
-from controllers.users import UserHandler, RegisterHandler
 from controllers.login import LoginHandler, LogoutHandler
-from controllers.goods import GoodsHandler
+from controllers.user import UserHandler, RegisterHandler
+from controllers.food import FoodHandler
 from config import Config
 
 from tornado.options import define, options
@@ -24,7 +24,7 @@ class Application(tornado.web.Application):
             (r"/upload/?", FileHandler),
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/new/?", RegisterHandler),
-            (r"/user/([0-9]+)/goods/?", GoodsHandler),
+            (r"/user/([0-9]+)/foods/?", FoodHandler),
             (r"/login/?", LoginHandler),
             (r"/logout/?", LogoutHandler),
         ]

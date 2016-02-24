@@ -1,7 +1,7 @@
 # coding:utf-8
 
 from .base import BaseHandler
-from models.users import Users
+from models.user import User
 
 
 class LoginHandler(BaseHandler):
@@ -12,7 +12,7 @@ class LoginHandler(BaseHandler):
         phone = self.get_argument("phone")
         passwd = self.get_argument("passwd")
 
-        user = Users.user_login(self.orm_session, phone, passwd)
+        user = User.user_login(self.orm_session, phone, passwd)
 
         if user:
             self.set_secure_cookie("logined", phone)
@@ -29,7 +29,7 @@ class LogoutHandler(BaseHandler):
         if not phone:
             return
 
-        user = Users.get_user_by_phone(self.orm_session, phone)
+        user = User.get_user_by_phone(self.orm_session, phone)
         if not user:
             self.write(dict(
                 status=1,

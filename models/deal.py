@@ -3,12 +3,12 @@
 """交易"""
 
 import datetime
-from sqlalchemy import Column, String, Integer, DateTime, Boolean, Float
+from sqlalchemy import Column, String, Integer, DateTime, Float
 from .orm import ORMBase
 
 
-class Deals(ORMBase):
-    __tablename__ = "deals"
+class Deal(ORMBase):
+    __tablename__ = "Deal"
 
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     seller = Column(Integer, nullable=False, index=True)  # 卖家

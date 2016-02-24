@@ -3,12 +3,12 @@
 """用户表"""
 
 import datetime
-from sqlalchemy import Column, String, Integer, DateTime, Boolean
+from sqlalchemy import Column, String, Integer, DateTime
 from .orm import ORMBase
 
 
-class Users(ORMBase):
-    __tablename__ = "users"
+class User(ORMBase):
+    __tablename__ = "User"
 
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     avatar = Column(String(1024), nullable=False, default="")  # 头像路径
@@ -20,24 +20,24 @@ class Users(ORMBase):
     addresses = Column(String(4096), nullable=False, default="")  # 配送地址，用';'分隔
 
     @classmethod
-    def get_user_info(cls, session, uid):
-        return session.query(Users).filter(
-            Users.id == uid,
+    def get_user_by_id(cls, session, uid):
+        return session.query(User).filter(
+            User.id == uid,
         ).first()
 
     @classmethod
     def get_user_by_phone(cls, session, phone):
-        return session.query(Users).filter(
-            Users.phone == phone,
+        return session.query(User).filter(
+            User.phone == phone,
         ).first()
 
     @classmethod
     def user_login(cls, session, phone, passwd):
-        return session.query(Users).filter(
-            Users.phone == phone,
-            Users.passwd == passwd,
+        return session.query(User).filter(
+            User.phone == phone,
+            User.passwd == passwd,
         ).first()
 
     @classmethod
     def delete_user(cls, session, uid):
-        Users.get_user_info(session, uid).delete()
+        User.get_user_info(session, uid).delete()
