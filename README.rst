@@ -32,6 +32,7 @@
 
     $ cd <source code path>
     $ mysql -u root < sql/create_db.sql
+    $ python init_test.py
     $ python3 run.py
 
 API
