@@ -18,7 +18,13 @@ class Food(ORMBase):
     price = Column(Float, nullable=False, default=0.00)  # 价格
 
     @classmethod
-    def get_Food_by_seller(cls, session, uid):
+    def get_instance_by_id(cls, session, gid):
+        return session.query(Food).filter(
+            Food.id == gid
+        ).first()
+
+    @classmethod
+    def get_food_by_seller(cls, session, uid):
         return session.query(Food).filter(
             Food.seller==uid,
         ).order_by(desc(Food.create_at)).all()

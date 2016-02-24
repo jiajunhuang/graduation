@@ -10,10 +10,9 @@ class UserHandler(BaseHandler):
     """获取用户信息"""
     def get(self, uid):
         uid = int(uid)
-        user = User.get_user_by_id(self.orm_session, uid)
-        logined = True if self.get_current_user() else False
+        user = User.get_instance_by_id(self.orm_session, uid)
         if user:
-            result = self._get_user_info(user, logined)
+            result = self._get_user_info(user)
             self.write(result)
         else:
             self.write(dict(

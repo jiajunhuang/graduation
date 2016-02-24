@@ -10,7 +10,7 @@ class FoodHandler(BaseHandler):
     def get(self, uid):
         uid = int(uid)
 
-        foods = list(map(self._get_food_info, Food.get_Food_by_seller(self.orm_session, uid)))
+        foods = list(map(self._get_food_info, Food.get_food_by_seller(self.orm_session, uid)))
 
         self.write(dict(
             foods=foods,
@@ -43,7 +43,7 @@ class FoodHandler(BaseHandler):
     @require_login
     def delete(self, uid):
         uid = int(uid)
-        user = User.get_user_by_id(self.orm_session, uid)
+        user = User.get_food_by_id(self.orm_session, uid)
         gid = int(self.get_argument("gid"))
         if not user:
             self.write(dict(

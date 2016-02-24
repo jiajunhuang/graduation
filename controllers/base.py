@@ -4,14 +4,15 @@ import tornado.web
 import tornado.gen
 from models.orm import ORMSession
 from utils.cache import cached_property
+from utils.check import require_instance
+from models.user import User
+from models.food import Food
+from models.deal import Deal
 
 
 class BaseHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def prepare(self):
-        from models.user import User  # NOQA
-        from models.food import Food  # NOQA
-        from models.deal import Deal  # NOQA
         from models.orm import ORMBase, engine
         ORMBase.metadata.create_all(engine)
 
@@ -35,12 +36,14 @@ class BaseHandler(tornado.web.RequestHandler):
                 ))
         super().write(chunk)
 
-    def _get_user_info(self, user, logined=False):
+    @require_instance(User)
+    def _get_user_info(self, user):
         result = dict(
             avatar=user.avatar.decode("utf-8"),
             name=user.name.decode("utf-8"),
         )
-        if logined:
+
+        if self.get_current_user():
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
                 register_at=user.register_at.strftime("%s"),
@@ -49,9 +52,10 @@ class BaseHandler(tornado.web.RequestHandler):
             ))
         return result
 
+    @require_instance(Food)
     def _get_food_info(self, food):
         return dict(
-            id=food.id,
+            gid=food.id,
             image=food.image.decode("utf-8"),
             name=food.name.decode("utf-8"),
             seller=food.seller,
@@ -59,13 +63,14 @@ class BaseHandler(tornado.web.RequestHandler):
             price=food.price,
         )
 
+    @require_instance(Deal)
     def _get_deal_info(self, deal):
         return dict(
             did=deal.id,
             seller=self._get_user_info(deal.seller),
             buyer=self._get_user_info(deal.buyer),
-            address=deal.address,
-            phone=deal.phone,
-            sell_at=self.sell_at.strftime("%s"),
+            address=deal.address.decode("utf-8"),
+            phone=deal.phone.decode("utf-8"),
+            sell_at=deal.sell_at.strftime("%s"),
             food=self._get_food_info(deal.food),
         )

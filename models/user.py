@@ -20,7 +20,7 @@ class User(ORMBase):
     addresses = Column(String(4096), nullable=False, default="")  # 配送地址，用';'分隔
 
     @classmethod
-    def get_user_by_id(cls, session, uid):
+    def get_instance_by_id(cls, session, uid):
         return session.query(User).filter(
             User.id == uid,
         ).first()
@@ -40,7 +40,7 @@ class User(ORMBase):
 
     @classmethod
     def delete_user(cls, session, uid):
-        user = User.get_user_by_id(session, int(uid))
+        user = User.get_instance_by_id(session, int(uid))
         if user:
             user.delete()
             session.commit()

@@ -11,6 +11,8 @@ class DealHandler(BaseHandler):
         uid = int(uid)
         deals = Deal.get_deals_by_uid(self.orm_session, uid)
         deals = list(map(self._get_deal_info, deals))
+        import logging
+        logging.error(deals)
         self.write(dict(
             deals=deals
         ))
