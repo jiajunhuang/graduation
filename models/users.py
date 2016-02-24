@@ -41,3 +41,9 @@ class Users(ORMBase):
             Users.passwd == passwd,
             Users.is_deleted == False
         ).first()
+
+    @classmethod
+    def delete_user(cls, session, uid):
+        user = Users.get_user_info(session, uid)
+        user.is_deleted = True
+        session.commit()

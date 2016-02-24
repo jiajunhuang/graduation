@@ -20,6 +20,12 @@ class UserHandler(BaseHandler):
                 msg="no such user",
             ))
 
+    def delete(self, uid):
+        logined = self.get_current_user()
+        if logined:
+            Users.delete_user(self.orm_session, logined)
+        self.write({})
+
 
 class RegisterHandler(BaseHandler):
     def post(self):
