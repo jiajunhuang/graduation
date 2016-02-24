@@ -16,10 +16,6 @@ class LoginHandler(BaseHandler):
 
         if user:
             self.set_secure_cookie("logined", phone)
-            self.write(dict(
-                status=0,
-                msg="success",
-            ))
         else:
             self.write(dict(
                 status=1,
@@ -31,10 +27,6 @@ class LogoutHandler(BaseHandler):
     def get(self):
         phone = self.get_current_user()
         if not phone:
-            self.write(dict(
-                status=0,
-                msg="user not login",
-            ))
             return
 
         user = Users.get_user_by_phone(self.orm_session, phone)

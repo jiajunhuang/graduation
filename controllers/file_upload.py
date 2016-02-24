@@ -17,8 +17,6 @@ class FileHandler(BaseHandler):
         cname = str(uuid.uuid4()) + extn
         fh = open(os.path.join(Config().img_path, cname), 'wb')
         fh.write(fileinfo['body'])
-        self.finish(dict(
-            status=0,
-            msg="success",
+        self.write(dict(
             filename=cname,
         ))

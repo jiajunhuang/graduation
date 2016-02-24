@@ -28,8 +28,6 @@ class GoodsHandler(BaseHandler):
         goods = list(map(self._get_good_info, Goods.get_goods_by_seller(self.orm_session, uid)))
 
         self.write(dict(
-            status=0,
-            msg="success",
             goods=goods,
         ))
 

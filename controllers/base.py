@@ -26,10 +26,17 @@ class BaseHandler(tornado.web.RequestHandler):
         if hasattr(self, "orm_session"):
             self.orm_session.close()
 
+    def write(self, chunk):
+        if isinstance(chunk, dict):
+            if not hasattr(chunk, "status"):
+                chunk.update(dict(
+                    status=0,
+                    msg="success",
+                ))
+        super().write(chunk)
+
     def _get_user_info(self, user, logined=False):
         result = dict(
-            status=0,
-            msg="success",
             avatar=user.avatar.decode("utf-8"),
             name=user.name.decode("utf-8"),
         )

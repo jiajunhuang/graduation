@@ -40,8 +40,6 @@ class RegisterHandler(BaseHandler):
             self.orm_session.refresh(user)
 
             self.write(dict(
-                status=0,
-                msg="success",
                 uid=user.id,
             ))
         except Exception as e:

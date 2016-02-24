@@ -17,16 +17,16 @@
 
 运行方式:
 
-- 安装python3
+- 安装python3,MySQL,redis
 
-    - ArchLinux: sudo pacman -S python
-    - Debian/Ubuntu: sudo apt-get install python3
+    - ArchLinux: sudo pacman -S python mariadb redis
+    - Debian/Ubuntu: sudo apt-get install python3 mysql-server redis-server redis-cli
     - Centos: http://stackoverflow.com/questions/8087184/installing-python3-on-rhel
     - Mac OS X: https://docs.python.org/3/using/mac.html
 
 - 安装依赖的包::
 
-    sudo pip install sqlalchemy tornado mysqlclient
+    sudo pip install sqlalchemy tornado mysqlclient hiredis
 
 - 运行::
 
