@@ -26,7 +26,7 @@ def main():
             phone=phone_base + i,
             passwd="123456",
             level=random.choice([1, 2, 3]),
-            name=random.choice(["jhone", "张三", 'lisi', 'a*b', "1@2"]),
+            name=random.choice(["jhone", "张三", 'lisi', "a*b", "1@2"]),
             addresses=random.choice(["上海;北京", ""]),
         )
         orm_session.add(user)
@@ -34,11 +34,13 @@ def main():
     orm_session.add(User(  # 卖家
         phone=99999,
         passwd="123456",
+        name="99999",
         level=1,
     ))
     orm_session.add(User(  # 管理员
         phone=88888,
         passwd="123456",
+        name="88888",
         level=2,
     ))
 
