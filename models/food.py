@@ -8,7 +8,7 @@ from .orm import ORMBase
 
 
 class Food(ORMBase):
-    __tablename__ = "Food"
+    __tablename__ = "food"
 
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     image = Column(String(1024), nullable=False, default="")  # 商品图片路径

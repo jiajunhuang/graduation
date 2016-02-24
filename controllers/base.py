@@ -35,7 +35,7 @@ class BaseHandler(tornado.web.RequestHandler):
                 ))
         super().write(chunk)
 
-    def _get_user_by_id(self, user, logined=False):
+    def _get_user_info(self, user, logined=False):
         result = dict(
             avatar=user.avatar.decode("utf-8"),
             name=user.name.decode("utf-8"),
@@ -58,3 +58,6 @@ class BaseHandler(tornado.web.RequestHandler):
             create_at=food.create_at.strftime("%s"),
             price=food.price,
         )
+
+    def _get_deal_info():
+        pass

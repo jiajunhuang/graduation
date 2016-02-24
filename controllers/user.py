@@ -11,8 +11,8 @@ class UserHandler(BaseHandler):
         uid = int(uid)
         user = User.get_user_by_id(self.orm_session, uid)
         logined = self.get_current_user()
-        if user:
-            result = self._get_user_by_id(user, logined)
+        if logined:
+            result = self._get_user_by_id(user, True)
             self.write(result)
         else:
             self.write(dict(

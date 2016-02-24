@@ -8,7 +8,7 @@ from .orm import ORMBase
 
 
 class User(ORMBase):
-    __tablename__ = "User"
+    __tablename__ = "user"
 
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     avatar = Column(String(1024), nullable=False, default="")  # 头像路径

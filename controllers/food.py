@@ -1,6 +1,5 @@
 # coding=utf-8
 
-import logging
 from .base import BaseHandler
 from models.food import Food
 from models.user import User
@@ -47,8 +46,10 @@ class FoodHandler(BaseHandler):
         user = User.get_user_by_id(self.orm_session, uid)
         gid = int(self.get_argument("gid"))
         if not user:
-            logging.debug("user does not exist")
-            self.write({})
+            self.write(dict(
+                status=1,
+                msg="user not exist",
+            ))
             return
 
         Food.delete(self.orm_session, user.id, gid)
