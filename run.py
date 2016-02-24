@@ -10,6 +10,7 @@ from controllers.login import LoginHandler, LogoutHandler
 from controllers.user import UserHandler, RegisterHandler
 from controllers.food import FoodHandler
 from controllers.deal import DealHandler
+from controllers.admin import AdminHandler
 from config import Config
 
 from tornado.options import define, options
@@ -21,14 +22,20 @@ tornado.options.parse_command_line()
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
+            # web
             (r"/", IndexHandler),
             (r"/upload/?", FileHandler),
+            # api
             (r"/login/?", LoginHandler),
             (r"/logout/?", LogoutHandler),
             (r"/user/new/?", RegisterHandler),
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/([0-9]+)/foods/?", FoodHandler),
             (r"/user/([0-9]+)/deals/?", DealHandler),
+            # admin
+            (r"/admin/?", AdminHandler),
+            # static
+            (r'/static/(.*)', tornado.web.StaticFileHandler),
         ]
         settings = {
             "template_path": Config().template_path,
