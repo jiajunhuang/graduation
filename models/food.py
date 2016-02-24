@@ -18,9 +18,9 @@ class Food(ORMBase):
     price = Column(Float, nullable=False, default=0.00)  # 价格
 
     @classmethod
-    def get_instance_by_id(cls, session, gid):
+    def get_instance_by_id(cls, session, fid):
         return session.query(Food).filter(
-            Food.id == gid
+            Food.id == fid
         ).first()
 
     @classmethod
@@ -30,9 +30,9 @@ class Food(ORMBase):
         ).order_by(desc(Food.create_at)).all()
 
     @classmethod
-    def delete(cls, session, uid, gid):
+    def delete(cls, session, uid, fid):
         session.query(Food).filter(
-            Food.id==gid,
+            Food.id==fid,
             Food.seller==uid,
         ).delete()
         session.commit()

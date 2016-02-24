@@ -55,7 +55,7 @@ class BaseHandler(tornado.web.RequestHandler):
     @require_instance(Food)
     def _get_food_info(self, food):
         return dict(
-            gid=food.id,
+            fid=food.id,
             image=food.image.decode("utf-8"),
             name=food.name.decode("utf-8"),
             seller=food.seller,

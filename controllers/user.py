@@ -3,6 +3,7 @@
 import logging
 from .base import BaseHandler
 from models.user import User
+from models.food import Food
 from utils.check import require_login
 
 

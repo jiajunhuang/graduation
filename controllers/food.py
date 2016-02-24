@@ -3,11 +3,12 @@
 from .base import BaseHandler
 from models.food import Food
 from models.user import User
-from utils.check import require_user_level, require_login
+from utils.check import require_user_level, check_fid
 
 
 class FoodHandler(BaseHandler):
     def get(self, uid):
+        """获取uid所提供的食品"""
         uid = int(uid)
 
         foods = list(map(self._get_food_info, Food.get_food_by_seller(self.orm_session, uid)))
@@ -17,7 +18,6 @@ class FoodHandler(BaseHandler):
         ))
 
     @require_user_level(level=1)
-    @require_login
     def post(self, uid):
         image = self.get_argument("image", "")
         name = self.get_argument("name")
@@ -36,15 +36,14 @@ class FoodHandler(BaseHandler):
         self.orm_session.refresh(food)
 
         self.write(dict(
-            gid=food.id,
+            fid=food.id,
         ))
 
     @require_user_level(level=1)
-    @require_login
     def delete(self, uid):
         uid = int(uid)
         user = User.get_food_by_id(self.orm_session, uid)
-        gid = int(self.get_argument("gid"))
+        fid = int(self.get_argument("fid"))
         if not user:
             self.write(dict(
                 status=1,
@@ -52,5 +51,21 @@ class FoodHandler(BaseHandler):
             ))
             return
 
-        Food.delete(self.orm_session, user.id, gid)
+        Food.delete(self.orm_session, user.id, fid)
         self.write({})
+
+    @require_user_level(level=1)
+    @check_fid
+    def put(self, uid):
+        to_change = {
+            "fid": int(self.get_argument("fid")),
+            "image": self.get_argument("image", None),
+            "name": self.get_argument("name", None),
+            "seller": int(self.get_argument("seller", 0)),
+            "price": float(self.get_argument("price", 0)),  # TODO maybe bug because of precision
+        }
+
+        for key, value in to_change.items():
+            if value:
+                self._food[key] = value
+        self.orm_session.commit()
