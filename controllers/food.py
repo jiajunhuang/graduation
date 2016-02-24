@@ -33,13 +33,14 @@ class FoodHandler(BaseHandler):
 
         self.orm_session.add(food)
         self.orm_session.commit()
-        self.orm_session.refresh(Food)
+        self.orm_session.refresh(food)
 
         self.write(dict(
             gid=food.id,
         ))
 
     @require_user_level(level=1)
+    @require_login
     def delete(self, uid):
         uid = int(uid)
         user = User.get_user_by_id(self.orm_session, uid)

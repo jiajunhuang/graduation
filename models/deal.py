@@ -16,7 +16,7 @@ class Deal(ORMBase):
     food = Column(Integer, nullable=False, index=True)  # 商品
     address = Column(String(64), nullable=False)  # 配送地址
     phone = Column(String(11), nullable=False)  # 联系方式
-    sell_at = Column(DateTime, nullable=False, default=datetime.datetime.now())  # 售出时间
+    sell_at = Column(DateTime, nullable=False, default=datetime.datetime.now)  # 售出时间
 
     @classmethod
     def get_deals_by_uid(cls, session, buyer):

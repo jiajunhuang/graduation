@@ -28,7 +28,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def write(self, chunk):
         if isinstance(chunk, dict):
-            if not hasattr(chunk, "status"):
+            if "status" not in chunk:
                 chunk.update(dict(
                     status=0,
                     msg="success",

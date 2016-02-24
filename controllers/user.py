@@ -3,6 +3,7 @@
 import logging
 from .base import BaseHandler
 from models.user import User
+from utils.check import require_login
 
 
 class UserHandler(BaseHandler):
@@ -20,10 +21,17 @@ class UserHandler(BaseHandler):
                 msg="no such user",
             ))
 
+    @require_login
     def delete(self, uid):
         logined = self.get_current_user()
-        if logined:
-            User.delete_user(self.orm_session, logined)
+        if not logined:
+            self.write(dict(
+                status=1,
+                msg="please login",
+            ))
+            return
+
+        User.delete_user(self.orm_session, logined)
         self.write({})
 
 

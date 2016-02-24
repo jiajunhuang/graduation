@@ -8,6 +8,7 @@ from utils.check import require_login
 class DealHandler(BaseHandler):
     @require_login
     def get(self, uid):
+        uid = int(uid)
         deals = Deal.get_deals_by_uid(self.orm_session, uid)
         deals = list(map(self._get_deal_info, deals))
         self.write(dict(

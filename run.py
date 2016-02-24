@@ -23,12 +23,12 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/", IndexHandler),
             (r"/upload/?", FileHandler),
-            (r"/user/([0-9]+)/?", UserHandler),
-            (r"/user/new/?", RegisterHandler),
-            (r"/user/([0-9]+)/foods/?", FoodHandler),
-            (r"/user/([0-9]+)/deals/?", DealHandler),
             (r"/login/?", LoginHandler),
             (r"/logout/?", LogoutHandler),
+            (r"/user/new/?", RegisterHandler),
+            (r"/user/([0-9]+)/?", UserHandler),
+            (r"/user/([0-9]+)/foods/?", FoodHandler),
+            (r"/user/([0-9]+)/deals/?", DealHandler),
         ]
         settings = {
             "template_path": Config().template_path,

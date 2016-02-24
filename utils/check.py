@@ -15,18 +15,21 @@ def require_user_level(level):
                     status=1,
                     msg='user level error',
                 ))
+                return
         return wrapper
     return real_decorator
 
 
 def require_login(func):
     def wrapper(obj, uid):
+        uid = int(uid)
         user = obj.get_current_user()
-        if not user:
+        if user:
+            return func(obj, uid)
+        else:
             obj.write(dict(
                 status=1,
                 msg="please login"
             ))
             return
-        return func(obj, uid)
     return wrapper
