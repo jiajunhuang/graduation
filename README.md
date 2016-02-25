@@ -17,6 +17,13 @@
 
 **vue-webpack-boilerplate**
 
+#### Usage
+
+``` bash
+$ cd graduation
+$ npm install
+$ npm run dev
+```
 
 #### Folder Structure
 
@@ -46,7 +53,7 @@
 └── dist                      # built static files
 ```
 
-#### How to run
+#### What's Included
 
 - `npm run dev`: first-in-class development experience.
   - Webpack + `vue-loader` for single file Vue components.
