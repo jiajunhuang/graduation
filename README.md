@@ -13,6 +13,63 @@
 
 - model/: 属于MVC中的model
 
+### Front End
+
+**vue-webpack-boilerplate**
+
+
+#### Folder Structure
+
+``` bash
+.
+├── package.js              # build scripts and dependencies
+├── .babelrc                  # babel configuration
+├── .eslintrc.js              # eslint configuration
+├── build
+│   ├── dev-server.js         # development server script
+│   ├── karma.conf.js         # unit testing config
+│   ├── webpack.base.conf.js  # shared base webpack config
+│   ├── webpack.dev.conf.js   # development webpack config
+│   └── webpack.prod.conf.js  # production webpack config
+├── src
+│   ├── index.html            # main html file
+│   ├── main.js               # app entry file
+│   ├── App.vue               # main app component
+│   ├── components            # ui components
+│   │   └── ...
+│   └── assets                # static assets
+│       └── ...
+└── test
+│   └── unit                  # unit tests
+│       ├── index.js          # unit test entry file
+│       └── ...
+└── dist                      # built static files
+```
+
+#### How to run
+
+- `npm run dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
+
+- `npm run build`: Production ready build.
+  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+  - **To serve built files, run an HTTP server inside `/dist`**.
+
+- `npm test`: Unit tests run in PhantomJS with Karma + karma-jasmine + karma-webpack.
+  - Supports ES2015 in test files.
+  - Supports all webpack loaders.
+  - Easy [mock injection](http://vuejs.github.io/vue-loader/workflow/testing-with-mocks.html).
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
 ### 后端运行方式:
 
 - 安装python3,MySQL,redis
@@ -24,9 +81,9 @@
 
 - 安装依赖的包
 
-    ```
-    sudo pip install sqlalchemy tornado mysqlclient hiredis
-    ```
+```
+sudo pip install sqlalchemy tornado mysqlclient hiredis
+```
 
 - 运行
 ```
@@ -40,7 +97,7 @@ $ python3 run.py
 
 ### 通用
 
-```json
+```js
 对于所有的请求，一定会包含以下字段
 {
     "status": 0,  // 请求状态，0为成功，1为失败
@@ -71,7 +128,7 @@ $ python3 run.py
 
 - `/user/([0-9]+)/?` 获取用户信息，分为详细版（用户已登录）和简略版（未登录）(GET)
 
-```json
+```js
 {
     "name": "路人甲",
     "register_at": "1456317626",
@@ -100,7 +157,7 @@ $ python3 run.py
 
 - `/user/([0-9]+)/foods/?` 获取该用户名下的所有食品列表，按创建时间由近及远排序(GET)
 
-```json
+```js
     {
     "foods": [
         {
@@ -136,7 +193,7 @@ $ python3 run.py
 
 - `/user/([0-9]+)/deals/?` 获取该用户所达成的所有交易(GET)
 
-```json
+```js
 {
     "deals": [
         {
