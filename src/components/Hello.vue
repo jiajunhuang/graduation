@@ -1,7 +1,7 @@
-<template>
-  <div class="hello">
+ <template>
+<div class="hello">
     <h1>{{ msg }}</h1>
-  </div>
+</div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
             // with hot-reload because the reloaded component
             // preserves its current state and we are modifying
             // its initial state.
-            msg: 'Hello World!'
+            msg: 'Hello World11!'
         }
     }
 }
