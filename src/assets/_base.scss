@@ -1,0 +1,145 @@
+html {
+    color: #333;
+    background: #fff;
+    text-rendering: optimizelegibility;
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul {
+    margin: 0;
+    padding: 0
+}
+
+article,aside,details,figcaption,figure,footer,header,iframe,menu,nav,section {
+    display: block;
+}
+
+audio,canvas,video {
+    display: inline-block;
+}
+
+body,button,input,select,textarea {
+    font: 400 1em/1.5 PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans
+}
+
+button,input {
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+blockquote {
+    position: relative;
+    color: #999;
+    font-weight: 300;
+    border-left: 1px solid #1abc9c;
+    padding-left: 1em;
+    margin: 1em 3em 1em 2em;
+}
+
+@media only screen and (max-width: 640px) {
+    blockquote {
+        margin:1em 0
+    }
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal
+}
+
+abbr {
+    cursor: help
+}
+
+del {
+    text-decoration: line-through
+}
+
+address,caption,cite,code,dfn,em,th,var {
+    font-style: normal;
+    font-weight: 400
+}
+
+ol,ul {
+    list-style: none
+}
+
+caption,th {
+    text-align: left
+}
+
+q:after,
+q:before {
+    content: ''
+}
+
+a {
+    color: #0089dc;
+    text-decoration: none;
+}
+
+
+code,
+pre {
+    font-family: Courier,'Courier New',monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+pre {
+    padding: 1em 1.5em;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8
+}
+
+hr {
+    margin-bottom: 10px;
+    height: 10px;
+    border: none;
+    border-bottom: 1px solid #cfcfcf
+}
+
+[draggable] {
+    cursor: move
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both
+}
+
+.textwrap,.textwrap td,.textwrap th {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+    font-weight: 400
+}
