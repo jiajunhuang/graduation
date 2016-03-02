@@ -1,2 +1,2 @@
-DROP DATABASE graduation IF EXISTS graduation;
+DROP DATABASE IF EXISTS graduation;
 CREATE DATABASE graduation;
