@@ -26,7 +26,7 @@ class Deal(ORMBase):
         ).order_by(desc(Deal.sell_at)).all()
 
     @classmethod
-    def get_all_deals(cls, session):
+    def get_all_items(cls, session):
         return session.query(Deal).order_by(desc(Deal.sell_at)).all()
 
     @classmethod

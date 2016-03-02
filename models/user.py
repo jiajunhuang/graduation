@@ -44,3 +44,7 @@ class User(ORMBase):
             User.id == uid,
         ).delete()
         session.commit()
+
+    @classmethod
+    def get_all_items(cls, session):
+        return session.query(User).order_by(desc(User.register_at)).all()

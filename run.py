@@ -34,6 +34,7 @@ class Application(tornado.web.Application):
             (r"/user/([0-9]+)/deals/?", DealHandler),
             # admin
             (r"/admin/?", AdminHandler),
+            (r"/admin/(deals|users|foods)?", AdminHandler),
             # static
             (r'/static/(.*)', tornado.web.StaticFileHandler),
         ]

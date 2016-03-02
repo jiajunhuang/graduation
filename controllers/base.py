@@ -64,7 +64,7 @@ class BaseHandler(tornado.web.RequestHandler):
             fid=food.id,
             image=food.image.decode("utf-8"),
             name=food.name.decode("utf-8"),
-            seller=food.seller,
+            seller=self._get_user_info(food.seller),
             create_at=str(food.create_at),
             price=food.price,
         )

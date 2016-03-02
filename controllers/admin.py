@@ -2,9 +2,29 @@
 
 from .base import BaseHandler
 from models.deal import Deal
+from models.user import User
+from models.food import Food
 
 
 class AdminHandler(BaseHandler):
-    def get(self):
-        deals = map(self._get_deal_info, Deal.get_all_deals(self.orm_session))
-        self.render("admin.html", deals=deals)
+    def prepare(self):
+        self.__category_mapper = {
+            "deals": self._get_deal_info,
+            "users": self._get_user_info,
+            "foods": self._get_food_info,
+        }
+
+        self.__class_mapper = {
+            "deals": Deal,
+            "users": User,
+            "foods": Food,
+        }
+        super().prepare()
+
+    def get(self, category=None):
+        category = "deals" if not category else category
+        if category not in ("deals", "users", "foods"):
+            self.redirect("/")  # redirect for security
+            return
+        items = map(self.__category_mapper[category], self.__class_mapper[category].get_all_items(self.orm_session))
+        self.render("admin/{}.html".format(category), items=items)

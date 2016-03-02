@@ -36,3 +36,7 @@ class Food(ORMBase):
             Food.seller==uid,
         ).delete()
         session.commit()
+
+    @classmethod
+    def get_all_items(cls, session):
+        return session.query(Food).order_by(desc(Food.create_at)).all()
