@@ -87,7 +87,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - 安装依赖的包
 
 ```
-sudo pip install sqlalchemy tornado
+sudo pip install sqlalchemy tornado mysqlclient
 ```
 
 - 运行
