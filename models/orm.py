@@ -5,6 +5,9 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import as_declarative
 from config import Config
 
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 @as_declarative()
 class ORMBase(object):
