@@ -79,24 +79,22 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ### 后端运行方式:
 
-- 安装python3,MySQL,redis
+- 安装python3,MySQL
 
-    - ArchLinux: sudo pacman -S python mariadb redis
-    - Debian/Ubuntu: sudo apt-get install python3 mysql-server redis-server redis-cli
-    - Centos: http://stackoverflow.com/questions/8087184/installing-python3-on-rhel
-    - Mac OS X: https://docs.python.org/3/using/mac.html
+    - ArchLinux: sudo pacman -S python mariadb
+    - Debian/Ubuntu: sudo apt-get install python3 mysql-server
 
 - 安装依赖的包
 
 ```
-sudo pip install sqlalchemy tornado mysqlclient hiredis
+sudo pip install sqlalchemy tornado mysqlclient
 ```
 
 - 运行
 ```
 $ cd <source code path>
 $ mysql -u root < sql/create_db.sql
-$ python init_test.py
+$ python3 init_test.py
 $ python3 run.py
 ```
 
