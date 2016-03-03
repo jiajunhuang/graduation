@@ -5,13 +5,25 @@
 该系统要求能够在线餐饮信息浏览，在线订餐，
 在线订单处理以及信息更新和删除等功能。
 
+    本项目采用前后端分离的开发方式，其中API和admin由@jiajunhuang完成，
+    前端由@zzuieliyaoli完成。(由于没有把项目文件分开，故目录看起来有点乱)
+
 ### 结构介绍:
 
-- templates/: 属于MVC中的view
-
-- controllers/: 属于MVC中的controller
-
-- model/: 属于MVC中的model
+```bash
+# tree -d -L 2
+.
+├── controllers  # 控制层
+├── models # 模型层
+├── sql
+├── static  # 静态文件
+│   ├── css
+│   ├── img
+│   └── js
+├── templates # 视图层
+│   └── admin # 后台的模板
+└── utils
+```
 
 ### Front End
 
@@ -77,7 +89,7 @@ $ npm run dev
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-### 后端运行方式:
+### API运行方式:
 
 - 安装python3,MySQL
 
@@ -86,16 +98,17 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 - 安装依赖的包
 
-```
+```bash
 sudo pip install sqlalchemy tornado mysqlclient
 ```
 
 - 运行
-```
+
+```bash
 $ cd <source code path>
 $ mysql -u root < sql/create_db.sql
 $ python3 init_test.py
-$ python3 run.py
+$ ./start.sh  # 这是debug模式
 ```
 
 ## API
@@ -235,7 +248,7 @@ $ python3 run.py
 
 - `/user/([0-9]+)/deals/?` 提交新的订单(POST):
 
-  - seller 卖的人, 必填
+  - seller 卖家, 必填
   - fid 商品id，必填
   - address 配送地址，必填
   - phone 手机号码，必填
@@ -243,3 +256,7 @@ $ python3 run.py
 - `/user/([0-9]+)/deals/?` 删除订单(DELETE):
 
   - did 订单id
+
+### TODO
+
+- 用sid替换cookie，以方便移动端
