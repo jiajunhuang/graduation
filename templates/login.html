@@ -1,9 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{{ static_url('favicon.ico') }}">
+
+        <title>Admin</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{{ static_url('css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{{ static_url('css/dashboard.css') }}" rel="stylesheet">
+
+        <link href="{{ static_url('css/login.css') }}" rel="stylesheet">
+
+    </head>
+
     <body>
-        <form action="/login" method="post">
-            Phone: <input type="text" name="phone">
-            Passwd: <input type="password" name="passwd">
-            <input type="submit" value="Sign in">
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <h1 class="text-center login-title">登录后台</h1>
+                    <div class="account-wall">
+                        <img class="profile-img" src="{{ static_url('admins.jpg') }}" alt="">
+                        <form class="form-signin" action="/login">
+                            <input name="phone" type="text" class="form-control" placeholder="手机号码" required autofocus>
+                            <input name="passwd" type="password" class="form-control" placeholder="密码" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit"> 登录</button>
+                        </form>
+                    </div>
+                    <a href="#" class="text-center new-account">新建账号</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="{{ static_url('js/jquery.min.js') }}"></script>
+            <script>window.jQuery || document.write('<script src="{{ static_url('js/jquery.min.js') }}"><\/script>')</script>
+            <script src="{{ static_url('js/bootstrap.min.js') }}"></script>
     </body>
 </html>
