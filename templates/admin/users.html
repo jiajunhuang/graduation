@@ -11,6 +11,7 @@
                 <th>联系地址</th>
                 <th>联系电话</th>
                 <th>注册时间</th>
+                <th>删除</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{ ";".join(item["addresses"]) }}</td>
                 <td>{{ item["phone"] }}</td>
                 <td>{{ item["register_at"] }}</td>
+                <td><button class="btn btn-danger">删除</td>
             </tr>
             {% end %}
         </tbody>

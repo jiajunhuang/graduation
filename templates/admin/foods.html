@@ -10,6 +10,7 @@
                 <th>卖家名称</th>
                 <th>食品价格</th>
                 <th>上架时间</th>
+                <th>删除</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <td>{{ item["seller"]["name"] }}</td>
                 <td>{{ item["price"] }}</td>
                 <td>{{ item["create_at"] }}</td>
+                <td><button class="btn btn-danger">删除</td>
             </tr>
             {% end %}
         </tbody>
