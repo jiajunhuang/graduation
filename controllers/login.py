@@ -15,11 +15,11 @@ class LoginHandler(BaseHandler):
         user = User.user_login(self.orm_session, phone, passwd)
 
         if user:
+            self.set_secure_cookie("logined", str(user.id))
+            self.set_secure_cookie("level", str(user.level))
             if user.level == 2:
                 self.redirect("/admin")
             else:
-                self.set_secure_cookie("logined", str(user.id))
-                self.set_secure_cookie("level", str(user.level))
                 self.write({})
         else:
             self.write(dict(
@@ -38,7 +38,7 @@ class LogoutHandler(BaseHandler):
             ))
             return
 
-        user = User.get_user_by_phone(self.orm_session, _uid)
+        user = User.get_instance_by_id(self.orm_session, _uid)
         if not user:
             self.write(dict(
                 status=1,

@@ -26,12 +26,6 @@ class User(ORMBase):
         ).first()
 
     @classmethod
-    def get_user_by_phone(cls, session, phone):
-        return session.query(User).filter(
-            User.phone == phone,
-        ).first()
-
-    @classmethod
     def user_login(cls, session, phone, passwd):
         return session.query(User).filter(
             User.phone == phone,
