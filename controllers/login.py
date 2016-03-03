@@ -16,6 +16,7 @@ class LoginHandler(BaseHandler):
 
         if user:
             self.set_secure_cookie("logined", str(user.id))
+            self.set_secure_cookie("level", str(user.level))
             self.write({})
         else:
             self.write(dict(
@@ -43,4 +44,5 @@ class LogoutHandler(BaseHandler):
             return
 
         self.clear_cookie("logined")
+        self.clear_cookie("level")
         self.write({})

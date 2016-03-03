@@ -26,6 +26,13 @@ class BaseHandler(tornado.web.RequestHandler):
         except AttributeError:
             return None
 
+    @property
+    def is_admin(self):
+        try:
+            return True if int(self.get_secure_cookie("level").decode()) == 2 else False
+        except AttributeError:
+            return False
+
     def on_finish(self):
         if hasattr(self, "orm_session"):
             self.orm_session.close()
@@ -42,6 +49,7 @@ class BaseHandler(tornado.web.RequestHandler):
     @require_instance(User)
     def _get_user_info(self, user):
         result = dict(
+            uid=user.id,
             avatar=user.avatar.decode("utf-8"),
             name=user.name.decode("utf-8"),
         )
@@ -49,9 +57,12 @@ class BaseHandler(tornado.web.RequestHandler):
         # 这里没有用@require_login装饰，是因为用户信息区分简略和详细版
         # 但不要求登录
         _uid = self.get_current_user()
-        if _uid == user.id:
+        # if self.is_admin or _uid == user.id:
+        # for debug
+        if True:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
+                level=int(user.level),
                 register_at=str(user.register_at),
                 phone=user.phone.decode("utf-8"),
                 addresses=[] if addresses == [""] else addresses

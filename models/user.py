@@ -3,7 +3,7 @@
 """用户表"""
 
 import datetime
-from sqlalchemy import Column, String, Integer, DateTime
+from sqlalchemy import Column, String, Integer, DateTime, desc
 from .orm import ORMBase
 
 
@@ -47,4 +47,6 @@ class User(ORMBase):
 
     @classmethod
     def get_all_items(cls, session):
-        return session.query(User).order_by(desc(User.register_at)).all()
+        return session.query(User).filter(
+            User.level != 2  # 仅返回非管理员
+        ).order_by(desc(User.register_at)).all()

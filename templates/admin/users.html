@@ -49,8 +49,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li><a href="/admin/deals">近期交易</a></li>
-            <li><a href="/admin/foods">食品管理</a></li>
             <li class="active"><a href="/admin/users">用户管理<span class="sr-only">(current)</span></a></li>
+            <li><a href="/admin/foods">食品管理</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -85,7 +85,8 @@
               <thead>
                 <tr>
                   <th>用户id</th>
-                  <th>买家名称</th>
+                  <th>用户名称</th>
+                  <th>用户级别</th>
                   <th>联系地址</th>
                   <th>联系电话</th>
                   <th>注册时间</th>
@@ -94,11 +95,12 @@
               <tbody>
                   {% for item in items %}
                     <tr>
-                        <td>{{ item["did"] }}</td>
-                        <td>{{ item["buyer"]["name"] }}</td>
-                        <td>{{ item["seller"]["name"] }}</td>
-                        <td>{{ item["food"]["name"] }}</td>
-                        <td>{{ item["sell_at"] }}</td>
+                        <td>{{ item["uid"] }}</td>
+                        <td>{{ item["name"] }}</td>
+                        <td>{{ "买家" if item["level"] == 1 else "卖家" }}</td>
+                        <td>{{ ";".join(item["addresses"]) }}</td>
+                        <td>{{ item["phone"] }}</td>
+                        <td>{{ item["register_at"] }}</td>
                     </tr>
                     {% end %}
               </tbody>
