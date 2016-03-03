@@ -49,11 +49,11 @@ def require_instance(atype):
         def wrapper(obj, instance):
             if not isinstance(instance, atype):
                 instance = atype.get_instance_by_id(obj.orm_session, instance)
-                if not instance:
-                    return dict(
-                        status=1,
-                        msg="no such item",
-                    )
+            if not instance:
+                return dict(
+                    status=1,
+                    msg="no such item",
+                )
 
             return func(obj, instance)
         return wrapper
