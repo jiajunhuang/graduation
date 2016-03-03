@@ -15,9 +15,12 @@ class LoginHandler(BaseHandler):
         user = User.user_login(self.orm_session, phone, passwd)
 
         if user:
-            self.set_secure_cookie("logined", str(user.id))
-            self.set_secure_cookie("level", str(user.level))
-            self.write({})
+            if user.level == 2:
+                self.redirect("/admin")
+            else:
+                self.set_secure_cookie("logined", str(user.id))
+                self.set_secure_cookie("level", str(user.level))
+                self.write({})
         else:
             self.write(dict(
                 status=1,

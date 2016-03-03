@@ -22,6 +22,9 @@ class AdminHandler(BaseHandler):
         super().prepare()
 
     def get(self, category=None):
+        if not self.is_admin:
+            self.redirect("/login")
+            return
         category = "deals" if not category else category
         if category not in ("deals", "users", "foods"):
             self.redirect("/")  # redirect for security

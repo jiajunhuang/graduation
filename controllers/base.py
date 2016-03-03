@@ -57,9 +57,7 @@ class BaseHandler(tornado.web.RequestHandler):
         # 这里没有用@require_login装饰，是因为用户信息区分简略和详细版
         # 但不要求登录
         _uid = self.get_current_user()
-        # if self.is_admin or _uid == user.id:
-        # for debug
-        if True:
+        if self.is_admin or _uid == user.id:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
                 level=int(user.level),
