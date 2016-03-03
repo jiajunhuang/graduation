@@ -27,4 +27,4 @@ class AdminHandler(BaseHandler):
             self.redirect("/")  # redirect for security
             return
         items = map(self.__category_mapper[category], self.__class_mapper[category].get_all_items(self.orm_session))
-        self.render("admin/{}.html".format(category), items=items)
+        self.render("admin/{}.html".format(category), active=category, items=items)
