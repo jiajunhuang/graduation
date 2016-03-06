@@ -31,7 +31,7 @@ def require_login(func):
             user = User.get_instance_by_id(obj.orm_session, uid)
             _uid = obj.get_current_user()
 
-            if user.id == _uid:
+            if user.id == _uid or obj.is_admin:
                 obj._uid= _uid
                 return func(obj, uid)
             else:

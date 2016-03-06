@@ -22,7 +22,7 @@
                 <td>{{ item["seller"]["name"] }}</td>
                 <td>{{ item["food"]["name"] }}</td>
                 <td>{{ item["sell_at"] }}</td>
-                <td><button class="btn btn-danger">删除</td>
+                <td><button class="btn btn-danger">删除</button></td>
             </tr>
             {% end %}
         </tbody>
@@ -35,18 +35,23 @@
 $(document).ready(
     function () {
         $("button.btn-danger").click(function () {
-            var uid = $(this).closest("tr").children("input[name=buyer_id]").attr("value");
-            var did = $(this).closest("tr").children("td[name=did]").text();
+            var item = $(this).parents("tr");
+            var uid = item.children("input[name=buyer_id]").attr("value");
+            var did = item.children("td[name=did]").text();
+            console.log(uid, did);
             if (uid !== undefined && did !== undefined) {
                 $.ajax({
-                    headers: {'Cookie': document.cookie},
                     url: "/user/" + uid + "/deals/",
                     type: "DELETE",
+                    data: {
+                        "sid": $("#sid").attr("value"),
+                        "did": did,
+                    },
                     success: function(result) {
-                        $(this).closest("tr").hide();
+                        item.hide("slow");
                     },
                     error: function(result) {
-                        alert("failed");
+                        alert("failed" + result);
                     }
                 });
             }
