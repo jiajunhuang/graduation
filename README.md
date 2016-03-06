@@ -120,6 +120,7 @@ $ ./start.sh  # 这是debug模式
 {
     "status": 0,  // 请求状态，0为成功，1为失败
     "msg": "success",  // 对请求的描述或所发生错误的描述
+    "sid": "xxxxxxxxxx", // 类似cookie，从服务端保存用户信息
 }
 ```
 
@@ -256,7 +257,3 @@ $ ./start.sh  # 这是debug模式
 - `/user/([0-9]+)/deals/?` 删除订单(DELETE):
 
   - did 订单id
-
-### TODO
-
-- 用sid替换cookie，以方便移动端

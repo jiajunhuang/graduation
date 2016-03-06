@@ -3,6 +3,7 @@
 import tornado.web
 import tornado.gen
 from models.orm import ORMSession
+from models.redis import RedisSession
 from utils.cache import cached_property
 from utils.check import require_instance
 from models.user import User
@@ -15,21 +16,42 @@ class BaseHandler(tornado.web.RequestHandler):
     def prepare(self):
         from models.orm import ORMBase, engine
         ORMBase.metadata.create_all(engine)
+        self.sid = self.get_secure_cookie("sid")
+        self.sid = self.sid.decode("utf-8") if self.sid else self.get_argument("sid", self.gen_sid())
+
+    def gen_sid(self, uid=""):
+        ip = self.request.remote_ip
+        uid = str(uid)
+        return ";".join([ip, uid])
 
     @cached_property
     def orm_session(self):
         return ORMSession(autoflush=True)
 
+    @cached_property
+    def redis_session(self):
+        return RedisSession
+
     def get_current_user(self):
-        try:
-            return int(self.get_secure_cookie("logined").decode())
-        except AttributeError:
-            return None
+        uid, level = self._get_current_user_info()
+        return int(uid) if uid else uid
+
+    def _get_current_user_info(self):
+        server_sid = self.redis_session.get(bytes(self.sid, "utf-8"))
+        if not server_sid:
+            return None, None
+        uid, level = server_sid.decode("utf-8").split(";")  # 只信任服务端数据
+        return uid, level
+
+    def get_current_level(self):
+        uid, level = self._get_current_user_info()
+        return int(level) if level else None
 
     @property
     def is_admin(self):
         try:
-            return True if int(self.get_secure_cookie("level").decode()) == 2 else False
+            level = self.get_current_level()
+            return True if level and level ==2 else False
         except AttributeError:
             return False
 
@@ -43,6 +65,7 @@ class BaseHandler(tornado.web.RequestHandler):
                 chunk.update(dict(
                     status=0,
                     msg="success",
+                    sid=self.sid,
                 ))
         super().write(chunk)
 

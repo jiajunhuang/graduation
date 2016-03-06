@@ -23,3 +23,4 @@ class Config(object, metaclass=Singleton):
         self.template_path = os.path.join(self.__dir_path, "templates")
         self.static_path = os.path.join(self.__dir_path, "static")
         self.img_path = os.path.join(self.static_path, "img")
+        self.redis = ('127.0.0.1', 6379)

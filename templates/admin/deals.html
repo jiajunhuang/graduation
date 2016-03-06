@@ -16,7 +16,8 @@
         <tbody>
             {% for item in items %}
             <tr>
-                <td>{{ item["did"] }}</td>
+                <input type="hidden" name="buyer_id" value={{ item["buyer"]["uid"] }} />
+                <td name="did">{{ item["did"] }}</td>
                 <td>{{ item["buyer"]["name"] }}</td>
                 <td>{{ item["seller"]["name"] }}</td>
                 <td>{{ item["food"]["name"] }}</td>
@@ -27,4 +28,29 @@
         </tbody>
     </table>
 </div>
+{% end %}
+
+{% block ext_js %}
+<script>
+$(document).ready(
+    function () {
+        $("button.btn-danger").click(function () {
+            var uid = $(this).closest("tr").children("input[name=buyer_id]").attr("value");
+            var did = $(this).closest("tr").children("td[name=did]").text();
+            if (uid !== undefined && did !== undefined) {
+                $.ajax({
+                    headers: {'Cookie': document.cookie},
+                    url: "/user/" + uid + "/deals/",
+                    type: "DELETE",
+                    success: function(result) {
+                        $(this).closest("tr").hide();
+                    },
+                    error: function(result) {
+                        alert("failed");
+                    }
+                });
+            }
+        });
+    });
+</script>
 {% end %}
