@@ -91,15 +91,15 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ### API运行方式:
 
-- 安装python3,MySQL
+- 安装python3,MySQL,Redis
 
-    - ArchLinux: sudo pacman -S python mariadb
-    - Debian/Ubuntu: sudo apt-get install python3 mysql-server
+    - ArchLinux: sudo pacman -S python mariadb redis
+    - Debian/Ubuntu: sudo apt-get install python3 mysql-server redis-server
 
 - 安装依赖的包
 
 ```bash
-sudo pip install sqlalchemy tornado mysqlclient
+sudo pip3 install sqlalchemy tornado mysqlclient redis
 ```
 
 - 运行
