@@ -47,6 +47,13 @@ class UserHandler(BaseHandler):
 class RegisterHandler(BaseHandler):
     def post(self):
         level = int(self.get_argument("level", 0))
+        if level > 1:
+            self.write(dict(
+                status=1,
+                msg="illegal"
+            ))
+            return
+
         phone = self.get_argument("phone")
         passwd = self.get_argument("passwd")
         name = self.get_argument("name", phone)
