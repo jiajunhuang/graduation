@@ -45,9 +45,31 @@ class UserHandler(BaseHandler):
 
 
 class RegisterHandler(BaseHandler):
+    """
+    @apiDescription 创建用户
+    @api {post} /user/new user_register
+    @apiVersion 0.0.1
+    @apiGroup user
+
+    @apiParam {String} phone 手机号
+    @apiParam {String} passwd 密码
+    @apiParam {String} name 用户名，可缺省，默认为电话号码
+
+    @apiPermission user
+
+    @apiSuccess {Number} uid 用户uid，全局唯一
+
+    @apiError UserExists 手机号已存在
+    @apiError UserLevelError 所申请的用户级别错误
+    @apiErrorExample {json} Error Response:
+        {
+            "status": 1,
+            "msg": "failed to register"
+        }
+    """
     def post(self):
         level = int(self.get_argument("level", 0))
-        if level > 1:
+        if not 0 <= level < 2:
             self.write(dict(
                 status=1,
                 msg="illegal"
