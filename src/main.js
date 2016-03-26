@@ -23,7 +23,7 @@ router.map({
 })
 
 router.redirect({
-  '*': '/index'
+  '/': '/index'
 })
 
 router.beforeEach(function () {
