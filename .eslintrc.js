@@ -34,10 +34,6 @@ module.exports = {
     'no-extra-boolean-cast': 1,
     'block-scoped-var': 1,
     'default-case': 1,
-    'dot-notation': [2, {
-      'allowKeywords': false,
-      'allowPattern': '^[a-z]+(_[a-z]+)+$'
-    }],
     'eqeqeq': [2, 'smart'],
     'no-extend-native': 1,
     'no-implicit-coercion': 0,
@@ -52,10 +48,6 @@ module.exports = {
     'vars-on-top': 0,
     'wrap-iife': [2, 'any'],
     'init-declarations': 0,
-    'no-unused-expressions': [2, {
-      'allowShortCircuit': true,
-      'allowTernary': true
-    }],
     'no-unused-vars': [2, {
       'vars': 'local',
       'args': 'after-used'
