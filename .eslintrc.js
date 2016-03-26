@@ -1,7 +1,7 @@
 module.exports = {
-  root: true,
-  extends: 'standard',
-  plugins: [
+  'root': true,
+  'extends': 'standard',
+  'plugins': [
     'html'
   ],
   'env': {
@@ -9,9 +9,6 @@ module.exports = {
     'es6': true,
     'node': true
   },
-  'plugins': [
-    'html'
-  ],
   'ecmaFeatures': {
     'arrowFunctions': true,
     'destructuring': true,
