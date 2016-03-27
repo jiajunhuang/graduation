@@ -115,6 +115,8 @@ $ ./start.sh  # 这是debug模式
 
 ### 通用
 
+### 文档
+
 ```js
 对于所有的请求，一定会包含以下字段
 {
@@ -143,44 +145,6 @@ $ ./start.sh  # 这是debug模式
 
 - `/logout/?` 注销当前登录用户
 
-### 用户
-
-- `/user/new/?` 注册新用户(POST)
-
-  - level 用户等级，0为买家，1为卖家, 默认为0
-  - phone 手机号
-  - passwd 密码
-  - name 名字，如不填，则为手机号
-
-  返回::
-    - uid 用户id
-
-- `/user/([0-9]+)/?` 获取用户信息，分为详细版（用户已登录）和简略版（未登录）(GET)
-
-```js
-{
-    "name": "路人甲",
-    "register_at": "1456317626",
-    "addresses": [],
-    "phone": "99999",
-    "avatar": ""
-}
-```
-
-- `/user/new/?` 创建新用户(POST):
-
-  - phone，手机号，必填
-  - passwd，密码，必填
-  - level，用户等级，0为买家，1为卖家，2为管理员，选填，默认为0
-  - name，用户名，选填，默认为手机号
-
-- `/user/([0-9]+)/?` 修改用户信息(PUT):
-
-    > avatar,level,passwd,phone,name,address 选填
-
-- `/user/([0-9]+)/?` 删除用户(DELETE):
-
-    > 无需参数
 
 ### 食品
 
