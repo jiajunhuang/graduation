@@ -22,6 +22,10 @@
       </div> -->
 
     </div>
+    <div class="back-to-top" v-bind:class="{'focus': isShowBackToTop === true}">
+      <a href="#" class="item" v-on:click.prevent="backToTop()" ><i class="fa fa-arrow-up"></i></a>
+      <span class="tips">返回顶部</span>
+    </div>
   </div>
 </template>
 
@@ -39,6 +43,24 @@ $fontColor: #ccc;
   width: 19px;
   background-color: #737074;
 }
+%tips {
+  position: absolute;
+
+  padding: 0.2em 0.5em;
+  border-radius: 2px;
+  background-color: $bgColor;
+  color: $fontColor;
+  &:after {
+    content: ' ';
+    border: 5px solid $bgColor;
+    display: block;
+    position: absolute;
+    top: 10px;
+    border-color: transparent transparent transparent $bgColor;
+    right: -10px;
+  }
+}
+
 
 div.fixed-navbar {
   z-index: 99;
@@ -51,31 +73,33 @@ div.fixed-navbar {
   display: inline-block;
   background-color: $bgColor;
 
+  a.item {
+    display: block;
+    text-align: center;
+    color: $fontColor;
+    line-height: 16px;
+    padding: 7px 8px 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &.focus {
+      background-color: #26a2ff;
+      color: #fff;
+      outline: 0;
+    }
+  }
+
   div.control {
     height: $height;
     width: 35px;
     position: absolute;
     top: 50%;
     margin-top: -$height * 0.5;
-    a.item {
-      display: block;
-      text-align: center;
-      color: $fontColor;
-      line-height: 16px;
-      padding: 7px 8px 10px;
-      margin-bottom: 8px;
-      margin-top: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
 
-      &:hover,
-      &.focus {
-        background-color: #26a2ff;
-        color: #fff;
-        outline: 0;
-      }
-    }
     div.order {
       position: relative;
       .tips {
@@ -111,23 +135,10 @@ div.fixed-navbar {
       }
     }
     span.tips {
-      position: absolute;
+      @extend %tips;
       right: 50px;
       top: 2px;
       width: 5em;
-      padding: 0.2em 0.5em;
-      border-radius: 2px;
-      background-color: $bgColor;
-      color: $fontColor;
-      &:after {
-        content: ' ';
-        border: 5px solid $bgColor;
-        display: block;
-        position: absolute;
-        top: 10px;
-        border-color: transparent transparent transparent $bgColor;
-        right: -10px;
-      }
     }
   }
 
@@ -177,6 +188,38 @@ div.fixed-navbar {
     }
 
   }
+  div.back-to-top {
+    position: relative;
+    bottom: 80px;
+    width: 35px;
+    display: none;
+    &.focus {
+      display: inline-block;
+    }
+    &:before {
+      @extend %line;
+      top: -4px;
+    }
+    &:after {
+      @extend %line;
+      bottom: -4px;
+    }
+    &:hover {
+      .tips {
+        display: block;
+      }
+    }
+    i {
+      font-size: 20px;
+    }
+    span.tips {
+      @extend %tips;
+      display: none;
+      right: 50px;
+      top: 2px;
+      width: 5em;
+    }
+  }
 }
 </style>
 
@@ -186,10 +229,13 @@ export default {
   created() {
     window.addEventListener('click', this.clickHandler)
     window.addEventListener('keyup', this.escHandler)
+    window.addEventListener('scroll', this.scrollHandler)
   },
   data() {
     return {
-      isShowNavbarContent: false
+      isShowNavbarContent: false,
+      scrollEventTimer: null,
+      isShowBackToTop: false
     }
   },
   methods: {
@@ -204,6 +250,15 @@ export default {
     },
     clickHandler() {
       this.hideNavbar()
+    },
+    scrollHandler() {
+      clearTimeout(this.scrollEventTimer)
+      this.scrollEventTimer = setTimeout(() => {
+        this.isShowBackToTop = !!((document.body.scrollTop || document.documentElement.scrollTop) > 1500)
+      }, 500)
+    },
+    backToTop() {
+      window.scrollTo(0, 0)
     }
   },
   beforeDestory() {
