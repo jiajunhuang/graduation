@@ -204,6 +204,10 @@ export default {
     clickHandler() {
       this.hideNavbar()
     }
+  },
+  beforeDestory() {
+    window.removeEventListener('click', this.clickHandler)
+    window.removeEventListener('keyup', this.escHandler)
   }
 }
 </script>
