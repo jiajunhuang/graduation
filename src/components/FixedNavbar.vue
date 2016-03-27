@@ -1,16 +1,17 @@
 <template>
-  <div class="fixed-navbar">
+  <div class="fixed-navbar" v-on:click.stop>
     <div class="control">
       <div class="order">
-        <a v-link="{  path: 'order' }" class="item"><i class="fa fa-list"></i></a>
+        <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
       <div class="shopping-cart">
-        <a href="#"  v-on:click.prevent="toggleNavbar()" class="item"><i class="fa fa-shopping-cart"></i> 购物车</a>
+        <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item" v-bind:class="{'focus': isShowNavbarContent === true}">
+          <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
-    <div class="content" v-bind:class="{ show: isShowNavbar}">
-      <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbar()">>></a></div>
+    <div class="content" v-bind:class="{ show: isShowNavbarContent === true}">
+      <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbarContent()">>></a></div>
       <div class="no-list">
         <i class="fa fa-bell"></i>
         <p>购物车空空如也</p>
@@ -68,7 +69,8 @@ div.fixed-navbar {
       font-weight: 700;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &.focus {
         background-color: #26a2ff;
         color: #fff;
         outline: 0;
@@ -181,28 +183,26 @@ div.fixed-navbar {
 export default {
   name: 'FixedNavbar',
   created() {
-    window.addEventListener('keyup', this.escHandler)
     window.addEventListener('click', this.clickHandler)
+    window.addEventListener('keyup', this.escHandler)
   },
   data() {
     return {
-      isShowNavbar: false
+      isShowNavbarContent: false
     }
   },
   methods: {
-    toggleNavbar() {
-      this.isShowNavbar = !this.isShowNavbar
+    toggleNavbarContent() {
+      this.isShowNavbarContent = !this.isShowNavbarContent
     },
-    escHandler() {
-      this.isShowNavbar === true && this.isShowNavbar
+    hideNavbar() {
+      this.isShowNavbarContent = false
     },
-    clickHandler(event) {
-      let target = event.target
-      if (target === this.$el) {
-        event.stopPropagation()
-        return false
-      }
-      this.isShowNavbar === true && this.isShowNavbar
+    escHandler(event) {
+      event.keyCode === 27 && this.hideNavbar()
+    },
+    clickHandler() {
+      this.hideNavbar()
     }
   }
 }
