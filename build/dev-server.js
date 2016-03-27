@@ -30,10 +30,10 @@ app.use(devMiddleware)
 // compilation error display
 app.use(hotMiddleware)
 
-app.listen(8088, function (err) {
+app.listen(8088, '0.0.0.0', function (err) {
     if (err) {
         console.log(err)
         return
     }
-    console.log('Listening at http://localhost:8088')
+    console.log('Listening at http://0.0.0.0:8088, find out your IP Address by `ip addr`')
 })
