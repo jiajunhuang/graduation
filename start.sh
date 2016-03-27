@@ -2,4 +2,4 @@
 
 apidoc -i controllers/ -o static/api/
 
-python run.py --debug=True
+python3 run.py --debug=True
