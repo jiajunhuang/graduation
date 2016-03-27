@@ -12,6 +12,19 @@ from models.deal import Deal
 
 
 class BaseHandler(tornado.web.RequestHandler):
+    """
+    @apiDescription 服务器返回请求字段
+    @api {get} / 服务器返回请求字段
+    @apiGroup base
+
+    @apiSuccess {json} JSON 所有请求都会包含的字符
+    @apiSuccessExample {json} Success Response:
+    {
+        "status": 0, // 0 成功，1 失败
+        "msg": "xxx", // 描述信息
+        "sid": "xxxRTYU&*^(*)" // session id
+    }
+    """
     @tornado.gen.coroutine
     def prepare(self):
         from models.orm import ORMBase, engine

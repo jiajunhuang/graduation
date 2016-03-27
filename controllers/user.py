@@ -18,11 +18,15 @@ class UserHandler(BaseHandler):
 
         @apiPermission user
 
-        @apiSuccess {json} JSON 用户信息
+        @apiSuccess {Number} uid 用户uid
+        @apiSuccess {String} avatar 头像
+        @apiSuccess {String} name 用户名
+        @apiSuccess {Number} level 用户级别，仅获取自己信息时出现
+        @apiSuccess {String} register_at 注册时间，仅获取自己信息时出现
+        @apiSuccess {String} phone 手机号
+        @apiSuccess {Array} address 配送地址
         @apiSuccessExample {json} Success Response:
         {
-            "status": 0,
-            "msg": "",
             "uid": 1,
             "avatar": "http://xxxx.com/avatar.png",
             "name": "001",
@@ -34,11 +38,6 @@ class UserHandler(BaseHandler):
         }
 
         @apiError UserNotExists 用户不存在
-        @apiErrorExample {json} Error Response:
-        {
-            "status": 1,
-            "msg": "no such user"
-        }
         """
         uid = int(uid)
         user = User.get_instance_by_id(self.orm_session, uid)
@@ -66,13 +65,6 @@ class UserHandler(BaseHandler):
         @apiParam {String} [address] 地址
 
         @apiPermission user
-
-        @apiSuccess {json} JSON 用户信息
-        @apiSuccessExample {json} Success Response:
-        {
-            "status": 0,
-            "msg": "",
-        }
 
         @apiError UserNotExists 用户不存在
         """
@@ -107,13 +99,6 @@ class UserHandler(BaseHandler):
         @apiGroup user
 
         @apiPermission user
-
-        @apiSuccess {json} JSON 用户信息
-        @apiSuccessExample {json} Success Response:
-        {
-            "status": 0,
-            "msg": "",
-        }
         """
         User.delete(self.orm_session, uid)
         self.write({})
@@ -135,11 +120,6 @@ class RegisterHandler(BaseHandler):
 
     @apiError UserExists 手机号已存在
     @apiError UserLevelError 所申请的用户级别错误
-    @apiErrorExample {json} Error Response:
-        {
-            "status": 1,
-            "msg": "failed to register"
-        }
     """
     def post(self):
         level = int(self.get_argument("level", 0))

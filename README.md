@@ -117,34 +117,12 @@ $ ./start.sh  # 这是debug模式
 
 ### 文档
 
-```js
-对于所有的请求，一定会包含以下字段
-{
-    "status": 0,  // 请求状态，0为成功，1为失败
-    "msg": "success",  // 对请求的描述或所发生错误的描述
-    "sid": "xxxxxxxxxx", // 类似cookie，从服务端保存用户信息
-}
-```
-
 ### 文件操作
 
 
 - `/upload` 上传文件到 `static/img` 下(POST):
 
     > 详见 `file_upload.html`
-
-### 登录登出
-
-
-- `/login/?` 获取登录页面(GET)
-
-- `/login/?` 使用电话号码和密码进行登录(POST):
-
-  - phone: 注册用的电话号码
-  - passwd: 注册的密码
-
-- `/logout/?` 注销当前登录用户
-
 
 ### 食品
 
