@@ -1,28 +1,26 @@
 <template>
   <top-header></top-header>
-  <!-- <router-view>
-  </router-view> -->
-  <!-- <footer>
-
-  </footer> -->
-  <fixed-navbar></fixed-navbar>
+  <router-view></router-view>
 </template>
 
 <script>
 
 import TopHeader from './components/Header.vue'
-import FixedNavbar from './components/FixedNavbar.vue'
+import IndexView from './components/IndexView.vue'
 
 export default {
   name: 'App',
-  components: {
-    TopHeader,
-    FixedNavbar
-  }
+  components: [
+    TopHeader, IndexView
+  ]
 }
 </script>
 <style lang='sass'>
 
 @import './assets/base';
+
+body {
+  height: 5000px;
+}
 
 </style>
