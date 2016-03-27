@@ -11,19 +11,44 @@
 ### 结构介绍:
 
 ```bash
-# tree -d -L 2
 .
 ├── controllers  # 控制层
 ├── models # 模型层
-├── sql
+├── sql # 数据库初始化文件
 ├── static  # 静态文件
 │   ├── css
 │   ├── img
 │   └── js
 ├── templates # 视图层
 │   └── admin # 后台的模板
-└── utils
+└── utils  # 工具函数
 ```
+
+### 运行:
+
+- 安装python3,MySQL,Redis
+
+    - ArchLinux: sudo pacman -S python mariadb redis
+    - Debian/Ubuntu: sudo apt-get install python3 mysql-server redis-server
+
+- 安装依赖的包
+
+```bash
+$ sudo pip3 install sqlalchemy tornado mysqlclient redis
+$ mysql -u root < sql/create_db.sql
+$ python3 init_test.py
+$ ./start.sh  # 这是debug模式
+```
+
+### 文档
+
+首先请安装 ``apidocjs``:
+
+```bash
+npm install apidoc -g
+```
+
+启动服务器 ``./start.sh``, 然后访问目标地址的 ``/static/api/index.html`` 读取文档，如 ``http://192.168.80.130:8888/static/api/index.html``
 
 ### Front End
 
@@ -87,36 +112,3 @@ $ npm run dev
   - Easy [mock injection](http://vuejs.github.io/vue-loader/workflow/testing-with-mocks.html).
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-### API运行方式:
-
-- 安装python3,MySQL,Redis
-
-    - ArchLinux: sudo pacman -S python mariadb redis
-    - Debian/Ubuntu: sudo apt-get install python3 mysql-server redis-server
-
-- 安装依赖的包
-
-```bash
-sudo pip3 install sqlalchemy tornado mysqlclient redis
-```
-
-- 运行
-
-```bash
-$ cd <source code path>
-$ mysql -u root < sql/create_db.sql
-$ python3 init_test.py
-$ ./start.sh  # 这是debug模式
-```
-
-### 文档
-
-首先请安装 ``apidocjs``:
-
-```bash
-npm install apidoc -g
-```
-
-然后访问目标地址的 ``/static/api/index.html`` 读取文档，如 ``http://192.168.80.130:8888/static/api/index.html``
