@@ -111,101 +111,12 @@ $ python3 init_test.py
 $ ./start.sh  # 这是debug模式
 ```
 
-## API
-
-### 通用
-
 ### 文档
 
-### 文件操作
+首先请安装 ``apidocjs``:
 
-
-- `/upload` 上传文件到 `static/img` 下(POST):
-
-    > 详见 `file_upload.html`
-
-### 食品
-
-- `/user/([0-9]+)/foods/?` 获取该用户名下的所有食品列表，按创建时间由近及远排序(GET)
-
-```js
-    {
-    "foods": [
-        {
-            "fid": 4,
-            "price": 0,
-            "create_at": "1456317627",
-            "seller": 11,
-            "name": "炸酱面",
-            "image": ""
-        },
-        ...
-    ],
-}
+```bash
+npm install apidoc -g
 ```
 
-- `/user/([0-9]+)/foods/?` 新建食品，该API要求所给uid存在且等级为1(POST):
-
-  - name：食品名，必填
-  - image：图片路径，选填，默认为""
-  - price：价格，选填，默认为0.0
-
-- `/user/([0-9]+)/foods/?` 修改食品(PUT):
-
-  - fid 食品id 必填
-  - image,name,seller,price 选填
-
-- `/user/([0-9]+)/foods/?` 删除食品(DELETE):
-
-  - fid 必填
-
-### 交易
-
-
-- `/user/([0-9]+)/deals/?` 获取该用户所达成的所有交易(GET)
-
-```js
-{
-    "deals": [
-        {
-        "phone": "10086",
-        "seller": {
-            "addresses": [],
-            "register_at": "1456317626",
-            "name": "99999",
-            "phone": "99999",
-            "avatar": ""
-        },
-        "buyer": {
-            "addresses": [],
-            "register_at": "1456317626",
-            "name": "99999",
-            "phone": "99999",
-            "avatar": ""
-        },
-        "food": {
-            "fid": 5,
-            "price": 1.11,
-            "create_at": "1456317627",
-            "seller": 11,
-            "name": "好吃的",
-            "image": ""
-        },
-        "sell_at": "1456317627",
-        "address": "USA",
-        "did": 10
-        }
-    ],
-}
-```
-
-- `/user/([0-9]+)/deals/?` 提交新的订单(POST):
-
-  - seller 卖家, 必填
-  - fid 商品id，必填
-  - address 配送地址，必填
-  - phone 手机号码，必填
-
-- `/user/([0-9]+)/deals/?` 删除订单(DELETE):
-
-  - did 订单id
+然后访问目标地址的 ``/static/api/index.html`` 读取文档，如 ``http://192.168.80.130:8888/static/api/index.html``

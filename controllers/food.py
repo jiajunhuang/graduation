@@ -24,6 +24,21 @@ class FoodHandler(BaseHandler):
         @apiSuccess {JSON} seller 用户信息, 见获取用户信息API
         @apiSuccess {String} create_at 创建时间
         @apiSuccess {Number} price 食品价格
+
+        @apiSuccessExample {json} Success Response:
+        {
+            "foods": [
+                {
+                    "fid": 4,
+                    "price": 0,
+                    "create_at": "1456317627",
+                    "seller": 11,
+                    "name": "炸酱面",
+                    "image": ""
+                },
+                ...
+            ],
+        }
         """
         uid = int(uid)
 

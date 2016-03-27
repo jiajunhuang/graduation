@@ -23,6 +23,39 @@ class DealHandler(BaseHandler):
         @apiSuccess {String} phone 号码
         @apiSuccess {String} sell_at 销售时间
         @apiSuccess {JSON} food 食品信息
+        @apiSuccessExample {json} Success Response:
+        {
+            "deals": [
+                {
+                "phone": "10086",
+                "seller": {
+                    "addresses": [],
+                    "register_at": "1456317626",
+                    "name": "99999",
+                    "phone": "99999",
+                    "avatar": ""
+                },
+                "buyer": {
+                    "addresses": [],
+                    "register_at": "1456317626",
+                    "name": "99999",
+                    "phone": "99999",
+                    "avatar": ""
+                },
+                "food": {
+                    "fid": 5,
+                    "price": 1.11,
+                    "create_at": "1456317627",
+                    "seller": 11,
+                    "name": "好吃的",
+                    "image": ""
+                },
+                "sell_at": "1456317627",
+                "address": "USA",
+                "did": 10
+                }
+            ],
+        }
         """
         uid = int(uid)
         deals = Deal.get_deals_by_uid(self.orm_session, uid)
