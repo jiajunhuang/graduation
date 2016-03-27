@@ -137,11 +137,12 @@ div.fixed-navbar {
     margin-left: 35px;
     background-color: #E6E6E6;
     overflow: hidden;
-    transition: all 5.5s ease-out-in;
+    transition: all 0.1s ease-in;
     &.show {
       width: 295px;
     }
     div.title {
+      width: 295px;
       background: #fff;
       font-size: 16px;
       color: #999;
