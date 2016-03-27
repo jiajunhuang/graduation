@@ -11,6 +11,11 @@ class FileHandler(BaseHandler):
         self.render("file_upload.html")
 
     def post(self):
+        """
+        @apiDescription 文件上传, 请使用网页按钮
+        @api {post} /upload/? 文件上传
+        @apiGroup file
+        """
         fileinfo = self.request.files['filearg'][0]
         fname = fileinfo['filename']
         extn = os.path.splitext(fname)[1]

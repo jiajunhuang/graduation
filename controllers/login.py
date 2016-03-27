@@ -17,8 +17,6 @@ class LoginHandler(BaseHandler):
         @apiParam {Number} phone 手机号
         @apiParam {String} passwd 密码
 
-        @apiSuccess {json} JSON 登陆成功
-
         @apiError UserNotExists 用户不存在
         @apiError BadPassword 密码错误
         """
@@ -50,8 +48,6 @@ class LogoutHandler(BaseHandler):
         @apiDescription 用户登出
         @api {get} /logout/? 登出
         @apiGroup login
-
-        @apiSuccess {json} JSON 登陆成功
 
         @apiError UserNotLogin 用户未登录
         @apiError UserNotExists 用户不存在

@@ -8,7 +8,23 @@ from utils.check import require_user_level, require_login
 
 class FoodHandler(BaseHandler):
     def get(self, uid):
-        """获取uid所提供的食品"""
+        """
+        @apiDescription 获取uid所提供的食品
+        @api {get} /user/([0-9]+)/foods/? 获取某uid提供的食品
+        @apiGroup food
+
+        @apiParam {Number} uid 用户uid
+
+        @apiPermission user
+
+        @apiSuccess {Array} foods 某uid所提供的食品信息，格式如下:
+        @apiSuccess {Number} fid 食品id
+        @apiSuccess {String} image 图片路径
+        @apiSuccess {String} name 食品名称
+        @apiSuccess {JSON} seller 用户信息, 见获取用户信息API
+        @apiSuccess {String} create_at 创建时间
+        @apiSuccess {Number} price 食品价格
+        """
         uid = int(uid)
 
         foods = list(map(self._get_food_info, Food.get_food_by_seller(self.orm_session, uid)))
@@ -20,6 +36,19 @@ class FoodHandler(BaseHandler):
     @require_user_level(level=1)
     @require_login
     def post(self, uid):
+        """
+        @apiDescription 创建食品
+        @api {post} /user/([0-9]+)/foods/? 创建食品
+        @apiGroup food
+
+        @apiParam {String} image 食品图片
+        @apiParam {String} name 食品名称
+        @apiParam {Number} price 食品价格
+
+        @apiPermission seller
+
+        @apiSuccess {Number} fid 食品id
+        """
         image = self.get_argument("image", "")
         name = self.get_argument("name")
         price = float(self.get_argument("price", 0))
@@ -43,6 +72,15 @@ class FoodHandler(BaseHandler):
     @require_user_level(level=1)
     @require_login
     def delete(self, uid):
+        """
+        @apiDescription 删除食品
+        @api {delete} /user/([0-9]+)/foods/? 删除
+        @apiGroup food
+
+        @apiParam {Number} fid 食品id
+
+        @apiPermission seller
+        """
         uid = int(uid)
         user = User.get_instance_by_id(self.orm_session, uid)
         fid = int(self.get_argument("fid"))
@@ -59,6 +97,19 @@ class FoodHandler(BaseHandler):
     @require_user_level(level=1)
     @require_login
     def put(self, uid):
+        """
+        @apiDescription 修改食品
+        @api {put} /user/([0-9]+)/foods/? 修改
+        @apiGroup food
+
+        @apiParam {Number} fid 食品id
+        @apiParam {String} [image] 照片地址
+        @apiParam {String} [name] 食品名称
+        @apiParam {Number} [seller] 卖家
+        @apiParam {Number} [price] 价格
+
+        @apiPermission seller
+        """
         fid = int(self.get_argument("fid"))
         food = Food.get_instance_by_id(self.orm_session, fid)
 
