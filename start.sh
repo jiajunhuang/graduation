@@ -1,3 +1,5 @@
 #!/bin/bash
 
-python run.py --debug=True
+apidoc -i controllers/ -o static/api/
+
+python3 run.py --debug=True

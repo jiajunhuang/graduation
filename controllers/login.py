@@ -9,6 +9,17 @@ class LoginHandler(BaseHandler):
         self.render("login.html")
 
     def post(self):
+        """
+        @apiDescription 用户登录
+        @api {post} /login/? 登录
+        @apiGroup login
+
+        @apiParam {Number} phone 手机号
+        @apiParam {String} passwd 密码
+
+        @apiError UserNotExists 用户不存在
+        @apiError BadPassword 密码错误
+        """
         phone = self.get_argument("phone")
         passwd = self.get_argument("passwd")
 
@@ -33,6 +44,14 @@ class LoginHandler(BaseHandler):
 
 class LogoutHandler(BaseHandler):
     def get(self):
+        """
+        @apiDescription 用户登出
+        @api {get} /logout/? 登出
+        @apiGroup login
+
+        @apiError UserNotLogin 用户未登录
+        @apiError UserNotExists 用户不存在
+        """
         _uid = self.get_current_user()
         if not _uid:
             self.write(dict(
