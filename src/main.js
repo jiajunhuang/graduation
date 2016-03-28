@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import IndexView from './components/IndexView.vue'
-import ShopView from './components/ShopView.vue'
-import UserView from './components/UserView.vue'
+import IndexView from './views/IndexView.vue'
+import ShopView from './views/ShopView.vue'
+// import UserView from './views/UserView.vue'
 import App from './App'
 
 Vue.use(Router)
@@ -14,10 +14,7 @@ router.map({
   '/index': {
     component: IndexView
   },
-  '/user/': {
-    component: UserView
-  },
-  '/shop/:id': {
+  '/shop/': {
     component: ShopView
   }
 })

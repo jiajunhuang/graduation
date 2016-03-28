@@ -6,12 +6,13 @@
 <script>
 
 import TopHeader from './components/Header.vue'
-import IndexView from './components/IndexView.vue'
+import IndexView from './views/IndexView.vue'
+import ShopView from './views/ShopView.vue'
 
 export default {
   name: 'App',
   components: [
-    TopHeader, IndexView
+    TopHeader, IndexView, ShopView
   ]
 }
 </script>
@@ -21,6 +22,7 @@ export default {
 
 body {
   height: 5000px;
+  background-color: #f7f7f7;
 }
 
 </style>
