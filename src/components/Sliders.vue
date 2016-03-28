@@ -8,6 +8,7 @@
 .sliders {
   width: 1000px;
   margin: 20px auto;
+  line-height: 0px;
   img {
     width: 100%;
   }
