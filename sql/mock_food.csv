@@ -1,0 +1,1001 @@
+id,image,name,seller,create_at,price
+1,http://dummyimage.com/182x219.gif/5fa2dd/ffffff,L OCCITANE IMMORTELLE PRECIOUS PROTECTION BROAD SPECTRUM SPF 20 SUNSCREEN,22,2015-07-09 08:35:12,14.9
+2,http://dummyimage.com/247x107.gif/5fa2dd/ffffff,healthy accents ibuprofen pm,2,2015-07-03 15:24:10,6.66
+3,http://dummyimage.com/160x181.gif/ff4444/ffffff,LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE,24,2015-11-14 14:02:34,15.97
+4,http://dummyimage.com/200x224.jpg/ff4444/ffffff,CONDITION AND ENHANCE HEALTHY SKIN PROTECTION,28,2015-09-22 01:01:20,16.81
+5,http://dummyimage.com/249x201.jpg/dddddd/000000,Methocarbamol,37,2015-05-09 11:15:42,14.31
+6,http://dummyimage.com/240x143.gif/cc0000/ffffff,Mesna,13,2016-02-19 20:52:38,3.48
+7,http://dummyimage.com/155x136.gif/ff4444/ffffff,Doxazosin,23,2015-07-12 03:19:15,14.67
+8,http://dummyimage.com/183x124.gif/dddddd/000000,Mineral Wear Talc-Free Airbrushing Loose Powder,11,2015-06-22 02:24:54,16.61
+9,http://dummyimage.com/209x196.gif/5fa2dd/ffffff,ALAVERT ALLERGY,36,2015-04-13 16:01:23,19.41
+10,http://dummyimage.com/103x199.jpg/ff4444/ffffff,Rite Aid,12,2015-12-20 02:10:23,5.25
+11,http://dummyimage.com/183x129.gif/5fa2dd/ffffff,Icy Hot Back and Large Areas,50,2016-01-07 15:54:17,2.65
+12,http://dummyimage.com/183x212.jpg/cc0000/ffffff,Androbalance,8,2015-11-29 01:41:03,4.94
+13,http://dummyimage.com/155x198.png/dddddd/000000,GBGF,24,2015-10-27 17:42:35,6.68
+14,http://dummyimage.com/186x155.jpg/ff4444/ffffff,Baclofen,28,2015-05-03 15:53:40,7.38
+15,http://dummyimage.com/186x215.png/ff4444/ffffff,Sterile Diluent for Allergenic Extract,41,2015-06-08 02:14:19,2.05
+16,http://dummyimage.com/175x196.gif/dddddd/000000,Hydromorphone Hydrochloride,47,2016-01-16 22:03:38,10.79
+17,http://dummyimage.com/159x223.png/5fa2dd/ffffff,SELEGILINE HYDROCHLORIDE,27,2015-05-19 05:01:40,14.73
+18,http://dummyimage.com/173x167.gif/ff4444/ffffff,Actoplus Met,45,2015-05-08 11:41:57,16.91
+19,http://dummyimage.com/197x225.gif/dddddd/000000,Ondansetron,35,2015-07-19 02:45:26,18.54
+20,http://dummyimage.com/145x242.gif/dddddd/000000,Alco Hand Sanitizer,13,2016-01-21 05:42:57,15.41
+21,http://dummyimage.com/193x177.gif/ff4444/ffffff,Arroyo Willow,6,2015-11-28 08:18:56,2.88
+22,http://dummyimage.com/165x143.jpg/5fa2dd/ffffff,Tinted BB,30,2016-01-22 22:43:24,3.62
+23,http://dummyimage.com/112x216.jpg/ff4444/ffffff,Glimepiride,24,2015-10-26 01:10:32,19.07
+24,http://dummyimage.com/108x157.jpg/ff4444/ffffff,Carbatrol,3,2015-07-08 10:50:36,10.04
+25,http://dummyimage.com/209x159.gif/5fa2dd/ffffff,amlodipine besylate,1,2015-11-09 07:03:04,1.85
+26,http://dummyimage.com/161x175.jpg/ff4444/ffffff,Oxycodone and Acetaminophen,1,2016-01-14 16:42:52,9.5
+27,http://dummyimage.com/169x163.jpg/cc0000/ffffff,Nizatidine,45,2016-03-01 00:14:46,18.02
+28,http://dummyimage.com/142x128.gif/cc0000/ffffff,Leader Allergy,43,2015-05-02 03:58:27,14.55
+29,http://dummyimage.com/237x198.jpg/dddddd/000000,Polytrim,42,2015-08-28 05:46:49,4.35
+30,http://dummyimage.com/201x203.gif/dddddd/000000,Galantamine Hydrobromide,31,2015-04-24 16:47:59,3.39
+31,http://dummyimage.com/183x174.jpg/cc0000/ffffff,Humulin N,34,2015-08-01 17:58:20,18.49
+32,http://dummyimage.com/126x209.jpg/5fa2dd/ffffff,Bethanechol Chloride,15,2015-06-17 04:43:22,2.44
+33,http://dummyimage.com/211x116.jpg/5fa2dd/ffffff,bareMinerals,34,2016-03-02 04:31:10,11.56
+34,http://dummyimage.com/127x161.gif/ff4444/ffffff,Acetaminophen,18,2015-08-06 11:13:06,10.59
+35,http://dummyimage.com/162x164.gif/dddddd/000000,SOLAR SENSE CLEAR ZINC SUNSCREEN FACE and LIPS BROAD SPECTRUM SPF 50,3,2015-11-01 16:03:50,5.82
+36,http://dummyimage.com/193x177.jpg/5fa2dd/ffffff,INDIGESTION,33,2015-06-14 12:57:42,13.27
+37,http://dummyimage.com/191x225.png/cc0000/ffffff,METFORMIN HYDROCHLORIDE,22,2015-05-12 06:22:20,15.93
+38,http://dummyimage.com/137x243.jpg/cc0000/ffffff,Antacid Supreme Cherry,45,2015-12-04 15:37:06,10.61
+39,http://dummyimage.com/234x181.jpg/5fa2dd/ffffff,Non-Aspirin PM,50,2015-11-08 01:45:05,16.57
+40,http://dummyimage.com/191x241.jpg/ff4444/ffffff,Cold-EEZE,27,2016-01-05 16:02:09,1.63
+41,http://dummyimage.com/149x166.png/5fa2dd/ffffff,ondansetron hydrochloride,1,2015-07-11 19:39:54,15.59
+42,http://dummyimage.com/210x167.gif/dddddd/000000,Sentrazolpidem PM-5,20,2015-04-02 09:01:48,5.46
+43,http://dummyimage.com/189x135.png/dddddd/000000,Atenolol,11,2015-10-10 05:15:14,8.85
+44,http://dummyimage.com/115x230.jpg/dddddd/000000,SMITH BROS WILD CHERRY Throat Drops,22,2015-05-01 05:05:33,2.21
+45,http://dummyimage.com/247x164.gif/ff4444/ffffff,Personal Care Ice Cold,48,2015-05-17 02:41:01,6.03
+46,http://dummyimage.com/123x146.png/cc0000/ffffff,Loratadine,15,2015-09-25 05:41:05,8.88
+47,http://dummyimage.com/206x207.png/cc0000/ffffff,Oxcarbazepine,30,2016-03-20 16:54:46,15.79
+48,http://dummyimage.com/124x128.jpg/dddddd/000000,Lidocaine HCl - Hydrocortisone Acetate,36,2016-02-23 21:27:29,1.62
+49,http://dummyimage.com/232x250.jpg/cc0000/ffffff,Hydrocodone Bitartrate and Acetaminophen,29,2015-12-30 11:23:42,12.61
+50,http://dummyimage.com/148x193.jpg/cc0000/ffffff,DawnMist Antiperspirant and Deodorant,3,2015-07-04 00:12:32,3.14
+51,http://dummyimage.com/126x154.gif/5fa2dd/ffffff,BABOR HSR Glamour Lifting,31,2015-07-06 22:29:12,11.46
+52,http://dummyimage.com/191x188.png/cc0000/ffffff,"Dextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate, and amphetamine sulfate",27,2015-10-24 14:31:44,1.18
+53,http://dummyimage.com/204x157.png/cc0000/ffffff,CLARINS Broad Spectrum SPF 15 Sunscreen Extra-Firming Foundation Tint 108,38,2015-11-24 23:23:33,8.83
+54,http://dummyimage.com/164x182.gif/ff4444/ffffff,Haddock,22,2015-10-27 22:49:30,5.71
+55,http://dummyimage.com/127x213.gif/dddddd/000000,Rabbitbush,25,2015-08-28 11:04:01,11.1
+56,http://dummyimage.com/125x113.gif/ff4444/ffffff,DHC Body Sunscreen Milk,45,2015-09-17 05:03:49,13.13
+57,http://dummyimage.com/246x210.jpg/dddddd/000000,RheumatismHP,12,2016-02-08 11:47:03,10.81
+58,http://dummyimage.com/120x161.jpg/ff4444/ffffff,elave Age Delay Daily Lip Defence,3,2016-03-21 08:07:26,16.79
+59,http://dummyimage.com/225x122.jpg/5fa2dd/ffffff,Cold Sore Treatment,35,2015-10-22 21:18:30,16.44
+60,http://dummyimage.com/185x104.gif/ff4444/ffffff,Back and Neck Rescue,30,2016-03-27 21:09:50,18.33
+61,http://dummyimage.com/174x107.png/cc0000/ffffff,STANDARDIZED SHORT RAGWEED POLLEN,25,2015-10-03 13:10:26,16.13
+62,http://dummyimage.com/209x104.gif/5fa2dd/ffffff,Dyspepsia,13,2015-10-04 06:04:21,13.6
+63,http://dummyimage.com/168x167.jpg/cc0000/ffffff,Doxycycline,48,2015-05-07 13:09:06,15.8
+64,http://dummyimage.com/185x242.jpg/5fa2dd/ffffff,ORIGINAL POWER WHITENING AND LINELESS AMPOULE,43,2015-12-21 10:50:38,11.72
+65,http://dummyimage.com/181x250.png/dddddd/000000,Walgreens Daytime Nighttime Wal-Flu Severe Cold and Cough Kit,26,2015-10-23 03:39:19,8.48
+66,http://dummyimage.com/201x138.jpg/cc0000/ffffff,Allergy Relief,36,2015-04-17 08:21:27,16.81
+67,http://dummyimage.com/173x203.png/ff4444/ffffff,Ibuprofen,50,2015-08-13 04:01:14,6.8
+68,http://dummyimage.com/114x112.png/ff4444/ffffff,LivRelief,6,2015-07-23 23:27:47,11.76
+69,http://dummyimage.com/182x162.png/cc0000/ffffff,fast mucus relief,30,2015-04-23 21:21:34,3.02
+70,http://dummyimage.com/103x175.gif/dddddd/000000,Hydrocodone Bitartrate And Acetaminophen,42,2015-07-14 00:33:55,17.63
+71,http://dummyimage.com/242x183.jpg/cc0000/ffffff,Amlodipine Besylate,18,2016-01-31 11:32:17,12.99
+72,http://dummyimage.com/247x119.png/ff4444/ffffff,DiorSkin Nude 023 Peach,5,2016-01-10 01:56:39,6.09
+73,http://dummyimage.com/124x187.png/ff4444/ffffff,Prednisolone Sodium Phosphate,43,2016-02-12 09:53:40,4.58
+74,http://dummyimage.com/248x104.png/5fa2dd/ffffff,NEOMYCIN and POLYMYXIN B SULFATES and HYDROCORTISONE,3,2015-04-01 06:34:10,10.68
+75,http://dummyimage.com/221x183.jpg/cc0000/ffffff,Burr Oak,38,2016-02-25 22:38:02,9.55
+76,http://dummyimage.com/160x168.jpg/cc0000/ffffff,erythromycin,17,2015-06-21 04:09:35,7.69
+77,http://dummyimage.com/112x177.jpg/cc0000/ffffff,Rite Aid day time severe cold and cough,45,2016-03-04 02:02:04,9.44
+78,http://dummyimage.com/126x208.gif/cc0000/ffffff,Ferrum silicicum Urtica,6,2015-04-17 19:28:22,8.29
+79,http://dummyimage.com/121x244.png/cc0000/ffffff,Extra Strength Headache Relief,18,2016-03-26 05:17:51,14.05
+80,http://dummyimage.com/158x168.jpg/dddddd/000000,DAYWEAR,34,2016-01-04 11:50:06,11.13
+81,http://dummyimage.com/231x192.jpg/5fa2dd/ffffff,Lovastatin,50,2015-06-25 19:54:12,2.18
+82,http://dummyimage.com/197x208.jpg/cc0000/ffffff,Meclizine Hydrochloride,46,2016-02-04 23:49:31,18.03
+83,http://dummyimage.com/191x223.png/5fa2dd/ffffff,Allergy,6,2016-02-06 04:25:29,17.13
+84,http://dummyimage.com/180x110.gif/5fa2dd/ffffff,SMART SENSE,41,2016-03-19 07:56:47,13.58
+85,http://dummyimage.com/172x136.jpg/ff4444/ffffff,Hand Foot Mouth,41,2016-01-11 19:35:11,14.63
+86,http://dummyimage.com/114x240.jpg/5fa2dd/ffffff,The Fresh Market Hand Sanitizer Alcohol Free,25,2015-10-23 05:28:30,10.69
+87,http://dummyimage.com/224x127.jpg/5fa2dd/ffffff,Ranitidine Hydrochloride,37,2016-03-28 17:32:53,4.69
+88,http://dummyimage.com/207x102.gif/cc0000/ffffff,loperamide hydrochloride,10,2015-06-21 20:40:05,15.33
+89,http://dummyimage.com/223x191.png/ff4444/ffffff,Anti-Bacterial Hand,36,2015-08-21 18:28:40,18.35
+90,http://dummyimage.com/162x150.gif/cc0000/ffffff,Diarrhea Dyspepsia,39,2015-06-16 16:11:08,14.01
+91,http://dummyimage.com/197x111.png/cc0000/ffffff,Golden Sunshine Far Infrared HOT Herbal,9,2015-07-01 20:10:03,13.69
+92,http://dummyimage.com/150x200.jpg/cc0000/ffffff,"carbidopa, levodopa and entacapone",12,2015-11-13 03:23:58,9.66
+93,http://dummyimage.com/248x149.png/cc0000/ffffff,Soft N Sure Foamed Antiseptic Handrub,6,2015-11-08 08:41:11,16.39
+94,http://dummyimage.com/138x203.gif/5fa2dd/ffffff,Head and Shoulders,34,2015-06-19 15:55:41,17.82
+95,http://dummyimage.com/163x232.gif/dddddd/000000,Dexamethasone Sodium Phosphate,28,2015-09-04 11:05:09,9.08
+96,http://dummyimage.com/226x101.png/cc0000/ffffff,Kadian,43,2015-09-26 14:32:06,12.69
+97,http://dummyimage.com/109x184.jpg/5fa2dd/ffffff,BANANA,28,2016-03-22 16:56:34,5.44
+98,http://dummyimage.com/171x216.jpg/ff4444/ffffff,Treatment Set TS339813,13,2015-09-15 00:18:26,3.89
+99,http://dummyimage.com/240x168.png/ff4444/ffffff,Hydrogen Peroxide,14,2015-10-23 02:43:32,10.79
+100,http://dummyimage.com/228x231.jpg/ff4444/ffffff,Defensolito Children Syrup,12,2016-01-20 18:46:18,4.36
+101,http://dummyimage.com/200x194.png/cc0000/ffffff,No7 Stay Perfect Foundation Sunscreen SPF 15 Vanilla,3,2015-05-09 11:44:15,3.81
+102,http://dummyimage.com/125x153.jpg/ff4444/ffffff,Gemfibrozil,14,2016-03-25 03:36:01,6.92
+103,http://dummyimage.com/187x149.jpg/cc0000/ffffff,Famotidine,36,2016-03-10 20:55:31,8.32
+104,http://dummyimage.com/142x206.jpg/cc0000/ffffff,"Standardized Grass Pollen, Sweet Vernal Grass",32,2015-08-28 22:17:25,15.16
+105,http://dummyimage.com/210x230.png/5fa2dd/ffffff,fluvoxamine maleate,37,2015-05-16 02:23:55,17.36
+106,http://dummyimage.com/156x241.png/ff4444/ffffff,The Cover Classic Foundation,46,2015-09-18 17:17:09,17.8
+107,http://dummyimage.com/233x219.gif/dddddd/000000,Acetaminophen,44,2015-07-12 14:33:42,3.18
+108,http://dummyimage.com/127x102.jpg/dddddd/000000,Quetiapine fumarate,21,2015-06-23 04:18:43,16.43
+109,http://dummyimage.com/178x158.jpg/cc0000/ffffff,LORTUSS,28,2016-01-07 09:13:55,12.11
+110,http://dummyimage.com/186x138.jpg/ff4444/ffffff,PASPALUM NOTATUM POLLEN,39,2015-10-10 18:42:51,5.06
+111,http://dummyimage.com/206x236.gif/cc0000/ffffff,Calcium Gluconate,31,2015-04-26 00:29:09,17.16
+112,http://dummyimage.com/135x101.jpg/dddddd/000000,HADDOCK,43,2015-10-15 19:42:29,2.0
+113,http://dummyimage.com/116x141.jpg/cc0000/ffffff,Sei Bella Age-Defying Liquid Foundation,43,2016-01-10 19:55:20,7.82
+114,http://dummyimage.com/217x224.gif/cc0000/ffffff,Aurum Stibium Special Order,44,2015-06-15 13:37:24,2.08
+115,http://dummyimage.com/247x159.gif/ff4444/ffffff,Q Tussin DM,36,2015-06-15 01:54:24,11.85
+116,http://dummyimage.com/200x159.jpg/ff4444/ffffff,Pedia Relief,37,2015-11-29 06:30:00,10.71
+117,http://dummyimage.com/173x215.png/ff4444/ffffff,Flu Relief Therapy Night Time,46,2015-07-16 22:24:04,11.67
+118,http://dummyimage.com/192x103.gif/ff4444/ffffff,Sulindac,50,2015-09-26 11:58:21,1.35
+119,http://dummyimage.com/235x101.png/dddddd/000000,Oxymorphone Hydrochloride,30,2016-03-18 19:08:46,3.38
+120,http://dummyimage.com/227x139.gif/dddddd/000000,Entereg,44,2015-07-27 13:15:35,8.89
+121,http://dummyimage.com/221x147.jpg/5fa2dd/ffffff,Special Clearing Booster,19,2015-11-01 14:31:40,14.28
+122,http://dummyimage.com/221x163.png/5fa2dd/ffffff,Medicated Heat,46,2016-01-10 21:05:47,1.62
+123,http://dummyimage.com/119x175.gif/5fa2dd/ffffff,Amlodipine Besylate,28,2015-10-11 23:36:32,4.2
+124,http://dummyimage.com/114x246.png/5fa2dd/ffffff,Type 3 Sinus Max,47,2015-08-31 00:55:28,6.15
+125,http://dummyimage.com/186x175.jpg/cc0000/ffffff,Midazolam Hydrochloride,50,2015-05-29 19:22:39,16.61
+126,http://dummyimage.com/168x116.png/dddddd/000000,"Standardized Grass Pollen, Bermuda Grass",6,2015-10-12 22:11:17,10.33
+127,http://dummyimage.com/116x215.jpg/5fa2dd/ffffff,Mexiletine Hydrochloride,47,2015-07-12 21:30:28,1.68
+128,http://dummyimage.com/179x208.gif/cc0000/ffffff,GRAVI-T,6,2015-11-16 13:10:06,13.96
+129,http://dummyimage.com/142x140.gif/5fa2dd/ffffff,BARACLUDE,19,2015-04-03 08:59:51,3.64
+130,http://dummyimage.com/122x148.jpg/cc0000/ffffff,Phenylephrine Hydrochloride,32,2015-07-13 04:09:21,12.6
+131,http://dummyimage.com/173x170.png/ff4444/ffffff,TC EnrichedFoam,49,2015-11-26 19:09:21,9.92
+132,http://dummyimage.com/194x194.gif/dddddd/000000,Nevirapine,3,2016-03-23 18:19:14,1.45
+133,http://dummyimage.com/186x178.png/dddddd/000000,Amoxicillin and Clavulanate Potassium,11,2015-09-04 11:20:55,19.67
+134,http://dummyimage.com/212x121.jpg/dddddd/000000,allergy and cold relief,50,2015-09-12 08:59:29,3.85
+135,http://dummyimage.com/243x139.png/dddddd/000000,Good Sense Allergy Multi Symptom,44,2015-08-18 13:34:22,19.28
+136,http://dummyimage.com/243x219.png/ff4444/ffffff,"",32,2015-11-01 06:03:11,13.14
+137,http://dummyimage.com/152x174.png/dddddd/000000,METHOTREXATE,29,2016-02-05 11:58:04,5.37
+138,http://dummyimage.com/215x183.gif/5fa2dd/ffffff,Triamcinolone Acetonide,36,2015-07-19 12:24:03,2.26
+139,http://dummyimage.com/112x114.gif/5fa2dd/ffffff,lamotrigine,43,2015-11-13 20:11:11,11.8
+140,http://dummyimage.com/147x102.gif/dddddd/000000,Glimepiride,7,2015-10-23 14:31:03,9.66
+141,http://dummyimage.com/239x187.gif/dddddd/000000,Menopause,35,2016-03-06 08:02:59,14.63
+142,http://dummyimage.com/116x200.png/cc0000/ffffff,Gentle Laxative,6,2015-12-29 22:12:53,6.52
+143,http://dummyimage.com/230x139.png/dddddd/000000,Appbutamone-D,42,2015-11-27 23:53:39,17.53
+144,http://dummyimage.com/106x134.jpg/dddddd/000000,Diazepam,6,2015-10-21 21:21:59,8.32
+145,http://dummyimage.com/235x117.jpg/dddddd/000000,Phoma glomerata,8,2016-03-15 18:07:36,5.05
+146,http://dummyimage.com/224x106.png/ff4444/ffffff,Propranolol Hydrochloride,48,2015-09-30 21:04:20,15.28
+147,http://dummyimage.com/108x154.jpg/dddddd/000000,CYCLOPHOSPHAMIDE,48,2015-05-19 12:32:00,13.13
+148,http://dummyimage.com/223x227.jpg/5fa2dd/ffffff,CONCERTA,29,2015-06-04 19:40:56,9.54
+149,http://dummyimage.com/158x142.gif/ff4444/ffffff,SNAPPY APPLE SCENTED HAND SANITIZER,1,2015-06-29 02:58:31,15.67
+150,http://dummyimage.com/120x218.png/dddddd/000000,Nifedipine,17,2015-04-19 02:52:14,2.57
+151,http://dummyimage.com/201x103.jpg/ff4444/ffffff,Advanced Firming and Anti Wrinkle,1,2015-09-09 12:48:13,12.86
+152,http://dummyimage.com/236x130.jpg/dddddd/000000,LEVOTHYROXINE SODIUM,19,2015-07-24 22:43:38,15.63
+153,http://dummyimage.com/129x213.png/5fa2dd/ffffff,LOXAPINE SUCCINATE,4,2015-12-06 09:11:58,1.22
+154,http://dummyimage.com/130x176.gif/ff4444/ffffff,SENSAI CONCEALER (BRUSH TYPE),33,2015-11-11 13:56:54,4.57
+155,http://dummyimage.com/231x116.gif/dddddd/000000,Pseudoephedrine Hydrochloride,41,2015-11-15 01:40:07,19.12
+156,http://dummyimage.com/134x157.gif/dddddd/000000,smart sense cold and allergy,18,2016-02-20 21:09:39,11.19
+157,http://dummyimage.com/137x233.jpg/cc0000/ffffff,montelukast sodium,6,2015-09-10 06:29:25,11.11
+158,http://dummyimage.com/200x162.jpg/cc0000/ffffff,expectorant cough,4,2016-02-21 14:49:02,16.65
+159,http://dummyimage.com/237x170.png/5fa2dd/ffffff,Sulfamethoxazole and Trimethoprim,16,2015-11-23 07:43:54,5.99
+160,http://dummyimage.com/128x216.jpg/dddddd/000000,Pioglitazone Hydrochloride and Metformin Hydrochloride,22,2015-04-20 03:49:21,5.82
+161,http://dummyimage.com/174x223.jpg/5fa2dd/ffffff,Stona for Children,7,2015-07-11 23:34:03,9.11
+162,http://dummyimage.com/181x100.jpg/dddddd/000000,"Pollens - Weeds, Giant, Short, Western Ragweed Mix",5,2015-04-14 17:17:00,5.37
+163,http://dummyimage.com/184x237.gif/dddddd/000000,Aveeno Baby Continuous Protection,35,2015-04-12 10:02:00,10.79
+164,http://dummyimage.com/190x168.png/dddddd/000000,Levisticum Quercus,30,2016-01-15 05:47:07,10.77
+165,http://dummyimage.com/193x106.jpg/cc0000/ffffff,Fluocinonide,13,2015-09-18 04:13:40,11.91
+166,http://dummyimage.com/174x243.jpg/5fa2dd/ffffff,Lovastatin,6,2015-12-02 10:20:17,13.1
+167,http://dummyimage.com/196x239.png/dddddd/000000,Levetiracetam,50,2015-10-11 14:13:01,9.78
+168,http://dummyimage.com/204x196.jpg/dddddd/000000,SHISEIDO ADVANCED HYDRO-LIQUID COMPACT (REFILL),5,2015-10-08 01:08:57,4.75
+169,http://dummyimage.com/128x240.gif/ff4444/ffffff,Intervene Makeup SPF 15 Soft Honey,49,2015-03-31 14:35:08,5.64
+170,http://dummyimage.com/110x212.gif/5fa2dd/ffffff,antacid,8,2016-03-09 08:36:09,14.5
+171,http://dummyimage.com/155x105.gif/dddddd/000000,All Day Allergy,36,2015-06-30 18:32:08,4.79
+172,http://dummyimage.com/221x222.jpg/cc0000/ffffff,Clobetasol Propionate,12,2015-06-07 22:16:49,17.16
+173,http://dummyimage.com/228x114.png/dddddd/000000,Vitamins A and D,30,2015-11-13 16:11:56,19.0
+174,http://dummyimage.com/216x239.gif/dddddd/000000,oxandrolone,35,2016-01-26 03:49:49,13.88
+175,http://dummyimage.com/100x210.jpg/5fa2dd/ffffff,Erythromycin Base,22,2015-12-10 11:53:03,19.3
+176,http://dummyimage.com/210x178.jpg/dddddd/000000,Cauliflower,34,2015-08-13 15:07:39,5.7
+177,http://dummyimage.com/224x213.gif/ff4444/ffffff,Anticavity,1,2015-11-16 00:00:50,8.42
+178,http://dummyimage.com/118x107.gif/dddddd/000000,Pain,25,2015-11-19 08:04:55,6.19
+179,http://dummyimage.com/184x153.gif/dddddd/000000,NIFEDIPINE,9,2015-06-01 06:11:49,17.89
+180,http://dummyimage.com/137x235.jpg/5fa2dd/ffffff,SoftSoap Antibacterial with moisturizers Fresh Citrus,23,2016-01-18 07:09:43,15.15
+181,http://dummyimage.com/211x195.jpg/ff4444/ffffff,Allergy Relief,43,2015-11-09 01:18:43,19.0
+182,http://dummyimage.com/207x149.png/cc0000/ffffff,allergy relief,39,2015-12-23 07:50:48,19.02
+183,http://dummyimage.com/136x117.jpg/5fa2dd/ffffff,Ionite APF,6,2016-03-24 17:29:10,2.0
+184,http://dummyimage.com/249x240.jpg/ff4444/ffffff,Protector,47,2015-08-08 07:26:30,19.23
+185,http://dummyimage.com/171x175.png/cc0000/ffffff,Pulmo Mercurius,1,2015-12-11 15:25:10,4.97
+186,http://dummyimage.com/184x162.png/dddddd/000000,Stool Softener,23,2016-01-14 06:49:43,3.04
+187,http://dummyimage.com/199x237.gif/cc0000/ffffff,Feminine Comfort,18,2016-03-14 04:58:10,5.56
+188,http://dummyimage.com/112x223.gif/5fa2dd/ffffff,Diltiazem Hydrochloride,33,2016-01-22 07:22:32,6.81
+189,http://dummyimage.com/171x190.jpg/5fa2dd/ffffff,Citalopram Hydrobromide,16,2015-12-20 01:51:44,18.54
+190,http://dummyimage.com/189x178.gif/ff4444/ffffff,Stool Softener,32,2015-04-09 17:20:51,9.93
+191,http://dummyimage.com/237x198.gif/dddddd/000000,EyS Eye Wash,1,2015-06-24 21:19:34,1.65
+192,http://dummyimage.com/233x180.png/5fa2dd/ffffff,Sorbet APF,5,2015-11-12 18:45:29,19.83
+193,http://dummyimage.com/187x201.jpg/dddddd/000000,SUPER CREAM,14,2015-08-16 14:19:03,9.71
+194,http://dummyimage.com/113x212.jpg/ff4444/ffffff,anti nausea,49,2015-12-06 06:10:04,19.07
+195,http://dummyimage.com/226x199.jpg/dddddd/000000,No7 Beautifully Matte Foundation Sunscreen Broad Spectrum SPF 15 Deeply Beige,32,2015-11-18 06:42:45,5.82
+196,http://dummyimage.com/101x248.png/5fa2dd/ffffff,Atorvastatin Calcium,27,2015-09-13 17:40:36,4.36
+197,http://dummyimage.com/153x176.png/cc0000/ffffff,Benzonatate,18,2015-09-24 09:54:02,10.77
+198,http://dummyimage.com/114x104.gif/dddddd/000000,Targretin,14,2015-05-13 17:18:45,14.2
+199,http://dummyimage.com/183x215.jpg/5fa2dd/ffffff,A.B.H.C. Instant Hand Sanitizer Citrus Scent,44,2016-02-20 22:52:16,14.29
+200,http://dummyimage.com/102x189.jpg/5fa2dd/ffffff,ZIMS ADVANCED ACEMANNAN AND ARNICA,27,2015-11-01 18:01:49,12.95
+201,http://dummyimage.com/112x238.jpg/dddddd/000000,REDNESS SOLUTIONS MAKEUP,15,2015-03-31 17:43:21,18.48
+202,http://dummyimage.com/134x127.jpg/ff4444/ffffff,AMBI,36,2015-12-30 01:47:01,11.13
+203,http://dummyimage.com/108x165.jpg/5fa2dd/ffffff,Carvedilol,4,2015-12-04 01:42:05,12.98
+204,http://dummyimage.com/122x231.jpg/dddddd/000000,Opium tincture deodorized,38,2015-11-09 11:28:55,1.75
+205,http://dummyimage.com/123x217.gif/ff4444/ffffff,Botrytis cinerea,47,2015-09-18 23:25:23,17.13
+206,http://dummyimage.com/163x162.jpg/ff4444/ffffff,Valacyclovir Hydrochloride,49,2015-06-09 13:00:45,6.55
+207,http://dummyimage.com/214x109.gif/cc0000/ffffff,Tramadol Hydrochloride,35,2015-04-26 18:21:13,16.45
+208,http://dummyimage.com/211x121.gif/cc0000/ffffff,Phendimetrazine Tartrate,26,2016-01-21 08:55:39,10.14
+209,http://dummyimage.com/215x123.gif/dddddd/000000,Nystatin,17,2015-05-10 16:13:31,1.15
+210,http://dummyimage.com/207x206.jpg/ff4444/ffffff,Baby Magic Medicated Patty Cake,49,2015-11-21 15:33:37,14.56
+211,http://dummyimage.com/198x121.jpg/cc0000/ffffff,bareMinerals 5-in-1 BB Advanced Performance Eyeshadow Broad Spectrum SPF 15,46,2015-04-01 15:58:25,10.34
+212,http://dummyimage.com/224x212.jpg/ff4444/ffffff,ANTI AGE FACE,5,2015-05-02 21:15:09,5.6
+213,http://dummyimage.com/223x222.png/5fa2dd/ffffff,Levofloxacin,19,2016-03-20 12:24:54,17.38
+214,http://dummyimage.com/192x187.jpg/dddddd/000000,Allergy Relief,16,2015-08-13 07:55:46,5.56
+215,http://dummyimage.com/190x121.gif/5fa2dd/ffffff,DooBony Mosrepel,38,2015-06-14 11:29:04,16.81
+216,http://dummyimage.com/181x170.gif/ff4444/ffffff,Petroleum,35,2015-07-04 17:33:07,1.46
+217,http://dummyimage.com/154x157.jpg/dddddd/000000,Soft Cheat Brome,6,2015-12-11 22:46:19,8.89
+218,http://dummyimage.com/156x213.jpg/5fa2dd/ffffff,Etoposide,48,2015-11-08 22:08:13,2.99
+219,http://dummyimage.com/247x181.jpg/dddddd/000000,ARTEMISIA TRIDENTATA POLLEN,14,2015-06-29 11:07:16,13.03
+220,http://dummyimage.com/168x188.jpg/dddddd/000000,Metoprolol Succinate,39,2015-11-06 17:21:50,16.26
+221,http://dummyimage.com/130x198.jpg/5fa2dd/ffffff,Leader Childrens Pain and Fever,2,2016-01-28 09:00:20,9.14
+222,http://dummyimage.com/106x222.gif/dddddd/000000,Oyster,5,2015-12-30 06:32:20,13.82
+223,http://dummyimage.com/105x227.jpg/dddddd/000000,Secret Clinical,46,2015-05-17 06:43:09,18.6
+224,http://dummyimage.com/139x123.png/ff4444/ffffff,Junior Pain Relief,29,2015-06-25 18:32:03,9.96
+225,http://dummyimage.com/249x201.gif/ff4444/ffffff,Vaseline,23,2015-10-14 19:02:12,6.08
+226,http://dummyimage.com/123x222.gif/5fa2dd/ffffff,Angel Falls Hand Sanitizer,40,2015-11-04 03:11:00,3.95
+227,http://dummyimage.com/248x233.png/ff4444/ffffff,Purmist,37,2015-05-13 09:28:48,6.72
+228,http://dummyimage.com/116x110.png/cc0000/ffffff,Terbutaline Sulfate,37,2016-03-09 23:03:47,19.8
+229,http://dummyimage.com/108x186.jpg/dddddd/000000,Trileptal,47,2016-03-03 13:28:52,2.41
+230,http://dummyimage.com/211x112.gif/dddddd/000000,Rx Act Tussin Chest Congestion,38,2016-01-24 07:30:19,12.87
+231,http://dummyimage.com/124x102.png/5fa2dd/ffffff,Ceramide Lift And Firm Makeup Broad Spectrum Sunscreen SPF 15 Cognac,48,2015-09-25 11:08:15,11.46
+232,http://dummyimage.com/164x101.jpg/5fa2dd/ffffff,Fosinopril Sodium,36,2015-10-28 00:23:59,6.76
+233,http://dummyimage.com/184x201.png/ff4444/ffffff,Non-Drowsy Sinus Congestion and Pain Relief,27,2016-03-07 08:32:54,8.62
+234,http://dummyimage.com/182x114.gif/5fa2dd/ffffff,Clopidogrel,21,2015-08-28 07:21:57,19.48
+235,http://dummyimage.com/140x163.jpg/cc0000/ffffff,Arnica Montana,5,2015-04-21 21:13:29,17.19
+236,http://dummyimage.com/168x142.jpg/cc0000/ffffff,La Prairie Switzerland,15,2015-04-10 14:14:20,8.47
+237,http://dummyimage.com/219x187.gif/dddddd/000000,IBUPROFEN,15,2015-07-01 22:27:02,2.85
+238,http://dummyimage.com/190x140.gif/cc0000/ffffff,SPF 30 Sunscreen,36,2015-07-20 22:28:53,9.77
+239,http://dummyimage.com/190x105.jpg/cc0000/ffffff,Soft Care Antibacterial-Antiseptic Hand,20,2015-06-26 06:03:22,11.97
+240,http://dummyimage.com/225x134.png/dddddd/000000,Coppertone Sport Continuous,8,2016-02-25 20:30:57,14.9
+241,http://dummyimage.com/243x221.jpg/dddddd/000000,CeraVe,4,2016-01-18 18:39:46,11.65
+242,http://dummyimage.com/233x232.png/cc0000/ffffff,Womens Mitchum Advanced Invisible Antiperspirant Deodorant,45,2016-03-24 13:14:07,8.89
+243,http://dummyimage.com/187x150.jpg/5fa2dd/ffffff,FLEBEAUTE COLLAGENIC MAKE UP BASE,40,2015-04-13 13:22:15,19.31
+244,http://dummyimage.com/101x171.png/dddddd/000000,topcare infants pain and fever,38,2016-03-11 13:11:43,12.35
+245,http://dummyimage.com/130x148.gif/cc0000/ffffff,Burkhart,33,2015-10-22 08:46:02,14.01
+246,http://dummyimage.com/189x179.gif/dddddd/000000,Carbamazepine,15,2016-03-09 13:07:57,2.25
+247,http://dummyimage.com/239x167.png/5fa2dd/ffffff,THERABREATH TOOTHPASTE,6,2016-02-26 12:05:38,2.46
+248,http://dummyimage.com/101x239.jpg/cc0000/ffffff,Benztropine Mesylate,20,2015-04-11 14:59:34,10.93
+249,http://dummyimage.com/215x202.gif/5fa2dd/ffffff,Glimepiride,12,2015-04-26 05:32:53,13.07
+250,http://dummyimage.com/218x107.jpg/dddddd/000000,Oxygen,40,2015-08-24 03:13:14,3.39
+251,http://dummyimage.com/186x114.jpg/dddddd/000000,Cocklebur,18,2015-06-09 19:25:31,9.38
+252,http://dummyimage.com/241x138.gif/ff4444/ffffff,Cefuroxime,1,2015-09-20 00:55:51,7.75
+253,http://dummyimage.com/176x222.png/5fa2dd/ffffff,Oxybutynin Chloride,10,2016-02-15 03:03:07,14.13
+254,http://dummyimage.com/144x102.gif/dddddd/000000,Levetiracetam,25,2015-04-09 20:17:24,7.46
+255,http://dummyimage.com/206x151.jpg/5fa2dd/ffffff,Terbinafine Hydrochloride,49,2015-04-04 17:02:21,3.69
+256,http://dummyimage.com/201x239.jpg/dddddd/000000,Awaken Skin Perfector BB Broad Spectrum SPF 15 Sunscreen Medium Dark,31,2016-01-15 06:57:03,11.22
+257,http://dummyimage.com/158x145.png/ff4444/ffffff,Topical 60 Sec Sodium Fluoride,16,2015-12-24 07:36:47,9.38
+258,http://dummyimage.com/136x116.jpg/cc0000/ffffff,Baclofen,16,2015-06-27 10:10:06,1.19
+259,http://dummyimage.com/222x233.png/dddddd/000000,Galantamine,23,2016-01-14 16:09:47,6.81
+260,http://dummyimage.com/182x178.jpg/dddddd/000000,Clotrimazole,5,2015-10-19 15:22:02,7.05
+261,http://dummyimage.com/129x147.png/ff4444/ffffff,Intervene Makeup SPF 15 Soft Wheat,27,2016-03-09 16:59:21,5.13
+262,http://dummyimage.com/227x249.gif/dddddd/000000,Ultra Pure,17,2015-06-02 20:34:27,17.32
+263,http://dummyimage.com/187x140.jpg/5fa2dd/ffffff,Cardene,41,2015-11-06 09:38:19,11.36
+264,http://dummyimage.com/250x125.gif/5fa2dd/ffffff,Old Spice Fresh,31,2015-07-16 19:50:48,11.15
+265,http://dummyimage.com/214x133.png/5fa2dd/ffffff,CY BETTER LIPS BALM Humectante para Labios con color FPS 18,41,2016-03-10 11:37:11,9.61
+266,http://dummyimage.com/176x234.jpg/dddddd/000000,Nizoral,14,2015-05-01 00:13:24,6.11
+267,http://dummyimage.com/111x135.jpg/dddddd/000000,Helium,47,2015-06-03 10:27:05,2.43
+268,http://dummyimage.com/144x230.png/dddddd/000000,Simvastatin,6,2015-06-08 16:30:23,7.83
+269,http://dummyimage.com/188x144.gif/cc0000/ffffff,Quartz 8,8,2015-10-18 04:51:13,1.13
+270,http://dummyimage.com/212x141.jpg/cc0000/ffffff,Cyclobenzaprine Hydrochloride,32,2015-11-03 21:35:27,6.8
+271,http://dummyimage.com/212x237.png/cc0000/ffffff,Childrens Ibuprofen,28,2015-07-30 14:46:08,3.14
+272,http://dummyimage.com/230x148.jpg/cc0000/ffffff,Clonidine Hydrochloride,27,2015-05-30 20:34:24,10.92
+273,http://dummyimage.com/221x149.gif/dddddd/000000,Eastern Sycamore Pollen,30,2016-03-02 02:50:20,13.89
+274,http://dummyimage.com/233x112.jpg/dddddd/000000,CLOMIPRAMINE HYDROCHLORIDE,39,2016-02-14 05:57:16,19.04
+275,http://dummyimage.com/123x234.jpg/ff4444/ffffff,Thiothixene,26,2016-03-18 07:50:33,17.23
+276,http://dummyimage.com/183x223.jpg/cc0000/ffffff,Dr. Jart DIS-A-PORE Beauty Balm,14,2015-10-16 01:48:22,13.44
+277,http://dummyimage.com/158x189.png/ff4444/ffffff,Fluorouracil,29,2015-04-15 19:34:13,7.5
+278,http://dummyimage.com/199x135.jpg/dddddd/000000,Promethazine VC With Codeine,37,2015-10-06 06:21:01,4.47
+279,http://dummyimage.com/127x146.jpg/ff4444/ffffff,Gas-X,24,2015-07-28 23:23:26,8.72
+280,http://dummyimage.com/180x162.png/cc0000/ffffff,EMBEDA,11,2015-10-20 12:08:05,10.73
+281,http://dummyimage.com/192x135.png/ff4444/ffffff,Clonazepam,4,2016-02-25 06:03:47,10.81
+282,http://dummyimage.com/138x238.jpg/ff4444/ffffff,SHISEIDO BENEFIANCE NUTRIPERFECT DAY,37,2015-07-15 07:02:56,12.19
+283,http://dummyimage.com/146x101.jpg/dddddd/000000,Diclofenac Potassium,16,2015-11-26 01:03:46,9.38
+284,http://dummyimage.com/176x209.jpg/dddddd/000000,Topcare Aspirin,36,2015-04-05 09:06:50,19.12
+285,http://dummyimage.com/118x235.jpg/5fa2dd/ffffff,Daytime Multi-Symptom Cold Relief,18,2015-09-09 13:55:31,6.52
+286,http://dummyimage.com/101x217.gif/dddddd/000000,Pink Eye Remedy,39,2015-12-03 17:40:03,5.69
+287,http://dummyimage.com/104x154.jpg/5fa2dd/ffffff,VIMIZIM,5,2016-03-01 17:40:49,1.77
+288,http://dummyimage.com/179x168.gif/5fa2dd/ffffff,Hydrocodone Bitartrate And Acetaminophen,38,2015-05-29 08:07:41,15.77
+289,http://dummyimage.com/198x199.png/dddddd/000000,Next Choice,15,2015-12-19 03:59:09,9.01
+290,http://dummyimage.com/225x224.gif/cc0000/ffffff,Muscle,41,2015-12-17 17:32:59,16.4
+291,http://dummyimage.com/117x172.gif/cc0000/ffffff,Tinactin,2,2015-08-24 01:09:41,3.0
+292,http://dummyimage.com/201x115.jpg/cc0000/ffffff,Wheat Smut,14,2015-12-18 11:45:49,3.3
+293,http://dummyimage.com/240x230.jpg/dddddd/000000,Zoloft,45,2016-02-02 01:35:24,10.7
+294,http://dummyimage.com/197x222.png/5fa2dd/ffffff,Fluconazole,41,2015-05-20 18:43:18,5.76
+295,http://dummyimage.com/107x234.png/5fa2dd/ffffff,XtraCare Skin Relief Oatmeal Daily Moisturizing,27,2016-01-08 12:50:12,1.75
+296,http://dummyimage.com/246x124.png/dddddd/000000,Metoprolol Tartrate,27,2015-04-24 07:29:48,11.03
+297,http://dummyimage.com/184x163.jpg/5fa2dd/ffffff,Pain Relief Alcohol Swabs,10,2015-07-11 18:45:35,14.73
+298,http://dummyimage.com/140x150.png/5fa2dd/ffffff,Coconut Lime Anti-Bacterial Hand Sanitizer,40,2015-10-23 19:07:00,13.01
+299,http://dummyimage.com/175x109.png/ff4444/ffffff,TOPCARE,41,2015-05-14 13:06:23,18.99
+300,http://dummyimage.com/124x102.gif/ff4444/ffffff,Johnsons Baby Pure Cornstarch Medicated,9,2015-07-07 19:15:01,17.06
+301,http://dummyimage.com/232x120.png/ff4444/ffffff,Lemon and Basil Antibacterial Foaming Hand Wash,42,2015-05-06 07:26:58,2.32
+302,http://dummyimage.com/226x191.jpg/ff4444/ffffff,Citalopram Hydrobromide,45,2015-05-17 13:53:18,3.72
+303,http://dummyimage.com/223x136.jpg/dddddd/000000,DR. Fresh Dailies Travel,44,2016-01-31 00:47:15,15.72
+304,http://dummyimage.com/182x157.png/ff4444/ffffff,Doxazosin,32,2016-01-18 01:52:58,17.85
+305,http://dummyimage.com/209x149.gif/ff4444/ffffff,Ketotifen Fumarate,48,2015-06-26 16:59:01,17.58
+306,http://dummyimage.com/175x187.png/ff4444/ffffff,Berberis Homaccord,20,2015-07-10 09:26:20,15.86
+307,http://dummyimage.com/208x220.jpg/cc0000/ffffff,LGB,6,2016-03-16 08:38:12,12.19
+308,http://dummyimage.com/230x133.gif/cc0000/ffffff,Promethazine Hydrochloride,20,2015-06-08 01:37:08,8.48
+309,http://dummyimage.com/149x154.png/5fa2dd/ffffff,ZINC OXIDE,20,2015-04-16 15:01:20,1.1
+310,http://dummyimage.com/190x139.gif/dddddd/000000,H E B MAX SEVERE CONGESTION and COUGH,36,2015-05-31 07:53:12,14.48
+311,http://dummyimage.com/177x223.png/dddddd/000000,Finasteride,28,2016-03-09 03:29:19,17.79
+312,http://dummyimage.com/187x125.jpg/dddddd/000000,Furosemide,23,2015-05-13 18:08:51,19.62
+313,http://dummyimage.com/232x150.png/cc0000/ffffff,Reef Safe SPF 45,21,2015-11-05 17:43:56,4.07
+314,http://dummyimage.com/240x205.png/5fa2dd/ffffff,Gabapentin,33,2015-10-22 07:01:29,16.72
+315,http://dummyimage.com/196x171.gif/ff4444/ffffff,Dexamethasone Sodium Phosphate,47,2015-08-28 05:00:14,3.42
+316,http://dummyimage.com/180x223.jpg/dddddd/000000,CAPTURE TOTALE COMPACT RADIANCE RESTORING LINE SMOOTHING MAKEUP SPF 20 010 Ivory,12,2015-05-29 11:35:22,3.01
+317,http://dummyimage.com/148x176.jpg/cc0000/ffffff,Naprelan,48,2015-12-06 07:25:26,13.54
+318,http://dummyimage.com/211x109.png/ff4444/ffffff,Doxycycline Hyclate,41,2015-08-22 05:52:44,4.58
+319,http://dummyimage.com/173x169.png/dddddd/000000,Oxygen,46,2016-01-05 02:32:41,3.23
+320,http://dummyimage.com/152x106.gif/5fa2dd/ffffff,GN Kids Eczema,12,2015-08-27 23:09:20,8.64
+321,http://dummyimage.com/166x190.png/dddddd/000000,SHISEIDO SHEER AND PERFECT COMPACT (REFILL),18,2015-12-06 07:37:43,3.84
+322,http://dummyimage.com/151x180.jpg/ff4444/ffffff,Prednisone,48,2015-05-26 00:20:27,5.28
+323,http://dummyimage.com/222x181.gif/cc0000/ffffff,temazepam,41,2015-07-07 11:34:01,17.1
+324,http://dummyimage.com/126x114.gif/cc0000/ffffff,Carvedilol,31,2015-08-03 07:48:29,16.81
+325,http://dummyimage.com/191x192.png/ff4444/ffffff,Lovenox,37,2015-07-04 04:57:28,2.87
+326,http://dummyimage.com/178x150.gif/ff4444/ffffff,Simvastatin,14,2015-09-15 06:40:20,1.8
+327,http://dummyimage.com/170x211.jpg/dddddd/000000,Nasel congestion,8,2015-05-17 18:16:29,1.87
+328,http://dummyimage.com/142x228.png/dddddd/000000,H-E-B Skin Corrective Innovative Skin Perfector BB Broad Spectrum SPF15 Sunscreen Light/Medium,15,2015-08-20 04:11:00,2.55
+329,http://dummyimage.com/144x197.jpg/5fa2dd/ffffff,Balsalazide Disodium,5,2015-08-09 17:08:53,17.38
+330,http://dummyimage.com/224x191.jpg/dddddd/000000,Losartan Potassium,46,2015-04-26 11:33:36,3.67
+331,http://dummyimage.com/131x141.gif/ff4444/ffffff,BAC,9,2015-06-23 11:58:52,3.02
+332,http://dummyimage.com/214x138.gif/5fa2dd/ffffff,Terazol 3,44,2015-04-29 07:21:11,1.88
+333,http://dummyimage.com/200x233.png/dddddd/000000,Venlafaxine Hydrochloride,29,2015-08-27 13:52:20,14.22
+334,http://dummyimage.com/200x250.png/ff4444/ffffff,QUEEN PALM POLLEN,35,2015-05-03 06:27:31,17.6
+335,http://dummyimage.com/225x113.jpg/dddddd/000000,MEVACOR,41,2016-02-18 17:56:10,16.65
+336,http://dummyimage.com/118x213.png/5fa2dd/ffffff,Potassium Chloride,3,2016-03-25 14:31:55,2.74
+337,http://dummyimage.com/142x187.png/ff4444/ffffff,DR. BABOR DERMA CELLULAR Ultimate Firming Eye,9,2015-12-17 04:53:10,2.47
+338,http://dummyimage.com/139x190.jpg/ff4444/ffffff,Fexofenadine Hydrochloride,42,2015-07-31 01:41:55,3.49
+339,http://dummyimage.com/104x230.png/cc0000/ffffff,Amlodipine besylate and Atorvastatin calcium,48,2015-08-13 04:14:07,12.34
+340,http://dummyimage.com/228x209.gif/ff4444/ffffff,Mirtazapine,50,2015-11-21 04:14:36,5.19
+341,http://dummyimage.com/107x209.jpg/cc0000/ffffff,PerioMed,7,2016-03-13 21:51:13,11.34
+342,http://dummyimage.com/232x223.jpg/cc0000/ffffff,ibuprofen,12,2015-05-17 14:17:35,17.27
+343,http://dummyimage.com/248x112.jpg/ff4444/ffffff,LBEL EFFET PARFAIT MINERAL NATURAL SKIN EFFECT MOUSSE FOUNDATION SPF 16,43,2015-05-26 13:46:34,10.08
+344,http://dummyimage.com/214x214.gif/cc0000/ffffff,AVANDARYL,33,2016-02-02 05:04:37,8.44
+345,http://dummyimage.com/247x237.png/5fa2dd/ffffff,Flucytosine,5,2015-09-20 05:04:26,10.37
+346,http://dummyimage.com/172x106.jpg/ff4444/ffffff,Metaproterenol Sulfate,40,2016-03-14 03:56:55,15.37
+347,http://dummyimage.com/214x122.gif/ff4444/ffffff,Naproxen Sodium,9,2015-05-28 18:58:51,19.28
+348,http://dummyimage.com/177x175.gif/dddddd/000000,Buspirone Hydrochloride,6,2016-01-06 18:27:01,12.71
+349,http://dummyimage.com/129x105.jpg/ff4444/ffffff,Plus White Super White TOOTH with PEROXIDE,26,2016-01-19 12:42:31,9.64
+350,http://dummyimage.com/179x133.gif/ff4444/ffffff,Hydrochlorothiazide,24,2015-07-09 18:56:02,12.08
+351,http://dummyimage.com/143x113.gif/cc0000/ffffff,Childrens Acetaminophen,40,2015-03-31 17:27:51,8.68
+352,http://dummyimage.com/214x230.gif/cc0000/ffffff,365 Everyday Value Be Well Cough Ease for Kids,34,2015-05-15 03:07:38,12.97
+353,http://dummyimage.com/211x128.gif/5fa2dd/ffffff,Allergy and Congestion Relief,31,2015-06-23 16:21:00,16.67
+354,http://dummyimage.com/234x148.jpg/5fa2dd/ffffff,SOLU-CORTEF,40,2015-05-22 16:27:21,4.18
+355,http://dummyimage.com/126x218.jpg/5fa2dd/ffffff,Tri Estrogen,39,2016-03-22 14:54:39,3.11
+356,http://dummyimage.com/165x193.png/ff4444/ffffff,Treatment Set TS332090,47,2015-05-29 13:57:57,19.59
+357,http://dummyimage.com/149x133.png/cc0000/ffffff,Glycopyrrolate,6,2016-01-10 02:07:55,4.57
+358,http://dummyimage.com/193x229.jpg/dddddd/000000,Fenofibrate,37,2015-08-16 19:32:34,15.18
+359,http://dummyimage.com/200x144.gif/ff4444/ffffff,Tolnaftate,13,2015-09-16 08:47:24,8.59
+360,http://dummyimage.com/117x183.gif/cc0000/ffffff,Lycogel Cover and Recovery - Breathable Camouflage - SPF 30 with LYCO Complex,12,2016-03-23 13:40:56,19.68
+361,http://dummyimage.com/173x181.jpg/dddddd/000000,OXYGEN,44,2015-04-11 19:57:02,2.98
+362,http://dummyimage.com/142x201.gif/cc0000/ffffff,Warfarin Sodium,13,2015-05-07 11:17:40,4.54
+363,http://dummyimage.com/110x164.gif/dddddd/000000,Allergies Food Chemicals,18,2016-01-19 10:23:53,12.27
+364,http://dummyimage.com/166x199.jpg/cc0000/ffffff,Miconazole Nitrate,10,2015-12-17 13:53:12,10.1
+365,http://dummyimage.com/220x227.jpg/dddddd/000000,Phenylalanine,15,2016-02-01 15:16:10,13.5
+366,http://dummyimage.com/232x227.jpg/ff4444/ffffff,Ranitidine,14,2015-05-26 18:53:47,2.47
+367,http://dummyimage.com/144x232.png/cc0000/ffffff,ENALAPRIL MALEATE,3,2015-09-15 12:43:07,13.98
+368,http://dummyimage.com/174x176.gif/cc0000/ffffff,smart sense nighttime,15,2015-05-28 08:39:44,9.32
+369,http://dummyimage.com/217x229.jpg/5fa2dd/ffffff,Prilosec OTC,7,2016-02-04 13:10:54,2.37
+370,http://dummyimage.com/195x130.gif/dddddd/000000,Alka-Seltzer Plus Severe Sinus and Cold,48,2016-03-07 01:09:11,14.67
+371,http://dummyimage.com/152x170.gif/ff4444/ffffff,Clonazepam,18,2015-06-16 06:34:29,19.3
+372,http://dummyimage.com/240x122.png/cc0000/ffffff,Microgestin,31,2015-09-30 08:07:21,14.61
+373,http://dummyimage.com/128x239.jpg/cc0000/ffffff,Travoprost Ophthalmic Solution 0.004%,24,2015-07-01 23:06:11,16.08
+374,http://dummyimage.com/132x244.gif/ff4444/ffffff,Aminophylline,9,2015-11-02 06:43:14,9.78
+375,http://dummyimage.com/202x133.gif/dddddd/000000,Cyclobenzaprine Hydrochloride,39,2015-12-30 17:01:43,8.36
+376,http://dummyimage.com/154x179.jpg/cc0000/ffffff,rx act flu and severe cold and cough,8,2016-02-06 13:07:18,4.05
+377,http://dummyimage.com/228x171.png/cc0000/ffffff,Ethambutol Hydrochloride,43,2016-01-01 10:12:33,14.01
+378,http://dummyimage.com/231x216.jpg/dddddd/000000,Doxycycline Hyclate,24,2015-07-31 17:58:31,10.79
+379,http://dummyimage.com/120x237.png/5fa2dd/ffffff,Air,48,2015-08-13 11:10:26,2.15
+380,http://dummyimage.com/214x116.gif/cc0000/ffffff,Pentasa,38,2015-03-30 02:11:24,19.16
+381,http://dummyimage.com/235x101.png/cc0000/ffffff,Nu Skin ageLOC Radiant Day Broad Spectrum SPF 22,21,2015-12-20 00:14:34,5.98
+382,http://dummyimage.com/102x198.png/dddddd/000000,Ativan,7,2015-10-18 18:34:44,6.84
+383,http://dummyimage.com/245x104.jpg/cc0000/ffffff,SSD Cream,23,2015-08-10 20:06:26,13.0
+384,http://dummyimage.com/119x212.jpg/5fa2dd/ffffff,FLUOROURACIL,30,2015-04-15 13:26:14,8.63
+385,http://dummyimage.com/125x214.png/cc0000/ffffff,CLE DE PEAU BEAUTE CR COMPACT FOUNDATION,4,2015-09-12 13:29:23,17.34
+386,http://dummyimage.com/142x226.png/dddddd/000000,Irinotecan Hydrochloride,41,2015-09-15 19:29:19,1.17
+387,http://dummyimage.com/184x196.gif/dddddd/000000,Premier Value Infants Ibuprofen,49,2015-05-13 13:31:38,9.67
+388,http://dummyimage.com/193x115.jpg/5fa2dd/ffffff,Rendrevie Sun Screen SPF35 PA,50,2015-08-03 23:06:58,13.5
+389,http://dummyimage.com/133x130.jpg/5fa2dd/ffffff,Oxymorphone Hydrochloride,12,2015-06-24 12:48:49,2.24
+390,http://dummyimage.com/128x240.jpg/ff4444/ffffff,Ocean Potion Instant Dry 30 Mist Sport Sunscreen,26,2015-06-28 14:17:12,7.44
+391,http://dummyimage.com/180x186.jpg/5fa2dd/ffffff,Neutrogena Healthy Skin Brightening Eye Perfector,32,2015-09-09 04:26:06,8.66
+392,http://dummyimage.com/114x163.png/ff4444/ffffff,EYE - CATARACT,47,2015-08-12 08:33:15,7.35
+393,http://dummyimage.com/246x169.png/ff4444/ffffff,CLE DE PEAU BEAUTE PW FOUNDATION s,6,2015-09-05 16:42:01,10.61
+394,http://dummyimage.com/135x138.jpg/dddddd/000000,Eplerenone,44,2015-11-06 04:45:46,19.51
+395,http://dummyimage.com/183x145.jpg/5fa2dd/ffffff,Homeopathic Immunity Supporting Adjuvant,16,2015-09-21 14:22:10,14.15
+396,http://dummyimage.com/224x220.png/dddddd/000000,Ciprofloxacin Hydrochloride,27,2015-08-24 11:18:55,18.56
+397,http://dummyimage.com/130x222.gif/ff4444/ffffff,TRAMADOL HYDROCHLORIDE,5,2015-12-07 15:52:14,3.77
+398,http://dummyimage.com/183x188.jpg/5fa2dd/ffffff,Nurture Skin Protectant,48,2015-07-20 14:25:00,10.44
+399,http://dummyimage.com/203x191.png/5fa2dd/ffffff,Alprazolam,32,2015-09-15 19:36:27,14.33
+400,http://dummyimage.com/175x242.gif/cc0000/ffffff,CLE DE PEAU BEAUTE REFINING FLUID FOUNDATION,23,2015-04-13 08:31:38,11.92
+401,http://dummyimage.com/201x211.gif/cc0000/ffffff,Movate Lemon,44,2015-05-13 13:48:37,17.26
+402,http://dummyimage.com/226x207.gif/cc0000/ffffff,SKIN CAVIAR CONCEALER FOUNDATION SUNSCREEN SPF 15 - Creme Peche,29,2015-07-21 11:03:47,10.9
+403,http://dummyimage.com/128x247.jpg/5fa2dd/ffffff,Colgate,20,2016-03-05 08:19:36,4.65
+404,http://dummyimage.com/237x159.jpg/dddddd/000000,Adult Low Dose Aspirin,29,2015-11-06 21:35:23,18.96
+405,http://dummyimage.com/199x193.png/cc0000/ffffff,"Butalbital, Acetaminophen, Caffeine and Codeine Phosphate",9,2015-05-11 19:47:55,12.85
+406,http://dummyimage.com/228x119.gif/5fa2dd/ffffff,Leaf Tobacco,31,2015-05-14 12:04:55,8.77
+407,http://dummyimage.com/193x164.png/cc0000/ffffff,Assured Day time Cold and Cough,9,2015-07-21 20:11:21,6.26
+408,http://dummyimage.com/171x208.png/cc0000/ffffff,VERELAN PM,1,2016-01-18 00:13:02,8.07
+409,http://dummyimage.com/225x130.png/5fa2dd/ffffff,Ceftriaxone Sodium,25,2015-09-29 10:13:51,5.47
+410,http://dummyimage.com/100x140.jpg/cc0000/ffffff,Adult Glycerin Laxative,5,2015-09-23 13:12:37,1.67
+411,http://dummyimage.com/125x169.png/ff4444/ffffff,Vancomycin Hydrochloride,20,2015-08-05 19:40:33,2.45
+412,http://dummyimage.com/124x152.png/5fa2dd/ffffff,Instant Hand Sanitizer,7,2016-03-05 04:35:08,16.45
+413,http://dummyimage.com/132x240.png/cc0000/ffffff,Couch Quack Grass,46,2015-05-10 07:42:05,17.26
+414,http://dummyimage.com/127x149.png/5fa2dd/ffffff,ibuprofen,22,2015-08-03 07:41:45,7.81
+415,http://dummyimage.com/112x244.jpg/5fa2dd/ffffff,TETANUS TOXOID ADSORBED,35,2016-01-22 16:26:32,1.09
+416,http://dummyimage.com/167x179.gif/ff4444/ffffff,LEXAPRO,38,2016-01-05 00:39:11,17.66
+417,http://dummyimage.com/128x198.gif/5fa2dd/ffffff,Aggrenox,35,2015-12-05 00:51:45,2.26
+418,http://dummyimage.com/154x136.png/ff4444/ffffff,Diltiazem Hydrochloride,49,2015-09-25 03:44:48,8.56
+419,http://dummyimage.com/104x161.gif/ff4444/ffffff,Colgate,6,2016-01-18 05:42:39,13.07
+420,http://dummyimage.com/178x135.gif/dddddd/000000,Sleep Aid,33,2015-12-27 19:34:05,17.52
+421,http://dummyimage.com/207x121.jpg/ff4444/ffffff,Ceftriaxone,35,2015-04-09 09:59:10,17.58
+422,http://dummyimage.com/160x190.png/5fa2dd/ffffff,Cladosporium cladosporioides,22,2015-09-11 11:37:07,15.36
+423,http://dummyimage.com/174x173.gif/ff4444/ffffff,Horse Epithelium,2,2015-09-01 05:33:30,6.23
+424,http://dummyimage.com/226x233.gif/dddddd/000000,Salicylic Acid,27,2015-04-25 04:07:16,4.16
+425,http://dummyimage.com/237x104.gif/dddddd/000000,Hydralazine Hydrochloride,10,2015-08-24 04:16:53,17.22
+426,http://dummyimage.com/193x242.jpg/cc0000/ffffff,cold and allergy,42,2015-09-02 12:49:01,14.53
+427,http://dummyimage.com/187x180.jpg/dddddd/000000,Atenolol,49,2015-09-06 05:20:28,16.35
+428,http://dummyimage.com/114x180.jpg/ff4444/ffffff,Arneu,46,2016-02-01 12:16:09,12.4
+429,http://dummyimage.com/168x134.gif/5fa2dd/ffffff,Aveeno Daily Moisturizing,9,2016-01-10 04:31:03,7.25
+430,http://dummyimage.com/221x154.jpg/cc0000/ffffff,Povidone-Iodine,15,2016-01-07 06:01:17,6.45
+431,http://dummyimage.com/162x230.gif/5fa2dd/ffffff,Candesartan Cilexetil,28,2016-01-03 04:21:49,12.92
+432,http://dummyimage.com/176x130.jpg/5fa2dd/ffffff,CVS PHARMACY,32,2015-08-25 09:01:03,10.58
+433,http://dummyimage.com/153x173.jpg/ff4444/ffffff,"Butalbital, Aspirin, Caffeine and Codeine Phosphate",22,2015-06-21 09:00:11,18.39
+434,http://dummyimage.com/239x146.jpg/ff4444/ffffff,Guinea Pig Epithelium,4,2016-03-16 23:35:54,10.0
+435,http://dummyimage.com/158x163.jpg/5fa2dd/ffffff,Losartan Potassium and Hydrochlorothiazide,29,2015-11-30 12:54:39,5.83
+436,http://dummyimage.com/218x104.png/dddddd/000000,Ibuprofen,42,2015-08-15 08:52:02,9.2
+437,http://dummyimage.com/143x118.png/5fa2dd/ffffff,Carbidopa and Levodopa,39,2015-07-10 05:59:49,13.68
+438,http://dummyimage.com/182x206.gif/cc0000/ffffff,Niaspan,8,2015-10-01 05:42:47,8.77
+439,http://dummyimage.com/183x245.gif/ff4444/ffffff,Isopropyl Alcohol,14,2015-10-10 17:41:52,18.68
+440,http://dummyimage.com/180x220.jpg/5fa2dd/ffffff,Diclofenac Sodium,44,2015-10-02 11:38:00,12.8
+441,http://dummyimage.com/149x167.jpg/ff4444/ffffff,CVS Sore Throat Mixed Berry Flavor,2,2015-10-24 05:39:15,10.36
+442,http://dummyimage.com/242x182.png/dddddd/000000,Mag-Al Plus XS,27,2015-08-23 09:40:55,14.39
+443,http://dummyimage.com/104x160.png/5fa2dd/ffffff,Leader,21,2015-08-21 10:09:22,9.33
+444,http://dummyimage.com/225x182.gif/ff4444/ffffff,Chest Congestion,29,2015-08-06 12:51:29,14.08
+445,http://dummyimage.com/211x199.gif/5fa2dd/ffffff,Chloraseptic Sore Throat Liquid Center,29,2015-04-13 10:24:30,2.51
+446,http://dummyimage.com/245x152.png/dddddd/000000,kids cough,34,2015-07-11 13:48:46,8.34
+447,http://dummyimage.com/236x126.gif/cc0000/ffffff,Antacid Antigas Maximum Strength Mint,47,2015-12-09 03:45:20,11.28
+448,http://dummyimage.com/202x100.gif/cc0000/ffffff,Diovan,42,2015-08-15 06:13:26,13.72
+449,http://dummyimage.com/143x114.gif/dddddd/000000,Orajel Instant Relief for Teething Pain,40,2015-12-15 08:24:29,5.0
+450,http://dummyimage.com/122x180.png/dddddd/000000,FixMySkin Healing Balm Fragrance-Free,16,2016-03-18 03:33:25,5.17
+451,http://dummyimage.com/104x134.gif/ff4444/ffffff,Apis Mell.,40,2016-02-29 03:24:53,4.08
+452,http://dummyimage.com/164x173.gif/dddddd/000000,Fragmin,23,2015-10-27 04:22:51,8.7
+453,http://dummyimage.com/198x166.jpg/ff4444/ffffff,Sambucus Larix,46,2015-08-01 20:10:05,9.22
+454,http://dummyimage.com/246x160.gif/5fa2dd/ffffff,ACONITUM LYCOCTONUM,24,2015-08-30 23:49:18,19.16
+455,http://dummyimage.com/145x109.jpg/cc0000/ffffff,Amoxicillin and Clavulanate Potassium,39,2015-11-18 15:09:09,15.86
+456,http://dummyimage.com/181x186.gif/dddddd/000000,bethanechol chloride,49,2015-05-27 04:30:34,13.05
+457,http://dummyimage.com/120x167.gif/dddddd/000000,Hydrocodone Bitartate and Acetaminophen,15,2015-10-10 10:19:44,12.45
+458,http://dummyimage.com/216x172.png/5fa2dd/ffffff,Paroxetine,48,2015-04-06 05:45:29,15.91
+459,http://dummyimage.com/208x167.gif/ff4444/ffffff,Ulta Lavender Woods Anti-Bacterial Hand Sanitizer,15,2016-01-29 15:46:01,5.92
+460,http://dummyimage.com/217x213.gif/5fa2dd/ffffff,Miracle Foot Repair,9,2015-07-20 09:17:11,18.62
+461,http://dummyimage.com/159x175.png/ff4444/ffffff,Donepezil Hydrochloride,25,2015-07-28 14:45:43,11.36
+462,http://dummyimage.com/189x109.gif/ff4444/ffffff,leader cough dm,50,2015-11-23 06:32:36,4.64
+463,http://dummyimage.com/217x195.png/dddddd/000000,LBEL COULEUR LUXE AMPLIFIER XP,9,2015-12-22 18:17:28,14.44
+464,http://dummyimage.com/185x187.jpg/ff4444/ffffff,Oxygen,32,2015-09-24 04:53:35,8.8
+465,http://dummyimage.com/131x175.png/5fa2dd/ffffff,Hyoscyamine Sulfate,40,2015-04-02 15:07:47,17.53
+466,http://dummyimage.com/128x160.jpg/5fa2dd/ffffff,Remedy Nutrashield,44,2016-01-14 20:01:07,14.63
+467,http://dummyimage.com/127x168.gif/5fa2dd/ffffff,Gelato APF,36,2016-03-24 01:07:48,15.92
+468,http://dummyimage.com/209x228.png/dddddd/000000,Dr. OH PATCH,36,2015-07-15 01:09:07,3.07
+469,http://dummyimage.com/219x209.jpg/5fa2dd/ffffff,Olive Pollen,10,2015-11-27 15:00:27,11.02
+470,http://dummyimage.com/148x139.gif/ff4444/ffffff,Micardis HCT,35,2015-09-16 07:48:56,3.14
+471,http://dummyimage.com/175x172.jpg/5fa2dd/ffffff,sunmark pain reliever,35,2016-01-19 19:03:59,13.33
+472,http://dummyimage.com/142x180.jpg/5fa2dd/ffffff,Preferred Plus Chest Congestion Relief,32,2015-06-24 20:02:20,19.51
+473,http://dummyimage.com/102x192.jpg/ff4444/ffffff,Weight Loss RELIEF,28,2016-03-05 06:50:39,11.04
+474,http://dummyimage.com/177x218.jpg/dddddd/000000,Salsalate,9,2016-03-10 00:12:09,15.98
+475,http://dummyimage.com/131x226.jpg/5fa2dd/ffffff,PHYTOGENIC INFINITE POWDER FOUNDATION,39,2015-12-16 13:32:37,5.88
+476,http://dummyimage.com/217x228.png/ff4444/ffffff,Antibacterial Hand Soap,30,2015-10-03 20:19:13,1.27
+477,http://dummyimage.com/218x112.png/ff4444/ffffff,PINUS ECHINATA POLLEN,24,2016-02-23 10:10:59,8.47
+478,http://dummyimage.com/247x135.png/5fa2dd/ffffff,ReCreate Foundation,2,2016-01-07 19:24:34,6.17
+479,http://dummyimage.com/196x106.png/dddddd/000000,sunmark antacid,37,2015-12-22 05:58:10,3.0
+480,http://dummyimage.com/235x186.png/cc0000/ffffff,Cephalexin,40,2016-03-15 12:17:33,17.73
+481,http://dummyimage.com/247x173.jpg/dddddd/000000,Vomiting Diarrhea,50,2015-11-16 15:51:52,1.74
+482,http://dummyimage.com/141x198.gif/5fa2dd/ffffff,Pantoprazole Sodium Delayed-Release Delayed-Release,41,2016-01-27 09:12:50,8.67
+483,http://dummyimage.com/142x244.png/ff4444/ffffff,ShopRite Ni Calm,50,2015-08-21 04:07:19,2.58
+484,http://dummyimage.com/234x205.gif/cc0000/ffffff,Golden Tan Always Stay-on Makeup Broad Spectrum SPF 15,7,2015-04-09 08:38:29,9.35
+485,http://dummyimage.com/215x131.jpg/dddddd/000000,TOBREX,50,2016-01-18 18:18:26,15.98
+486,http://dummyimage.com/198x232.jpg/cc0000/ffffff,Healthy Accents Tussin Cough,43,2015-04-09 11:21:56,8.55
+487,http://dummyimage.com/199x185.gif/ff4444/ffffff,KEPPRA,8,2015-04-23 04:00:08,3.04
+488,http://dummyimage.com/164x190.jpg/dddddd/000000,Meijer SPF 70,13,2015-12-21 06:27:20,7.85
+489,http://dummyimage.com/154x199.jpg/cc0000/ffffff,Luxury Foam Antibacterial,3,2016-01-14 07:47:12,1.4
+490,http://dummyimage.com/214x180.png/cc0000/ffffff,AZITHROMYCIN,21,2015-08-30 15:17:05,3.32
+491,http://dummyimage.com/235x102.jpg/ff4444/ffffff,Cuprum Aceticum 3,21,2015-10-03 15:15:14,2.53
+492,http://dummyimage.com/151x103.png/ff4444/ffffff,Theraflu,44,2015-12-01 15:35:49,13.05
+493,http://dummyimage.com/123x168.gif/dddddd/000000,CPDA-1,10,2015-09-28 06:58:24,10.52
+494,http://dummyimage.com/165x222.jpg/5fa2dd/ffffff,ARNICA MONTANA,12,2015-10-15 11:55:50,4.51
+495,http://dummyimage.com/199x185.png/dddddd/000000,OPTICAL ORIGINAL EYE DROPS,26,2016-02-18 13:11:58,12.74
+496,http://dummyimage.com/221x181.png/cc0000/ffffff,"Pollens - Trees, Linden (Basswood) Tilia americana",3,2015-05-03 00:20:00,16.64
+497,http://dummyimage.com/125x159.gif/dddddd/000000,Clemastine Fumarate,48,2015-08-25 02:00:56,5.82
+498,http://dummyimage.com/199x102.png/5fa2dd/ffffff,Severe Cold and Flu,29,2015-04-02 07:42:45,2.82
+499,http://dummyimage.com/200x162.png/5fa2dd/ffffff,BETAMETHASONE VALERATE,31,2015-07-26 00:03:32,17.42
+500,http://dummyimage.com/106x222.jpg/dddddd/000000,MG DermaWash,9,2016-03-09 03:21:56,18.88
+501,http://dummyimage.com/149x238.gif/cc0000/ffffff,HAND SANITIZING,45,2015-06-22 17:38:22,19.34
+502,http://dummyimage.com/173x123.jpg/cc0000/ffffff,Doxazosin Mesylate,29,2015-12-10 10:37:35,17.49
+503,http://dummyimage.com/181x167.png/5fa2dd/ffffff,Azithromycin,10,2015-06-10 06:20:04,16.42
+504,http://dummyimage.com/232x205.png/dddddd/000000,SOMAVERT,6,2015-05-26 19:01:42,19.9
+505,http://dummyimage.com/123x170.png/dddddd/000000,Sodium Chloride,39,2015-09-20 00:00:12,4.77
+506,http://dummyimage.com/130x119.jpg/ff4444/ffffff,Bruises-Muscle Soreness,23,2015-07-30 22:58:52,18.93
+507,http://dummyimage.com/243x152.jpg/dddddd/000000,LEVAQUIN,2,2016-01-25 14:29:23,14.66
+508,http://dummyimage.com/145x145.jpg/5fa2dd/ffffff,Aspirin,46,2015-07-03 21:37:00,15.69
+509,http://dummyimage.com/162x232.gif/dddddd/000000,Oxygen,44,2015-05-11 19:51:53,17.82
+510,http://dummyimage.com/103x172.jpg/5fa2dd/ffffff,Enchanted Moments Mistletoe Kisses Hand Sanitizer,13,2015-08-01 22:14:19,1.22
+511,http://dummyimage.com/198x113.jpg/ff4444/ffffff,SHISEIDO SUN PROTECTION COMPACT FOUNDATION (REFILL),24,2015-10-07 12:08:43,2.19
+512,http://dummyimage.com/237x204.gif/dddddd/000000,Cyclobenzaprine Hydrochloride,46,2015-08-05 23:04:49,10.91
+513,http://dummyimage.com/178x215.png/ff4444/ffffff,Medline Acetaminophen,29,2015-10-22 06:17:22,6.64
+514,http://dummyimage.com/205x204.gif/dddddd/000000,Meijer Elements 7-in-1 Anti-Aging Vitamin,6,2016-02-02 17:52:03,8.17
+515,http://dummyimage.com/150x141.png/dddddd/000000,CD DIORSKIN STAR Studio Makeup Spectacular Brightening with sunscreen Broad Spectrum SPF30 010,1,2015-06-02 12:57:27,12.07
+516,http://dummyimage.com/118x242.png/cc0000/ffffff,EQUATE,35,2015-06-09 22:57:57,4.56
+517,http://dummyimage.com/105x141.png/ff4444/ffffff,Hydrocortisone Acetate,45,2016-02-22 18:15:28,19.64
+518,http://dummyimage.com/133x198.png/5fa2dd/ffffff,Carbidopa and Levodopa,12,2015-08-14 16:53:31,11.28
+519,http://dummyimage.com/118x133.gif/cc0000/ffffff,Toasted Vanilla Sugar Kit,7,2016-01-09 12:02:02,17.84
+520,http://dummyimage.com/211x179.jpg/5fa2dd/ffffff,Didanosine,25,2016-02-02 02:55:31,18.43
+521,http://dummyimage.com/136x205.gif/dddddd/000000,Valsartan and Hydrochlorothiazide,24,2015-06-03 16:31:26,19.58
+522,http://dummyimage.com/154x200.jpg/5fa2dd/ffffff,Bethanechol Chloride,16,2016-02-16 07:04:09,12.22
+523,http://dummyimage.com/239x201.jpg/5fa2dd/ffffff,DOCEFREZ,36,2015-11-28 14:02:51,2.73
+524,http://dummyimage.com/207x216.gif/dddddd/000000,EMEND,30,2015-07-17 04:39:25,11.45
+525,http://dummyimage.com/213x192.png/ff4444/ffffff,CVS Redness Relief Original,48,2015-09-22 04:44:02,10.31
+526,http://dummyimage.com/242x157.png/ff4444/ffffff,PHENTERMINE HYDROCHLORIDE,45,2015-11-29 01:56:14,11.81
+527,http://dummyimage.com/133x173.jpg/cc0000/ffffff,Western Family,26,2015-08-01 02:19:45,14.21
+528,http://dummyimage.com/237x222.jpg/dddddd/000000,Clarins UV Plus HP SPF 40 Day Screen High Protection,28,2016-01-25 04:55:35,14.81
+529,http://dummyimage.com/141x195.gif/dddddd/000000,Sof Skin Pure Petroleum Cocoa Butter Scented,19,2015-06-27 00:06:54,2.0
+530,http://dummyimage.com/156x186.gif/cc0000/ffffff,Topical Anesthetic,36,2015-11-07 05:17:51,14.61
+531,http://dummyimage.com/181x189.gif/cc0000/ffffff,Immuno Compound Homeopathic Tonic,3,2015-08-02 09:46:13,16.21
+532,http://dummyimage.com/153x110.jpg/dddddd/000000,Panitrol,39,2015-04-22 17:17:53,12.72
+533,http://dummyimage.com/138x196.jpg/ff4444/ffffff,acyclovir,28,2015-07-06 15:27:46,18.26
+534,http://dummyimage.com/121x169.png/5fa2dd/ffffff,Saltbush,13,2015-10-24 04:50:55,2.15
+535,http://dummyimage.com/215x180.gif/dddddd/000000,Nighttime Sleep Aid,30,2015-11-07 18:27:04,17.87
+536,http://dummyimage.com/143x123.jpg/dddddd/000000,GUNA-TGF BETA 1,41,2016-01-26 03:02:19,1.45
+537,http://dummyimage.com/131x162.gif/dddddd/000000,Ephedrine Sulfate,34,2015-09-29 14:56:26,10.85
+538,http://dummyimage.com/158x223.png/dddddd/000000,Levoxyl,19,2015-10-20 20:55:01,12.52
+539,http://dummyimage.com/176x158.png/dddddd/000000,Wal-Zan,4,2015-11-03 22:58:34,5.21
+540,http://dummyimage.com/231x203.gif/5fa2dd/ffffff,Ofloxacin,15,2016-01-19 20:46:52,16.78
+541,http://dummyimage.com/108x181.png/5fa2dd/ffffff,Naproxen Sodium,10,2015-09-08 09:53:32,1.97
+542,http://dummyimage.com/152x206.jpg/5fa2dd/ffffff,MEPRON,42,2015-12-25 12:16:33,14.76
+543,http://dummyimage.com/239x151.gif/5fa2dd/ffffff,Hydrocortisone,44,2015-06-18 14:24:49,8.3
+544,http://dummyimage.com/182x234.png/dddddd/000000,Opcicon One-Step,16,2016-01-20 16:08:50,16.74
+545,http://dummyimage.com/121x165.png/cc0000/ffffff,Hydrochlorothiazide,36,2015-09-20 14:29:57,16.23
+546,http://dummyimage.com/130x227.png/5fa2dd/ffffff,Ondansetron,3,2016-02-09 07:23:16,1.18
+547,http://dummyimage.com/165x235.png/5fa2dd/ffffff,Paire OB Plus DHA,10,2015-04-30 16:31:37,6.79
+548,http://dummyimage.com/195x189.png/cc0000/ffffff,MiraLAX,29,2015-05-27 05:59:33,8.7
+549,http://dummyimage.com/174x177.jpg/5fa2dd/ffffff,mally Poreless Perfection Glowing Foundation Rich,25,2016-03-08 06:10:18,3.11
+550,http://dummyimage.com/183x250.gif/5fa2dd/ffffff,Sulfamethoxazole and Trimethoprim,46,2015-11-28 15:19:06,18.53
+551,http://dummyimage.com/131x185.png/cc0000/ffffff,Rhustoxoforce,37,2015-05-03 09:18:39,8.11
+552,http://dummyimage.com/189x201.png/dddddd/000000,"Pollens - Weeds, Dock/Sorrel Mix",25,2015-06-07 09:30:03,2.13
+553,http://dummyimage.com/106x239.png/ff4444/ffffff,Arnica e pl. tota 6,45,2015-05-04 16:22:56,19.35
+554,http://dummyimage.com/139x147.png/ff4444/ffffff,COCHLIOBOLUS SATIVUS,6,2016-03-02 13:43:29,7.72
+555,http://dummyimage.com/118x196.png/5fa2dd/ffffff,Imipramine Hydrochloride,22,2015-09-25 15:19:07,8.31
+556,http://dummyimage.com/153x168.gif/5fa2dd/ffffff,CD DIORSNOW White Reveal Fresh Transparency Liquid Foundation with Sunscreen Broad Spectrum SPF 30 010,13,2015-07-02 20:40:07,14.09
+557,http://dummyimage.com/222x184.gif/dddddd/000000,Finasteride,19,2015-12-30 00:28:31,15.62
+558,http://dummyimage.com/241x155.png/ff4444/ffffff,FOLIC ACID,18,2015-08-30 08:49:01,15.9
+559,http://dummyimage.com/202x248.jpg/dddddd/000000,Triamcinolone Acetonide,12,2015-06-18 16:03:23,6.6
+560,http://dummyimage.com/232x135.jpg/cc0000/ffffff,ANNA LOTAN Clear Protector Free Broad Spectrum SPF 32 Sunscreen,21,2015-07-14 10:19:41,8.92
+561,http://dummyimage.com/132x151.jpg/dddddd/000000,Nimbex,37,2015-10-17 18:37:45,17.23
+562,http://dummyimage.com/185x128.jpg/ff4444/ffffff,Carduus Oxalis,37,2015-04-06 15:50:45,9.02
+563,http://dummyimage.com/215x158.jpg/5fa2dd/ffffff,wal itin d,42,2016-01-25 15:22:32,16.54
+564,http://dummyimage.com/204x192.jpg/cc0000/ffffff,EXTINA,16,2015-08-18 19:55:39,15.08
+565,http://dummyimage.com/213x237.gif/ff4444/ffffff,Dexamethasone,43,2015-06-11 13:06:53,15.06
+566,http://dummyimage.com/250x115.png/ff4444/ffffff,Alprazolam,48,2015-11-07 20:46:57,11.51
+567,http://dummyimage.com/116x147.jpg/5fa2dd/ffffff,Ampicillin and Sulbactam,16,2016-03-13 22:46:05,10.03
+568,http://dummyimage.com/214x135.gif/dddddd/000000,CELEBREX,12,2016-02-24 10:16:20,14.18
+569,http://dummyimage.com/171x178.jpg/5fa2dd/ffffff,ZANTAC,24,2015-09-28 23:53:25,2.91
+570,http://dummyimage.com/191x223.gif/ff4444/ffffff,HEALTHY ACCENTS,21,2015-06-04 21:27:42,13.31
+571,http://dummyimage.com/152x236.png/cc0000/ffffff,Buspirone Hydrochloride,7,2015-06-04 13:43:32,13.16
+572,http://dummyimage.com/180x101.jpg/dddddd/000000,PEGINTRON,26,2016-01-20 15:14:47,7.42
+573,http://dummyimage.com/176x229.gif/ff4444/ffffff,Americaine,12,2016-01-09 15:23:54,8.69
+574,http://dummyimage.com/231x110.jpg/cc0000/ffffff,Atomoxetine Hydrochloride,23,2016-03-16 01:15:49,6.19
+575,http://dummyimage.com/182x113.png/5fa2dd/ffffff,Equaline all day allergy,32,2016-03-06 11:04:34,6.24
+576,http://dummyimage.com/161x129.gif/cc0000/ffffff,Peter Thomas Roth CC,10,2015-09-05 20:41:12,1.18
+577,http://dummyimage.com/240x244.jpg/5fa2dd/ffffff,PredniSONE,7,2015-11-16 01:19:06,12.24
+578,http://dummyimage.com/141x228.gif/ff4444/ffffff,Healthy Accents Cold and Cough,20,2016-01-10 06:42:04,5.38
+579,http://dummyimage.com/208x215.png/5fa2dd/ffffff,Quetiapine fumarate,6,2016-02-17 03:16:28,1.47
+580,http://dummyimage.com/188x132.jpg/5fa2dd/ffffff,Amoxicillin and Clavulanate Potassium,41,2015-05-05 14:09:23,6.44
+581,http://dummyimage.com/199x132.jpg/ff4444/ffffff,BACKACHE WITH ARNICA,28,2016-03-03 11:11:02,5.84
+582,http://dummyimage.com/217x151.gif/cc0000/ffffff,Fexofenadine Hydrochloride,6,2015-09-13 11:57:44,6.66
+583,http://dummyimage.com/115x163.png/ff4444/ffffff,Goats Milk,13,2015-05-29 19:36:53,3.96
+584,http://dummyimage.com/129x204.gif/cc0000/ffffff,Western Family Complete Whitening,28,2015-10-20 12:07:17,2.22
+585,http://dummyimage.com/174x248.gif/ff4444/ffffff,Guanfacine Hydrochloride,26,2016-02-05 02:38:39,4.77
+586,http://dummyimage.com/199x216.gif/ff4444/ffffff,BullFrog Quik,21,2015-06-14 10:23:59,12.47
+587,http://dummyimage.com/193x200.jpg/5fa2dd/ffffff,LoHist DM,30,2016-01-19 16:58:43,16.54
+588,http://dummyimage.com/106x226.jpg/5fa2dd/ffffff,Atenolol,31,2015-09-09 15:20:13,4.76
+589,http://dummyimage.com/138x162.png/dddddd/000000,"Pollens - Trees, Eucalyptus (Blue Gum) Eucalyptus globulus",8,2015-11-21 08:56:12,2.89
+590,http://dummyimage.com/164x116.jpg/5fa2dd/ffffff,EB302 ARTHRITIS RELIEF,20,2016-01-05 09:57:21,16.27
+591,http://dummyimage.com/163x140.png/cc0000/ffffff,DayTime NiteTime,4,2015-04-17 03:58:55,10.97
+592,http://dummyimage.com/231x113.jpg/cc0000/ffffff,PROVIGIL,12,2016-02-04 09:54:02,4.6
+593,http://dummyimage.com/208x158.png/ff4444/ffffff,Warfarin Sodium,36,2015-11-13 04:18:23,17.85
+594,http://dummyimage.com/179x236.gif/cc0000/ffffff,Childrens Allergy,10,2015-12-03 11:30:03,9.39
+595,http://dummyimage.com/249x196.gif/cc0000/ffffff,Metaxalone,34,2015-07-06 07:37:09,10.38
+596,http://dummyimage.com/208x127.gif/dddddd/000000,Fluconazole,49,2015-09-07 13:21:25,13.98
+597,http://dummyimage.com/113x222.jpg/dddddd/000000,Nifedipine,21,2015-04-18 22:03:56,3.2
+598,http://dummyimage.com/204x132.jpg/5fa2dd/ffffff,Reciphexamine,23,2016-03-23 10:44:24,9.16
+599,http://dummyimage.com/153x143.jpg/cc0000/ffffff,wet n wild,33,2016-01-20 06:55:33,17.89
+600,http://dummyimage.com/210x139.png/cc0000/ffffff,Prefenz Silica Based Hand Sanitizer,15,2015-04-01 03:34:04,18.38
+601,http://dummyimage.com/201x247.gif/dddddd/000000,EXTENDED PHENYTOIN SODIUM,29,2016-01-02 12:00:22,5.03
+602,http://dummyimage.com/158x171.jpg/5fa2dd/ffffff,Colgate Proclinical Refreshing Mint,4,2016-02-08 19:22:07,7.31
+603,http://dummyimage.com/113x245.png/dddddd/000000,Fluocinonide,35,2015-06-30 08:29:25,17.19
+604,http://dummyimage.com/176x104.gif/ff4444/ffffff,Betalido Kit,3,2016-01-15 18:09:15,7.42
+605,http://dummyimage.com/158x119.png/5fa2dd/ffffff,"Standardized Mite, Dermatophagoides farinae, Scratch or Bulk, 30000 AU per mL",10,2015-08-11 11:16:25,14.89
+606,http://dummyimage.com/176x146.png/ff4444/ffffff,Diltiazem Hydrochloride,49,2015-08-15 23:59:09,15.91
+607,http://dummyimage.com/216x137.png/ff4444/ffffff,Ginger Lime hand sanitizer,20,2016-01-16 21:02:17,6.68
+608,http://dummyimage.com/192x127.jpg/5fa2dd/ffffff,HYDROCORTISONE,36,2015-10-20 19:06:57,1.29
+609,http://dummyimage.com/249x151.gif/dddddd/000000,Zyprexa,14,2015-12-30 04:00:08,19.6
+610,http://dummyimage.com/241x124.png/dddddd/000000,DOUBLE PERFECTION LUMIERE,22,2015-09-04 13:26:32,5.6
+611,http://dummyimage.com/154x223.jpg/dddddd/000000,Nupercainal Bio-Active Hemorrhoidal,10,2015-05-11 01:48:42,14.97
+612,http://dummyimage.com/184x120.png/dddddd/000000,Depakote,15,2016-03-25 08:27:08,11.15
+613,http://dummyimage.com/169x223.gif/5fa2dd/ffffff,FE C Tab Plus,15,2015-04-22 23:53:23,5.09
+614,http://dummyimage.com/232x155.jpg/5fa2dd/ffffff,ACONITUM FEROX,8,2016-01-24 00:09:21,15.73
+615,http://dummyimage.com/237x146.jpg/5fa2dd/ffffff,LBEL FILLING EFFECT FOUNDATION SPF 10,48,2015-05-27 13:07:04,4.33
+616,http://dummyimage.com/212x134.jpg/cc0000/ffffff,Sensitive Skin antiperspirant deodorant roll-on,47,2015-09-04 00:40:25,14.46
+617,http://dummyimage.com/115x169.gif/dddddd/000000,Promethazine Hydrochloride,18,2015-06-17 09:29:07,14.4
+618,http://dummyimage.com/230x107.gif/dddddd/000000,Trimethoprim,46,2015-07-09 05:27:24,15.67
+619,http://dummyimage.com/240x237.gif/cc0000/ffffff,HELLO FLAWLESS OXYGEN WOW Broad Spectrum SPF 25 BRIGHTENING MAKEUP - WARM ME UP,43,2015-12-04 09:30:00,10.91
+620,http://dummyimage.com/245x216.gif/dddddd/000000,Levetiracetam,11,2015-10-09 06:14:50,6.8
+621,http://dummyimage.com/143x140.png/cc0000/ffffff,HYVEE,26,2016-03-17 21:36:13,16.84
+622,http://dummyimage.com/218x232.png/dddddd/000000,Action Chemical Antibac Clear,37,2016-01-25 03:12:59,10.08
+623,http://dummyimage.com/126x215.png/cc0000/ffffff,antiperspirant deodorant,8,2015-08-10 22:30:04,17.32
+624,http://dummyimage.com/135x177.gif/dddddd/000000,Clonidine Hydrochloride,49,2015-08-09 05:46:01,9.86
+625,http://dummyimage.com/120x151.jpg/dddddd/000000,Abacavir,20,2016-03-05 01:31:24,16.76
+626,http://dummyimage.com/201x195.png/5fa2dd/ffffff,Lactated Ringers,41,2015-10-11 19:31:50,2.45
+627,http://dummyimage.com/221x213.jpg/5fa2dd/ffffff,Rifampin,49,2015-03-30 23:59:09,17.34
+628,http://dummyimage.com/134x122.jpg/5fa2dd/ffffff,Anacardium Homaccord,15,2015-04-06 02:43:00,18.08
+629,http://dummyimage.com/238x120.gif/cc0000/ffffff,Pramoxine Hydrochloride,17,2015-12-27 01:41:02,10.2
+630,http://dummyimage.com/123x104.png/cc0000/ffffff,Smart Sense Naproxen Sodium,40,2016-02-12 11:23:03,2.24
+631,http://dummyimage.com/151x115.jpg/5fa2dd/ffffff,NAPROXEN SODIUM,8,2016-02-16 22:56:52,13.04
+632,http://dummyimage.com/209x107.jpg/dddddd/000000,Tretinoin,19,2015-08-20 00:12:16,5.58
+633,http://dummyimage.com/114x244.gif/5fa2dd/ffffff,Fluconazole,21,2015-04-12 20:40:59,8.86
+634,http://dummyimage.com/216x128.jpg/cc0000/ffffff,Prednisone,28,2015-06-22 22:06:10,6.44
+635,http://dummyimage.com/161x184.jpg/5fa2dd/ffffff,AK-POLY-BAC,32,2015-05-22 11:49:44,10.65
+636,http://dummyimage.com/235x166.jpg/5fa2dd/ffffff,Dextrose,35,2016-03-23 07:30:50,5.52
+637,http://dummyimage.com/220x164.jpg/ff4444/ffffff,Tramadol Hydrochloride,4,2015-08-27 04:19:04,4.89
+638,http://dummyimage.com/129x175.gif/cc0000/ffffff,Losartan Potassium,4,2016-03-14 06:18:55,7.98
+639,http://dummyimage.com/202x246.png/5fa2dd/ffffff,Propranolol Hydrochloride,49,2015-04-17 14:14:00,8.66
+640,http://dummyimage.com/174x172.png/cc0000/ffffff,Sufentanil Citrate,29,2015-05-26 16:07:42,3.92
+641,http://dummyimage.com/188x206.gif/cc0000/ffffff,CVS HYDROCORTISONE WITH ALOE,26,2015-09-25 00:50:19,16.87
+642,http://dummyimage.com/167x165.png/dddddd/000000,Androbalance,46,2015-09-21 00:37:53,15.64
+643,http://dummyimage.com/209x186.gif/cc0000/ffffff,Cefprozil,10,2016-01-25 16:02:10,18.59
+644,http://dummyimage.com/115x188.jpg/ff4444/ffffff,MBM 11 Thyroid Adrenal,28,2015-12-20 17:40:48,2.09
+645,http://dummyimage.com/168x140.gif/cc0000/ffffff,R-Tanna,31,2016-03-20 02:40:59,12.19
+646,http://dummyimage.com/164x205.gif/cc0000/ffffff,Headache Relief To Go,44,2016-02-28 09:39:15,12.52
+647,http://dummyimage.com/110x131.gif/ff4444/ffffff,Lidocaine Hydrochloride,35,2016-03-15 09:17:58,12.5
+648,http://dummyimage.com/117x139.jpg/5fa2dd/ffffff,acid controller,44,2015-05-30 08:10:52,17.59
+649,http://dummyimage.com/171x153.jpg/dddddd/000000,INSTANT HAND SANITIZER,26,2015-07-30 01:00:26,16.87
+650,http://dummyimage.com/183x164.jpg/5fa2dd/ffffff,Umbrella Sunscreen,47,2015-10-09 23:42:25,10.09
+651,http://dummyimage.com/196x244.png/cc0000/ffffff,PlusPHARMA,48,2015-12-30 01:43:30,12.73
+652,http://dummyimage.com/131x121.png/ff4444/ffffff,LUBRIDERM,20,2015-10-08 08:22:56,11.51
+653,http://dummyimage.com/166x181.jpg/ff4444/ffffff,Pier 1 Imports Melon and Mint Anti-Bacterial Hand Sanitizer,9,2015-05-04 22:27:10,10.71
+654,http://dummyimage.com/236x211.gif/5fa2dd/ffffff,Antiseptic Swab,50,2015-12-30 06:37:22,3.9
+655,http://dummyimage.com/128x163.jpg/dddddd/000000,Zap APF,37,2015-11-20 12:16:31,17.65
+656,http://dummyimage.com/143x245.png/cc0000/ffffff,miconazole 1,36,2015-09-20 02:09:16,2.42
+657,http://dummyimage.com/241x155.png/ff4444/ffffff,Up (and) Up Green Apple Scent,11,2015-06-28 09:30:42,8.78
+658,http://dummyimage.com/154x161.jpg/dddddd/000000,Covergirl Outlast Stay Fabulous 3in1 Foundation,18,2015-12-20 02:16:42,1.42
+659,http://dummyimage.com/226x116.gif/ff4444/ffffff,Arnica e pl. tota 12,42,2015-04-19 05:05:41,7.07
+660,http://dummyimage.com/218x199.gif/cc0000/ffffff,Hazelnut Pollen,26,2015-12-06 01:35:10,5.45
+661,http://dummyimage.com/116x129.jpg/cc0000/ffffff,Prochlorperazine Maleate,40,2015-10-20 01:11:42,6.67
+662,http://dummyimage.com/235x130.jpg/5fa2dd/ffffff,Metoprolol Tartrate,26,2015-08-16 23:54:01,3.79
+663,http://dummyimage.com/142x194.jpg/dddddd/000000,Head and Shoulders,42,2015-05-29 12:36:48,16.52
+664,http://dummyimage.com/118x142.gif/ff4444/ffffff,Sensible,44,2015-06-16 23:22:02,3.55
+665,http://dummyimage.com/230x141.png/5fa2dd/ffffff,Ursodiol,49,2016-01-13 12:06:36,4.56
+666,http://dummyimage.com/123x226.gif/dddddd/000000,Lamotrigine,30,2015-07-21 06:24:19,4.21
+667,http://dummyimage.com/247x103.jpg/dddddd/000000,Escitalopram,17,2016-03-25 00:05:40,2.53
+668,http://dummyimage.com/204x148.png/5fa2dd/ffffff,FLUOROMETHOLONE,34,2015-06-09 18:33:44,5.88
+669,http://dummyimage.com/150x201.jpg/cc0000/ffffff,OXCARBAZEPINE,15,2016-01-21 19:56:36,1.87
+670,http://dummyimage.com/168x168.png/dddddd/000000,ADEFOVIR DIPIVOXIL,22,2015-06-19 14:20:08,9.16
+671,http://dummyimage.com/104x147.jpg/dddddd/000000,Strawberry,10,2015-12-02 08:59:11,10.26
+672,http://dummyimage.com/117x121.png/dddddd/000000,Nutrilyte II,26,2015-09-15 03:17:36,6.08
+673,http://dummyimage.com/103x216.png/5fa2dd/ffffff,up and up cold and flu relief,23,2015-06-08 15:27:35,10.45
+674,http://dummyimage.com/236x190.jpg/5fa2dd/ffffff,OXYGEN,5,2015-12-22 23:53:48,11.98
+675,http://dummyimage.com/246x185.gif/5fa2dd/ffffff,DUAL ACTION CHERRY COUGH SUPPRESSANT ORAL ANESTHETIC,23,2016-03-16 13:08:25,9.25
+676,http://dummyimage.com/149x242.jpg/dddddd/000000,Furosemide,48,2016-01-26 06:08:46,2.63
+677,http://dummyimage.com/144x125.png/cc0000/ffffff,Childrens Cold and Allergy,4,2016-03-16 13:51:48,16.19
+678,http://dummyimage.com/172x117.jpg/cc0000/ffffff,Oxygen,45,2015-10-19 15:08:04,2.83
+679,http://dummyimage.com/147x100.png/dddddd/000000,Lisinopril,34,2015-08-07 21:37:41,10.81
+680,http://dummyimage.com/135x208.jpg/dddddd/000000,Potassium Chloride,43,2015-07-25 00:24:47,14.02
+681,http://dummyimage.com/210x199.jpg/dddddd/000000,good sense lice treatment,20,2015-06-06 10:16:22,9.69
+682,http://dummyimage.com/128x147.gif/5fa2dd/ffffff,"Pollens - Trees, Tree Mix 6",15,2015-07-11 00:55:55,11.82
+683,http://dummyimage.com/238x181.gif/dddddd/000000,Tiger Balm White,3,2015-12-09 20:43:47,7.91
+684,http://dummyimage.com/248x133.jpg/cc0000/ffffff,Gabapentin,25,2015-12-09 22:31:19,2.12
+685,http://dummyimage.com/162x105.jpg/ff4444/ffffff,benzphetamine hydrochloride,30,2015-07-31 07:43:50,2.1
+686,http://dummyimage.com/222x116.jpg/ff4444/ffffff,Oxygen,37,2015-04-11 06:13:05,7.41
+687,http://dummyimage.com/227x235.png/ff4444/ffffff,Calcium Chloride,30,2015-06-04 00:02:16,11.19
+688,http://dummyimage.com/219x227.jpg/ff4444/ffffff,Retisert,20,2015-11-11 01:53:47,17.57
+689,http://dummyimage.com/124x168.gif/ff4444/ffffff,REQUIP,16,2015-04-05 13:42:03,8.02
+690,http://dummyimage.com/151x114.gif/ff4444/ffffff,Cephalexin,14,2016-01-29 03:32:28,16.79
+691,http://dummyimage.com/245x231.jpg/cc0000/ffffff,Citroma Magnesium Citrate,18,2015-10-15 06:20:48,12.82
+692,http://dummyimage.com/171x157.jpg/dddddd/000000,Olay Regenerist Luminous Brightening and Protecting,48,2015-05-05 16:43:48,2.99
+693,http://dummyimage.com/101x129.jpg/ff4444/ffffff,Zodryl AC 50,48,2015-12-07 18:19:16,18.74
+694,http://dummyimage.com/127x136.gif/5fa2dd/ffffff,HEMANGEOL,18,2016-01-01 08:49:55,12.53
+695,http://dummyimage.com/184x108.png/ff4444/ffffff,24 Hour Allergy,14,2015-10-18 16:59:47,10.24
+696,http://dummyimage.com/151x114.png/ff4444/ffffff,mally Poreless Perfection Glowing Foundation Tan,27,2016-03-06 10:51:01,10.19
+697,http://dummyimage.com/203x207.jpg/cc0000/ffffff,Persantine,27,2015-11-06 05:19:18,11.5
+698,http://dummyimage.com/232x137.gif/dddddd/000000,OXYGEN,37,2015-11-29 00:52:22,13.71
+699,http://dummyimage.com/230x227.gif/5fa2dd/ffffff,AQUA COLLAGEN SOLUTION MARINE HYDROGEL EYE,49,2015-05-22 09:35:38,1.89
+700,http://dummyimage.com/180x188.png/dddddd/000000,Infants Gas Relief,21,2016-01-24 08:53:43,11.26
+701,http://dummyimage.com/177x177.png/5fa2dd/ffffff,Furosemide,15,2016-01-27 10:19:55,17.72
+702,http://dummyimage.com/190x179.gif/ff4444/ffffff,Breast Care - Fibrocystic,18,2015-08-07 22:14:35,10.99
+703,http://dummyimage.com/244x173.gif/ff4444/ffffff,BABY DIAPER,31,2016-01-13 19:54:18,4.83
+704,http://dummyimage.com/205x166.jpg/5fa2dd/ffffff,Rivastigmine Tartrate,38,2015-06-23 23:15:50,13.0
+705,http://dummyimage.com/215x119.png/dddddd/000000,Sodium Chloride,1,2016-01-11 23:01:44,1.14
+706,http://dummyimage.com/198x123.gif/dddddd/000000,Kapok,35,2016-02-10 10:34:34,4.81
+707,http://dummyimage.com/210x239.jpg/5fa2dd/ffffff,Salicylic Acid,9,2015-05-14 10:40:38,13.62
+708,http://dummyimage.com/116x218.gif/ff4444/ffffff,Plant Stemcell VEGF bFGF Tonic,39,2015-10-27 12:22:48,11.38
+709,http://dummyimage.com/159x131.jpg/5fa2dd/ffffff,Australian Gold,41,2015-12-05 13:00:37,4.85
+710,http://dummyimage.com/145x222.jpg/dddddd/000000,Cardizem,15,2016-01-26 10:51:17,1.31
+711,http://dummyimage.com/199x142.jpg/dddddd/000000,Dental plus Whitening,31,2015-05-29 23:49:27,18.14
+712,http://dummyimage.com/207x139.png/dddddd/000000,Nitrofurantoin (monohydrate/macrocrystals),25,2016-02-25 18:26:25,16.12
+713,http://dummyimage.com/245x202.gif/ff4444/ffffff,Paroxetine,23,2016-01-15 02:42:39,15.43
+714,http://dummyimage.com/116x118.jpg/cc0000/ffffff,Stomach Relief,20,2015-06-14 05:42:50,19.55
+715,http://dummyimage.com/114x227.gif/cc0000/ffffff,GIM,42,2015-12-25 08:34:36,3.13
+716,http://dummyimage.com/102x142.gif/cc0000/ffffff,Hydrocodone Bitartrate and Acetaminophen,6,2016-01-10 08:50:08,4.3
+717,http://dummyimage.com/246x153.gif/5fa2dd/ffffff,Imari Blossom,26,2016-02-16 15:23:58,11.34
+718,http://dummyimage.com/195x236.gif/5fa2dd/ffffff,Cardizem,38,2015-08-25 22:12:25,13.99
+719,http://dummyimage.com/237x115.png/dddddd/000000,Hydrocortisone Valerate,14,2015-06-14 00:20:29,4.2
+720,http://dummyimage.com/146x241.png/ff4444/ffffff,Fluconazole,11,2015-06-10 10:48:47,4.32
+721,http://dummyimage.com/104x120.jpg/cc0000/ffffff,TussiCaps,15,2015-11-17 23:17:29,16.99
+722,http://dummyimage.com/181x174.gif/cc0000/ffffff,Dividends,17,2015-10-31 21:31:20,2.35
+723,http://dummyimage.com/199x243.gif/ff4444/ffffff,ACACIA,38,2016-01-02 12:24:46,4.23
+724,http://dummyimage.com/123x242.gif/dddddd/000000,Mens Maca Root Energising Face Protector,9,2016-01-13 22:07:58,7.19
+725,http://dummyimage.com/206x250.gif/5fa2dd/ffffff,DILAUDID,1,2015-12-01 06:39:15,11.15
+726,http://dummyimage.com/250x120.png/cc0000/ffffff,White Birch,39,2015-06-18 16:45:59,7.25
+727,http://dummyimage.com/105x169.jpg/dddddd/000000,Inon Ace,42,2015-06-13 11:30:41,6.08
+728,http://dummyimage.com/240x175.gif/5fa2dd/ffffff,Xylocaine,10,2015-07-16 18:08:24,1.05
+729,http://dummyimage.com/169x195.jpg/cc0000/ffffff,GoodSense,16,2015-04-27 21:09:00,19.6
+730,http://dummyimage.com/142x242.gif/5fa2dd/ffffff,CYMBALTA,13,2015-07-04 14:20:27,19.16
+731,http://dummyimage.com/193x111.gif/ff4444/ffffff,Oxygen,49,2016-01-19 19:28:08,15.32
+732,http://dummyimage.com/140x165.png/5fa2dd/ffffff,good sense pain relief pm,17,2015-10-20 22:03:57,2.36
+733,http://dummyimage.com/118x132.png/cc0000/ffffff,Stool Softener DC Laxative,47,2015-04-19 23:30:21,18.69
+734,http://dummyimage.com/130x154.jpg/dddddd/000000,RAMEDICA,8,2015-07-25 13:58:48,3.45
+735,http://dummyimage.com/242x228.png/5fa2dd/ffffff,Original Antibacterial foaming hand,39,2015-11-27 03:09:17,17.13
+736,http://dummyimage.com/122x124.png/cc0000/ffffff,Buxom Show Some Skin Weightless Foundation Broad Spectrum SPF 30,36,2015-07-30 12:06:04,6.98
+737,http://dummyimage.com/227x140.gif/ff4444/ffffff,Zithromax,24,2015-08-24 15:01:21,3.0
+738,http://dummyimage.com/187x191.png/cc0000/ffffff,PredniSONE,21,2015-08-07 18:35:03,18.81
+739,http://dummyimage.com/183x140.gif/ff4444/ffffff,Lorazepam,39,2015-12-26 20:51:22,18.47
+740,http://dummyimage.com/215x169.jpg/cc0000/ffffff,Sciatici Freee,17,2015-08-17 22:17:44,2.72
+741,http://dummyimage.com/213x231.png/5fa2dd/ffffff,Rabbit Epithelium,50,2015-11-16 21:30:50,11.7
+742,http://dummyimage.com/228x144.jpg/dddddd/000000,CAPRELSA,9,2015-12-08 15:34:15,9.66
+743,http://dummyimage.com/235x226.png/ff4444/ffffff,PLANTAGO LANCEOLATA POLLEN,30,2015-10-02 19:04:51,13.88
+744,http://dummyimage.com/199x138.gif/dddddd/000000,benzphetamine hydrochloride,39,2015-05-16 23:08:18,1.82
+745,http://dummyimage.com/162x167.gif/ff4444/ffffff,Lisinopril,37,2015-07-21 22:14:25,10.01
+746,http://dummyimage.com/108x222.png/ff4444/ffffff,ELOCON,38,2015-09-30 14:02:19,11.99
+747,http://dummyimage.com/249x156.gif/dddddd/000000,Gum Drop Hand Sanitizer,41,2015-11-16 14:04:51,19.42
+748,http://dummyimage.com/126x139.gif/5fa2dd/ffffff,Chlorpromazine Hydrochloride,47,2015-11-16 11:02:52,3.9
+749,http://dummyimage.com/106x143.jpg/ff4444/ffffff,Zap APF,13,2015-06-08 11:01:03,5.41
+750,http://dummyimage.com/176x182.jpg/dddddd/000000,Pleo Nig,36,2015-08-19 13:16:16,1.93
+751,http://dummyimage.com/173x218.jpg/ff4444/ffffff,Oxygen,13,2015-08-26 09:22:15,17.97
+752,http://dummyimage.com/126x188.gif/ff4444/ffffff,methylphenidate hydrochloride,50,2015-05-11 16:07:14,19.45
+753,http://dummyimage.com/157x152.jpg/dddddd/000000,Salsolinol,28,2015-04-06 03:27:43,10.77
+754,http://dummyimage.com/103x114.gif/cc0000/ffffff,Tag Alder,3,2015-04-20 17:53:05,14.01
+755,http://dummyimage.com/184x195.gif/dddddd/000000,Naproxen,24,2016-03-14 04:44:35,8.9
+756,http://dummyimage.com/113x121.jpg/cc0000/ffffff,Assured Instant Hand Sanitizer With Moisturizers Vitamin E and Aloe,35,2015-09-27 04:49:31,2.81
+757,http://dummyimage.com/174x192.jpg/5fa2dd/ffffff,Good Sense Ibuprofen,44,2015-12-03 00:23:18,18.35
+758,http://dummyimage.com/164x186.gif/cc0000/ffffff,Fosinopril Sodium and Hydrochlorothiazide,8,2015-04-20 02:52:57,15.16
+759,http://dummyimage.com/110x250.gif/cc0000/ffffff,Amyl Nitrite,39,2015-08-07 15:57:15,12.98
+760,http://dummyimage.com/213x188.png/5fa2dd/ffffff,Instant Hand Sanitizer,31,2016-01-24 00:11:43,14.36
+761,http://dummyimage.com/248x215.png/cc0000/ffffff,Oxygen,39,2015-11-15 05:37:27,7.45
+762,http://dummyimage.com/121x129.gif/5fa2dd/ffffff,Healthy Accents Antibacterial Body Wash,24,2015-08-31 07:56:45,19.75
+763,http://dummyimage.com/152x203.gif/ff4444/ffffff,levalbuterol hydrochloride,23,2015-04-06 19:36:24,2.78
+764,http://dummyimage.com/226x241.gif/5fa2dd/ffffff,Valsartan and Hydrochlorothiazide,34,2015-10-26 07:47:23,8.72
+765,http://dummyimage.com/240x210.png/dddddd/000000,tussin dm,37,2015-11-01 20:02:56,8.75
+766,http://dummyimage.com/154x151.png/5fa2dd/ffffff,Phytonadione,2,2015-05-03 12:01:21,9.34
+767,http://dummyimage.com/240x212.gif/dddddd/000000,Diltiazem Hydrochloride,34,2015-06-29 04:27:01,17.11
+768,http://dummyimage.com/208x146.gif/dddddd/000000,Allegra D-12 Hour,3,2016-01-08 22:42:15,11.82
+769,http://dummyimage.com/128x134.gif/dddddd/000000,healthy accents ibuprofen,44,2015-04-15 06:27:23,6.72
+770,http://dummyimage.com/224x245.jpg/5fa2dd/ffffff,RINKEL MOLD MIX C,22,2015-07-31 21:27:00,13.17
+771,http://dummyimage.com/125x100.png/5fa2dd/ffffff,pain relief pm,48,2015-07-21 14:42:09,19.8
+772,http://dummyimage.com/143x183.gif/cc0000/ffffff,Lorazepam,10,2015-07-03 23:07:40,12.53
+773,http://dummyimage.com/173x228.jpg/dddddd/000000,OXCARBAZEPINE,22,2015-04-30 23:45:52,12.48
+774,http://dummyimage.com/141x150.jpg/cc0000/ffffff,Lamivudine,16,2015-05-19 05:39:42,5.61
+775,http://dummyimage.com/156x209.gif/cc0000/ffffff,WELLBUTRIN,26,2015-06-10 23:00:32,3.39
+776,http://dummyimage.com/207x231.gif/5fa2dd/ffffff,Healthy Accents Aspirin,3,2015-08-04 17:08:59,3.61
+777,http://dummyimage.com/148x134.png/cc0000/ffffff,NAPRELAN,50,2015-09-04 15:24:52,12.06
+778,http://dummyimage.com/144x201.png/dddddd/000000,LEFLUNOMIDE,5,2016-01-16 02:54:33,19.13
+779,http://dummyimage.com/109x192.jpg/cc0000/ffffff,Escitalopram,49,2016-02-29 16:39:59,14.88
+780,http://dummyimage.com/229x165.png/cc0000/ffffff,"Standardized Grass Pollen, Grass Mix 7",35,2015-05-22 12:50:59,8.78
+781,http://dummyimage.com/180x186.gif/dddddd/000000,Good Neighbor Pharmacy Tioconazole 1,45,2015-09-01 18:47:23,1.17
+782,http://dummyimage.com/121x204.gif/5fa2dd/ffffff,Anti-Bacterial Wipes,33,2015-08-24 17:22:45,5.71
+783,http://dummyimage.com/143x149.png/dddddd/000000,Amoxicillin and Clavulanate Potassium,9,2015-10-01 15:39:57,10.91
+784,http://dummyimage.com/155x244.jpg/cc0000/ffffff,First Aid and Burn,9,2016-03-13 19:44:47,18.25
+785,http://dummyimage.com/210x104.jpg/5fa2dd/ffffff,TAMSULOSIN HYDROCHLORIDE,7,2015-10-24 13:19:17,9.0
+786,http://dummyimage.com/239x245.jpg/cc0000/ffffff,Aesculus Quercus Essence,31,2015-08-29 00:10:41,3.58
+787,http://dummyimage.com/162x101.png/cc0000/ffffff,LEVAQUIN,32,2015-10-15 10:39:50,7.78
+788,http://dummyimage.com/237x249.jpg/5fa2dd/ffffff,Muscle Rescue,2,2016-02-07 13:32:22,18.68
+789,http://dummyimage.com/205x218.gif/dddddd/000000,Instant Hand Sanitizer,10,2015-12-15 22:52:26,2.93
+790,http://dummyimage.com/164x178.gif/cc0000/ffffff,Promethazine Hydrochloride,25,2015-09-28 04:01:17,10.86
+791,http://dummyimage.com/210x110.gif/5fa2dd/ffffff,Exuviance CoverBlend Skin Caring Foundation,30,2015-07-11 23:25:25,18.36
+792,http://dummyimage.com/137x107.png/dddddd/000000,Donepezil Hydrochloride,13,2015-07-28 00:49:51,3.72
+793,http://dummyimage.com/179x124.jpg/5fa2dd/ffffff,ZENPEP,4,2016-03-03 15:50:54,12.93
+794,http://dummyimage.com/166x224.png/ff4444/ffffff,Valsartan and Hydrochlorothiazide,6,2015-08-29 21:33:38,6.7
+795,http://dummyimage.com/220x131.jpg/ff4444/ffffff,OXYCODONE AND ACETAMINOPHEN,31,2015-10-10 18:12:29,18.65
+796,http://dummyimage.com/148x207.png/cc0000/ffffff,Arizona Ash,39,2015-07-29 18:08:47,15.05
+797,http://dummyimage.com/116x188.png/dddddd/000000,Sunmark ibuprofen,40,2016-03-19 20:24:14,12.88
+798,http://dummyimage.com/153x183.jpg/5fa2dd/ffffff,"COMPRESSED GAS, N.O.S.",10,2016-01-06 02:16:20,7.47
+799,http://dummyimage.com/182x161.png/5fa2dd/ffffff,CEFTRIAXONE,12,2015-04-22 19:23:30,7.58
+800,http://dummyimage.com/198x113.gif/ff4444/ffffff,Geodon,1,2015-05-16 10:49:47,6.56
+801,http://dummyimage.com/240x139.jpg/cc0000/ffffff,Paricalcitol,40,2015-12-10 18:53:22,2.43
+802,http://dummyimage.com/185x101.png/dddddd/000000,Lancome Paris Flash Bronzer AntiAge,50,2015-10-07 00:24:02,11.05
+803,http://dummyimage.com/114x195.png/ff4444/ffffff,allergy,14,2016-01-19 13:38:52,13.18
+804,http://dummyimage.com/107x112.png/cc0000/ffffff,Suphedrine PE Sinus and Allergy,14,2015-08-25 14:50:34,4.93
+805,http://dummyimage.com/228x245.jpg/dddddd/000000,Rolaids Regular Strength- Cherry,33,2015-06-18 11:55:18,16.28
+806,http://dummyimage.com/209x190.png/ff4444/ffffff,Oxycodone Hydrochloride,13,2015-05-30 21:16:06,7.13
+807,http://dummyimage.com/174x214.png/ff4444/ffffff,Alphadine Scrub,8,2015-04-02 09:14:48,17.02
+808,http://dummyimage.com/223x172.png/dddddd/000000,Cetaphil DermaControl SPF 30,5,2016-03-06 21:33:11,5.3
+809,http://dummyimage.com/230x144.png/5fa2dd/ffffff,Ondansetron HCL,3,2015-05-12 03:38:05,15.63
+810,http://dummyimage.com/132x238.jpg/cc0000/ffffff,Ciprofloxacin Otic,50,2015-05-31 21:44:22,17.83
+811,http://dummyimage.com/128x150.gif/cc0000/ffffff,Valsartan and hydrochlorothiazide,5,2015-11-18 09:34:49,5.6
+812,http://dummyimage.com/194x147.jpg/ff4444/ffffff,Sotalol Hydrochloride,37,2015-06-04 01:06:49,12.51
+813,http://dummyimage.com/210x230.jpg/cc0000/ffffff,METHOTREXATE,47,2016-02-04 12:15:38,2.0
+814,http://dummyimage.com/190x115.png/dddddd/000000,SohMed Alertness Aid,2,2015-10-12 06:51:25,12.19
+815,http://dummyimage.com/125x176.png/5fa2dd/ffffff,Doxycycline,39,2015-09-14 12:14:51,2.1
+816,http://dummyimage.com/135x173.png/ff4444/ffffff,ZYPREXA,9,2015-06-12 18:14:35,9.01
+817,http://dummyimage.com/126x130.jpg/5fa2dd/ffffff,SEPIA OFFICINALIS,13,2015-10-13 01:21:35,2.58
+818,http://dummyimage.com/223x228.jpg/cc0000/ffffff,Pecan Nut Meat,24,2015-12-23 08:11:24,16.43
+819,http://dummyimage.com/231x173.png/5fa2dd/ffffff,Eve Lom Brilliant Cover Concealer Broad Spectrum SPF 15 Sunscreen,16,2016-02-11 00:56:10,7.95
+820,http://dummyimage.com/111x205.gif/cc0000/ffffff,Ibuprofen and Pseudoephedrine Hydrochloride,37,2015-04-30 20:04:15,7.93
+821,http://dummyimage.com/181x108.jpg/ff4444/ffffff,Back Muscle and Joint Relief,7,2015-11-22 02:06:27,1.96
+822,http://dummyimage.com/184x151.jpg/ff4444/ffffff,ATORVASTATIN CALCIUM,36,2015-12-01 07:05:39,2.55
+823,http://dummyimage.com/212x185.jpg/cc0000/ffffff,Levothyroxine Sodium,39,2016-01-03 23:09:13,18.2
+824,http://dummyimage.com/222x188.gif/ff4444/ffffff,KADIAN,3,2015-08-27 15:31:24,15.5
+825,http://dummyimage.com/174x202.gif/5fa2dd/ffffff,good neighbor pharmacy tussin dm max,37,2015-11-16 13:09:37,2.29
+826,http://dummyimage.com/121x222.png/dddddd/000000,Mucus Relief,8,2015-05-22 00:55:08,3.87
+827,http://dummyimage.com/194x121.gif/dddddd/000000,Fenofibric Acid,19,2016-02-26 07:06:16,4.93
+828,http://dummyimage.com/169x196.gif/cc0000/ffffff,Royal Antibacterial Orange Berry Hand Cleanse,14,2015-06-14 12:49:13,1.05
+829,http://dummyimage.com/241x157.gif/cc0000/ffffff,Dr. Blue,19,2016-01-19 13:31:21,2.68
+830,http://dummyimage.com/166x118.gif/ff4444/ffffff,ELF Lip Balm SPF 15,2,2015-05-17 15:08:13,12.09
+831,http://dummyimage.com/164x220.png/ff4444/ffffff,Niaspan,16,2015-10-07 08:03:30,9.85
+832,http://dummyimage.com/237x145.gif/ff4444/ffffff,Right Guard Sport Fresh Invisible Solid Antiperspirant and Deodorant,9,2015-08-21 22:53:59,19.06
+833,http://dummyimage.com/161x244.gif/ff4444/ffffff,Ibuprofen,17,2015-09-21 05:26:54,9.8
+834,http://dummyimage.com/189x107.jpg/ff4444/ffffff,simvastatin,45,2015-12-27 21:20:00,18.92
+835,http://dummyimage.com/141x149.gif/dddddd/000000,FAMILY CARE TRIPLE ANTIBIOTIC PAIN RELIEF,47,2016-01-01 21:23:54,6.48
+836,http://dummyimage.com/120x150.gif/ff4444/ffffff,Oxycodone Hydrochloride,44,2015-05-08 23:31:13,1.71
+837,http://dummyimage.com/157x106.jpg/ff4444/ffffff,Everyday Clean Dandruff,3,2015-12-02 03:12:39,12.19
+838,http://dummyimage.com/106x242.gif/cc0000/ffffff,Rheumatrex,9,2016-03-04 02:04:27,2.04
+839,http://dummyimage.com/192x177.jpg/dddddd/000000,Menticol first aid antiseptic and external analgesic lotion,39,2015-06-28 16:37:56,2.39
+840,http://dummyimage.com/188x233.png/5fa2dd/ffffff,Alprazolam,23,2016-03-28 12:07:23,11.2
+841,http://dummyimage.com/189x222.gif/5fa2dd/ffffff,PanOxyl,9,2015-08-22 08:59:06,13.5
+842,http://dummyimage.com/100x245.png/ff4444/ffffff,Healerz for Itches,22,2015-04-19 05:46:41,13.29
+843,http://dummyimage.com/121x130.png/cc0000/ffffff,Solu-Medrol,50,2015-04-18 15:48:03,2.11
+844,http://dummyimage.com/198x212.jpg/cc0000/ffffff,Laxative Pills,50,2015-06-25 23:49:52,9.75
+845,http://dummyimage.com/220x102.gif/5fa2dd/ffffff,CVS PHARMACY,8,2015-06-12 04:49:42,10.74
+846,http://dummyimage.com/139x183.jpg/cc0000/ffffff,STOOL SOFTENER DOCUSATE SODIUM 50 MG,9,2015-04-11 14:12:55,11.97
+847,http://dummyimage.com/170x112.png/dddddd/000000,Caffeine Withdrawal,50,2015-08-29 14:30:01,6.43
+848,http://dummyimage.com/134x191.jpg/ff4444/ffffff,Phosphorus 8 Special Order,40,2015-08-09 17:57:53,10.46
+849,http://dummyimage.com/195x222.jpg/cc0000/ffffff,Amlodipine Besylate and Benazepril Hydrochloride,36,2015-04-06 18:21:48,10.59
+850,http://dummyimage.com/184x100.png/cc0000/ffffff,Famotidine,28,2015-11-27 21:43:47,7.0
+851,http://dummyimage.com/213x244.jpg/ff4444/ffffff,Metronidazole,41,2016-02-17 03:43:31,8.93
+852,http://dummyimage.com/157x200.gif/5fa2dd/ffffff,Enoxaparin Sodium,21,2015-07-26 08:12:44,5.75
+853,http://dummyimage.com/104x136.gif/5fa2dd/ffffff,FENOFIBRATE,2,2015-05-03 20:41:08,6.34
+854,http://dummyimage.com/194x149.jpg/ff4444/ffffff,INTRON A,48,2015-09-15 09:26:39,17.85
+855,http://dummyimage.com/209x205.gif/5fa2dd/ffffff,Smooth texture Orange flavor,16,2016-03-26 08:19:28,7.48
+856,http://dummyimage.com/229x180.gif/ff4444/ffffff,TACT,31,2015-05-19 23:08:43,3.62
+857,http://dummyimage.com/191x141.png/5fa2dd/ffffff,SUNMARK Calcium Antacid,43,2015-05-12 13:59:54,12.61
+858,http://dummyimage.com/162x175.gif/5fa2dd/ffffff,Benazepril Hydrochloride and Hydrochlorothiazide,48,2015-12-19 05:27:03,5.01
+859,http://dummyimage.com/154x191.jpg/5fa2dd/ffffff,Topiramate,5,2015-04-30 16:14:27,12.74
+860,http://dummyimage.com/137x188.gif/cc0000/ffffff,Mucus Relief Plus,13,2015-04-17 04:43:51,15.65
+861,http://dummyimage.com/134x221.png/cc0000/ffffff,Gabapentin,46,2015-05-09 11:00:26,19.89
+862,http://dummyimage.com/236x204.gif/cc0000/ffffff,Halls,9,2015-04-29 17:19:52,5.02
+863,http://dummyimage.com/150x201.gif/dddddd/000000,Gildagia,31,2015-09-03 07:29:59,18.93
+864,http://dummyimage.com/217x121.png/5fa2dd/ffffff,morphine sulfate,9,2015-10-01 00:36:25,18.89
+865,http://dummyimage.com/222x219.jpg/dddddd/000000,Metformin hydrochloride,17,2015-04-16 05:42:09,12.36
+866,http://dummyimage.com/138x211.png/cc0000/ffffff,Cold and Allergy,28,2015-10-16 18:05:06,18.14
+867,http://dummyimage.com/105x241.gif/5fa2dd/ffffff,Lamotrigine Extended Release,14,2015-05-29 11:07:59,18.77
+868,http://dummyimage.com/207x124.jpg/5fa2dd/ffffff,INVEGA,19,2015-04-16 12:25:29,6.06
+869,http://dummyimage.com/137x218.png/dddddd/000000,ReCreate Foundation,31,2015-11-10 07:06:02,14.34
+870,http://dummyimage.com/149x230.jpg/dddddd/000000,Raspberry Scented Hand Sanitizer,42,2015-05-20 04:13:13,13.84
+871,http://dummyimage.com/178x132.jpg/dddddd/000000,Lisinopril,41,2015-06-07 16:25:48,9.69
+872,http://dummyimage.com/236x231.png/5fa2dd/ffffff,Dextromethorphan HBr and Guaifenesin,27,2015-10-15 09:47:01,13.36
+873,http://dummyimage.com/228x157.jpg/dddddd/000000,SOFTSOAP,50,2016-01-19 11:28:08,18.88
+874,http://dummyimage.com/224x194.gif/dddddd/000000,EQUALINE,5,2015-04-21 01:42:49,4.06
+875,http://dummyimage.com/108x198.png/5fa2dd/ffffff,SHISEIDO ADVANCED HYDRO-LIQUID COMPACT (REFILL),24,2015-04-03 17:21:44,4.91
+876,http://dummyimage.com/169x129.gif/dddddd/000000,DERMA ICE BURN RELIEF with Aloe Vera,33,2015-08-05 07:06:36,5.38
+877,http://dummyimage.com/187x156.png/ff4444/ffffff,Alprazolam,13,2015-04-07 23:00:20,12.98
+878,http://dummyimage.com/227x176.jpg/cc0000/ffffff,Hydrocortisone Butyrate Cream (lipid) 0.1%,18,2015-08-18 18:48:22,12.81
+879,http://dummyimage.com/183x190.jpg/5fa2dd/ffffff,CVS Medicated Chest Rub,2,2015-07-10 01:47:11,14.16
+880,http://dummyimage.com/239x189.gif/ff4444/ffffff,NARS FOUNDATION,6,2015-09-28 07:22:24,2.9
+881,http://dummyimage.com/219x119.png/ff4444/ffffff,omeprazole,29,2015-11-04 16:59:17,4.19
+882,http://dummyimage.com/225x151.jpg/cc0000/ffffff,DDF,20,2015-08-28 13:09:05,5.57
+883,http://dummyimage.com/178x248.jpg/ff4444/ffffff,DulcoEase Pink,44,2016-03-23 23:19:41,7.99
+884,http://dummyimage.com/236x130.jpg/5fa2dd/ffffff,Fentanyl,26,2015-09-20 05:46:51,13.11
+885,http://dummyimage.com/188x185.jpg/5fa2dd/ffffff,Publix UltraDish Detergent,3,2015-04-26 01:27:05,9.24
+886,http://dummyimage.com/169x216.jpg/cc0000/ffffff,Sodium Chloride,36,2015-08-18 23:58:32,15.49
+887,http://dummyimage.com/172x131.jpg/5fa2dd/ffffff,OxyContin,2,2015-10-10 10:58:40,17.74
+888,http://dummyimage.com/129x143.gif/5fa2dd/ffffff,Doxycycline Hyclate,42,2015-04-21 16:03:40,17.46
+889,http://dummyimage.com/166x125.gif/ff4444/ffffff,Childrens Acetaminophen,2,2015-08-14 21:52:59,1.67
+890,http://dummyimage.com/117x236.jpg/5fa2dd/ffffff,California Valley White Oak,29,2015-10-02 19:19:44,2.36
+891,http://dummyimage.com/133x141.jpg/ff4444/ffffff,Propranolol Hydrochloride,26,2015-04-09 11:10:01,18.89
+892,http://dummyimage.com/160x187.gif/dddddd/000000,Wound Healing,30,2015-07-02 22:14:44,18.31
+893,http://dummyimage.com/130x151.jpg/ff4444/ffffff,SHISEIDO SHEER MATIFYING COMPACT (REFILL),49,2015-06-27 22:46:55,15.53
+894,http://dummyimage.com/181x113.jpg/dddddd/000000,Orasep,12,2016-01-09 18:30:56,17.81
+895,http://dummyimage.com/235x131.png/dddddd/000000,Fluoxetine,43,2015-07-06 22:12:04,18.83
+896,http://dummyimage.com/107x241.jpg/ff4444/ffffff,Caraway Seed,29,2015-07-31 18:55:53,6.45
+897,http://dummyimage.com/136x215.gif/5fa2dd/ffffff,Etodolac,36,2015-06-26 01:42:49,18.57
+898,http://dummyimage.com/189x170.png/dddddd/000000,METHOTREXATE,34,2015-11-02 11:06:13,9.13
+899,http://dummyimage.com/165x139.gif/cc0000/ffffff,Rite Aid Sunscreen,5,2015-06-29 19:43:40,2.41
+900,http://dummyimage.com/165x175.jpg/ff4444/ffffff,SUBSYS,7,2015-12-08 23:27:56,16.08
+901,http://dummyimage.com/149x149.gif/cc0000/ffffff,Omnitrope,3,2015-06-24 08:25:16,1.26
+902,http://dummyimage.com/236x234.jpg/ff4444/ffffff,Cold Hands - Feet,17,2015-08-05 22:11:09,1.91
+903,http://dummyimage.com/183x241.jpg/5fa2dd/ffffff,Hydroxyzine Hydrochloride,12,2015-10-04 14:34:04,12.11
+904,http://dummyimage.com/196x131.png/dddddd/000000,Extra Strength Pain Reliever,43,2016-02-20 08:39:34,5.47
+905,http://dummyimage.com/156x129.gif/dddddd/000000,Warfarin Sodium,10,2015-12-21 21:23:08,17.21
+906,http://dummyimage.com/214x118.jpg/ff4444/ffffff,CLARINS Ever Matte Broad Spectrum SPF 15 Tint 112,22,2016-01-04 22:19:46,5.41
+907,http://dummyimage.com/154x231.gif/ff4444/ffffff,Multi-Symptom Cold Relief,7,2016-01-05 18:54:26,15.39
+908,http://dummyimage.com/157x195.gif/cc0000/ffffff,Inflammation - Fever,20,2016-02-04 12:22:30,9.3
+909,http://dummyimage.com/236x184.jpg/cc0000/ffffff,Hydralazine Hydrochloride,49,2015-09-04 06:02:00,5.71
+910,http://dummyimage.com/243x246.png/dddddd/000000,DayTime Cold Multi-Symptom,50,2015-12-31 23:30:14,12.71
+911,http://dummyimage.com/130x194.jpg/cc0000/ffffff,Cargo Tinted Moisturizer SPF 20,16,2015-08-19 05:35:53,16.19
+912,http://dummyimage.com/210x240.gif/ff4444/ffffff,Metoprolol Tartrate and Hydrochlorothiazide,38,2015-06-24 18:58:25,16.0
+913,http://dummyimage.com/105x195.png/ff4444/ffffff,Ziprasidone,31,2016-02-27 13:43:57,17.19
+914,http://dummyimage.com/216x124.gif/ff4444/ffffff,Meperidine Hydrochloride,25,2015-10-29 00:16:16,15.87
+915,http://dummyimage.com/116x185.jpg/dddddd/000000,APRIL Bath and Shower Cucumber Melon Scented Antibacterial HAND SANITIZER,8,2015-11-26 00:32:20,4.47
+916,http://dummyimage.com/250x110.gif/dddddd/000000,Oxycodone Hydrochloride,31,2015-08-08 23:35:29,12.39
+917,http://dummyimage.com/182x132.png/ff4444/ffffff,ISA KNOX AGELESS MOIST SERUM TWO WAY CAKE 23 (REFILL),8,2015-06-18 00:52:53,2.77
+918,http://dummyimage.com/149x141.jpg/cc0000/ffffff,All Day Pain Relief,21,2015-12-28 08:05:00,17.72
+919,http://dummyimage.com/198x226.png/cc0000/ffffff,MORELLA CERIFERA POLLEN,17,2015-05-01 22:48:17,15.1
+920,http://dummyimage.com/224x172.png/dddddd/000000,IHS 2000 INSTANT HAND SANITIZER,19,2015-11-28 15:50:35,4.17
+921,http://dummyimage.com/220x174.gif/ff4444/ffffff,FIBERCON,11,2015-04-26 16:07:52,1.77
+922,http://dummyimage.com/147x123.png/cc0000/ffffff,Rohto,4,2015-09-05 20:01:46,9.41
+923,http://dummyimage.com/200x104.jpg/dddddd/000000,Temazepam,15,2015-07-09 03:18:05,4.22
+924,http://dummyimage.com/176x181.jpg/ff4444/ffffff,clobetasol propionate,26,2015-06-30 21:44:32,5.17
+925,http://dummyimage.com/136x170.gif/dddddd/000000,Cinnamic Acid,9,2015-08-26 17:07:53,1.62
+926,http://dummyimage.com/218x140.gif/ff4444/ffffff,Lansoprazole,32,2015-04-30 11:19:31,19.73
+927,http://dummyimage.com/161x244.png/cc0000/ffffff,Risperidone,47,2015-10-06 22:02:08,17.44
+928,http://dummyimage.com/186x233.jpg/cc0000/ffffff,Fresh Umbrain Clay Freshface Foundation SPF 20 Croisette,10,2015-12-14 01:47:53,12.2
+929,http://dummyimage.com/147x201.jpg/ff4444/ffffff,PAIN RELIEVER PM,5,2016-03-10 04:17:14,2.99
+930,http://dummyimage.com/111x239.png/ff4444/ffffff,Lidocaine Hydrochloride and Epinephrine,6,2015-05-06 13:17:15,9.17
+931,http://dummyimage.com/130x202.png/ff4444/ffffff,Pollen Guard Weed Mix,38,2015-10-11 02:49:13,7.67
+932,http://dummyimage.com/126x203.jpg/ff4444/ffffff,ARUBA ALOE ISLAND REMEDY DAILY ULTRA ALOE,5,2015-08-28 19:14:47,5.65
+933,http://dummyimage.com/144x228.png/dddddd/000000,Birch,19,2015-11-09 00:06:28,1.25
+934,http://dummyimage.com/236x123.jpg/dddddd/000000,finipil pro/elec,39,2016-01-28 19:50:30,8.41
+935,http://dummyimage.com/244x233.gif/5fa2dd/ffffff,Trihexyphenidyl Hydrochloride,33,2015-09-16 18:17:45,3.74
+936,http://dummyimage.com/168x216.png/cc0000/ffffff,Naproxen,28,2015-04-20 04:26:42,10.78
+937,http://dummyimage.com/111x156.gif/ff4444/ffffff,Cough Hay Fever,41,2015-08-10 04:25:10,12.44
+938,http://dummyimage.com/244x125.jpg/5fa2dd/ffffff,Moore Medical Ibuprofen,49,2016-02-13 02:14:16,8.24
+939,http://dummyimage.com/220x113.gif/dddddd/000000,Amlodipine Besylate,42,2015-07-01 13:29:12,15.06
+940,http://dummyimage.com/211x131.png/cc0000/ffffff,Bum Ease,1,2015-04-15 03:43:55,7.13
+941,http://dummyimage.com/156x212.png/5fa2dd/ffffff,Lisinopril,43,2015-05-24 08:35:08,10.34
+942,http://dummyimage.com/142x132.jpg/cc0000/ffffff,LISINOPRIL,19,2016-01-22 08:42:05,13.6
+943,http://dummyimage.com/162x155.jpg/5fa2dd/ffffff,Red Mulberry Pollen,10,2015-05-05 04:38:35,6.86
+944,http://dummyimage.com/169x162.jpg/5fa2dd/ffffff,SPF 18 SUPER SENSITIVE SUNSCREEN,42,2015-08-06 13:55:14,17.54
+945,http://dummyimage.com/230x151.jpg/ff4444/ffffff,Attends Daily Barrier,25,2015-11-13 17:23:16,2.51
+946,http://dummyimage.com/166x127.png/dddddd/000000,GloStrips,47,2015-06-01 05:56:20,7.77
+947,http://dummyimage.com/101x107.png/5fa2dd/ffffff,Correway Sunscreen (Non-waterproof),43,2015-07-29 00:17:55,5.84
+948,http://dummyimage.com/223x173.jpg/dddddd/000000,Motrin,31,2015-11-25 21:00:21,13.57
+949,http://dummyimage.com/185x239.png/cc0000/ffffff,Ibuprofen,5,2016-03-12 21:36:54,19.42
+950,http://dummyimage.com/241x246.gif/cc0000/ffffff,CENTER-AL - PLATANUS OCCIDENTALIS POLLEN,35,2016-02-06 07:23:14,8.04
+951,http://dummyimage.com/164x182.png/dddddd/000000,Hand Sanitizer,44,2015-12-30 19:04:16,2.4
+952,http://dummyimage.com/123x237.png/cc0000/ffffff,Metformin Hydrochloride,21,2016-01-29 00:56:38,2.48
+953,http://dummyimage.com/187x130.jpg/ff4444/ffffff,Nasal Allergy Relief,35,2016-01-07 15:28:36,17.99
+954,http://dummyimage.com/146x135.gif/5fa2dd/ffffff,Adenocard,19,2015-04-11 13:57:26,11.17
+955,http://dummyimage.com/196x236.gif/ff4444/ffffff,Acetaminophen And Codeine,7,2015-10-08 18:17:12,17.42
+956,http://dummyimage.com/208x105.jpg/cc0000/ffffff,Treatment Set TS345268,16,2015-08-10 23:38:19,17.25
+957,http://dummyimage.com/125x129.jpg/ff4444/ffffff,Rosanil,32,2016-03-02 09:47:05,4.76
+958,http://dummyimage.com/100x195.gif/cc0000/ffffff,hydrochlorothiazide,12,2015-12-18 06:39:24,4.74
+959,http://dummyimage.com/145x217.jpg/cc0000/ffffff,Lorazepam,28,2015-05-31 15:54:10,2.63
+960,http://dummyimage.com/222x166.png/cc0000/ffffff,CENTER-AL - ATRIPLEX WRIGHTII POLLEN,2,2015-11-29 15:18:04,15.5
+961,http://dummyimage.com/113x173.jpg/dddddd/000000,Menthol and Zinc Oxide,21,2015-07-25 09:06:25,2.73
+962,http://dummyimage.com/171x101.png/dddddd/000000,Synthroid,21,2016-01-28 13:30:56,5.61
+963,http://dummyimage.com/115x143.png/ff4444/ffffff,Maple Pollen Mixture,16,2015-03-31 04:27:46,15.67
+964,http://dummyimage.com/150x180.gif/cc0000/ffffff,Estomarol,23,2015-09-14 18:58:33,1.54
+965,http://dummyimage.com/146x156.png/cc0000/ffffff,Insect Bites,17,2015-08-27 14:01:36,2.38
+966,http://dummyimage.com/145x207.jpg/dddddd/000000,Cefdinir,10,2015-05-02 15:58:59,19.6
+967,http://dummyimage.com/163x110.jpg/5fa2dd/ffffff,Purminerals 4 in 1 Makeup SPF 15 Light,6,2015-11-19 07:18:44,3.65
+968,http://dummyimage.com/232x107.png/ff4444/ffffff,Pseudoephedrine,38,2015-10-29 20:58:37,5.95
+969,http://dummyimage.com/134x226.gif/cc0000/ffffff,"Timothy, Standardized",24,2015-06-05 21:07:34,11.86
+970,http://dummyimage.com/230x112.jpg/ff4444/ffffff,Lamivudine,17,2015-09-14 16:24:59,4.29
+971,http://dummyimage.com/146x107.png/5fa2dd/ffffff,"Terrasil Itch, Rash and Pain Relief",16,2016-01-15 00:45:54,17.0
+972,http://dummyimage.com/141x135.png/ff4444/ffffff,Bupropion Hydrochloride,8,2015-08-14 02:59:46,9.02
+973,http://dummyimage.com/198x239.jpg/dddddd/000000,NEOMYCIN AND POLYMYXIN B SULFATES AND GRAMICIDIN,36,2015-11-24 16:08:21,8.08
+974,http://dummyimage.com/219x143.gif/cc0000/ffffff,Peach,9,2016-03-22 18:02:17,3.72
+975,http://dummyimage.com/242x230.gif/cc0000/ffffff,Sucralfate,50,2015-08-09 11:11:58,9.22
+976,http://dummyimage.com/114x186.gif/5fa2dd/ffffff,Paroxetine,37,2015-06-20 13:58:44,17.11
+977,http://dummyimage.com/138x220.jpg/dddddd/000000,SPRYCEL,15,2015-06-24 07:12:25,4.46
+978,http://dummyimage.com/166x176.jpg/5fa2dd/ffffff,Ciclopirox,16,2016-03-24 05:10:53,17.4
+979,http://dummyimage.com/203x137.gif/dddddd/000000,Omeprazole,21,2015-04-01 19:09:32,9.87
+980,http://dummyimage.com/156x201.gif/dddddd/000000,N-Con Tonic,25,2015-07-09 06:27:35,15.79
+981,http://dummyimage.com/111x199.gif/dddddd/000000,Hand Sanitizer,25,2015-07-01 23:44:31,19.14
+982,http://dummyimage.com/240x215.png/5fa2dd/ffffff,Aspirin,46,2016-01-19 02:40:51,16.06
+983,http://dummyimage.com/214x185.png/dddddd/000000,VASOPRESSIN,4,2015-04-03 01:56:05,16.04
+984,http://dummyimage.com/174x242.gif/ff4444/ffffff,INSTANT HAND SANITIZER,28,2015-12-12 00:24:38,5.16
+985,http://dummyimage.com/220x120.png/ff4444/ffffff,Methyldopate Hydrochloride,25,2015-10-24 05:22:21,1.99
+986,http://dummyimage.com/231x210.jpg/dddddd/000000,Hydroxyzine Hydrochloride,47,2015-11-15 07:37:05,9.11
+987,http://dummyimage.com/243x234.jpg/5fa2dd/ffffff,Lisinopril,38,2015-09-12 11:58:23,11.09
+988,http://dummyimage.com/248x214.png/ff4444/ffffff,DuoNeb,1,2015-06-13 15:00:06,5.45
+989,http://dummyimage.com/163x178.png/cc0000/ffffff,FaBB Tablets,33,2015-07-29 01:58:31,17.65
+990,http://dummyimage.com/168x190.png/dddddd/000000,LUMENE TIME FREEZE FIRMING DAY SPF 15,46,2015-07-12 04:16:30,3.79
+991,http://dummyimage.com/246x218.png/ff4444/ffffff,Kids Irritated Eye Relief,21,2015-11-28 22:45:13,15.21
+992,http://dummyimage.com/108x239.gif/ff4444/ffffff,Docusate Sodium,45,2016-03-26 03:50:16,4.74
+993,http://dummyimage.com/171x180.jpg/5fa2dd/ffffff,good sense childrens ibuprofen oral suspension,41,2015-04-19 11:31:50,15.29
+994,http://dummyimage.com/140x152.png/ff4444/ffffff,Metformin Hydrochloride,1,2015-06-09 13:39:24,16.67
+995,http://dummyimage.com/113x112.png/5fa2dd/ffffff,Childrens Teething RELIEF,47,2015-07-14 06:34:54,19.66
+996,http://dummyimage.com/115x200.gif/5fa2dd/ffffff,Glimepiride,35,2015-04-07 09:07:15,4.84
+997,http://dummyimage.com/235x107.jpg/ff4444/ffffff,Diclofenac Sodium Extended-Release,18,2016-01-18 01:44:48,5.44
+998,http://dummyimage.com/187x246.gif/cc0000/ffffff,Betapace,34,2015-11-13 14:28:18,8.88
+999,http://dummyimage.com/193x138.gif/dddddd/000000,LMD in Sodium Chloride,39,2015-12-06 02:03:40,17.54
+1000,http://dummyimage.com/170x195.png/ff4444/ffffff,Topcare Nicotine,49,2015-07-01 16:27:47,6.43

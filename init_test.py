@@ -1,5 +1,6 @@
 # coding=utf-8
 
+import os
 import random
 import tornado.ioloop
 import tornado.web
@@ -75,4 +76,12 @@ def main():
 
 
 if __name__ == "__main__":
+    CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+    # first, create db
+    CREATE_DB = "mysql < %s" % os.path.join(CURRENT_DIR, "sql/create_db.sql")
+    os.system(CREATE_DB)
+    # insert some pre-defined data
     main()
+    # insert random generate data
+    INSERT_RANDOM_DATA = "mysql -u root < %s" % os.path.join(CURRENT_DIR, "sql/gen_mock.sql")
+    os.system(INSERT_RANDOM_DATA)
