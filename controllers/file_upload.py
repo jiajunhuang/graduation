@@ -12,7 +12,7 @@ class FileHandler(BaseHandler):
 
     def post(self):
         """
-        @apiDescription 文件上传, 请使用网页按钮
+        @apiDescription 文件上传, 请访问 ``/upload/?`` 或参照 ``templates/file_upload.html``
         @api {post} /upload/? 文件上传
         @apiGroup file
         """
