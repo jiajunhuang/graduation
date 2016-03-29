@@ -7,6 +7,7 @@ import tornado.web
 from models.user import User
 from models.food import Food
 from models.deal import Deal
+from models.grade import Grade
 
 from tornado.options import define
 define("debug", default=False, help="debug=True|False")
@@ -51,18 +52,24 @@ def main():
             seller=11,
             price=random.choice([0, 1.11, 2.22])
         )
+
         orm_session.add(food)
         orm_session.commit()
 
     # add deal
     for i in range(10):
+        buyer=random.choice(list(range(1, 10))),
         deal = Deal(
             seller=random.choice(list(range(1, 10))),
-            buyer=random.choice(list(range(1, 10))),
             food=random.choice(list(range(1, 10))),
+            buyer=buyer,
             address=random.choice(["上海", "北京"]),
             phone=random.choice(["15879583333", "15879583334", "15879583335"]),
         )
+        # add comment and score for it
+        grade = Grade(fid=i, uid=buyer, score=random.choice([1.1, 2.2, 3.3, 4.4, 5.0]), comment=random.choice(["好吃", "赞"]))
+
+        orm_session.add(grade)
         orm_session.add(deal)
         orm_session.commit()
 

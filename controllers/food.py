@@ -13,8 +13,6 @@ class FoodHandler(BaseHandler):
         @api {get} /user/([0-9]+)/foods/? 获取某uid提供的食品
         @apiGroup food
 
-        @apiParam {Number} uid 用户uid
-
         @apiPermission user
 
         @apiSuccess {Array} foods 某uid所提供的食品信息，格式如下:
@@ -24,6 +22,8 @@ class FoodHandler(BaseHandler):
         @apiSuccess {JSON} seller 用户信息, 见获取用户信息API
         @apiSuccess {String} create_at 创建时间
         @apiSuccess {Number} price 食品价格
+        @apiSuccess {Array} grades 评价的array
+        @apiSuccess {Number} avg_grade 平均评分，如果没有评论则取4分
 
         @apiSuccessExample {json} Success Response:
         {
