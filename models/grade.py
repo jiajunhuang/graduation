@@ -17,6 +17,7 @@ class Grade(ORMBase):
     score = Column(Float, nullable=False, default=5.00)  # 食品评分
     score_at = Column(DateTime, nullable=False, default=datetime.datetime.now)  # 评价时间
     comment = Column(String(4096), nullable=False, default="")  # 评论
+    speed = Column(Integer, nullable=False, default=20)  # 配送速度
 
     @classmethod
     def get_last_n_items(cls, session, fid, num=30):

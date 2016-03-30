@@ -142,6 +142,7 @@ class BaseHandler(tornado.web.RequestHandler):
         @apiSuccess {Number} score 评分
         @apiSuccess {String} score_at 评论时间
         @apiSuccess {String} comment 评论内容
+        @apiSuccess {Number} speed 配送速度
         """
         grades = Grade.get_last_n_items(self.orm_session, fid, num)
         result = []
@@ -153,5 +154,6 @@ class BaseHandler(tornado.web.RequestHandler):
                 score=grade.score,
                 score_at=str(grade.score_at),
                 comment=grade.comment.decode("utf-8"),
+                speed=grade.speed,
             ))
         return result

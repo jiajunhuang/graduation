@@ -14,8 +14,9 @@ class GradeHandler(BaseHandler):
         @apiGroup grade
 
         @apiParam {Number} fid 食品id
-        @apiParam {Number} score 评分
-        @apiParam {String} comment 评论
+        @apiParam {Number} [score] 评分
+        @apiParam {String} [comment] 评论
+        @apiParam {Number} [speed] 配送时间
 
         @apiPermission user
 
@@ -26,8 +27,9 @@ class GradeHandler(BaseHandler):
         score = float(self.get_argument("score", 4.0))
         score = score if score < 5 else 5  # 5分制
         comment = self.get_argument("comment", "好评")
+        speed = int(self.get_argument("speed", 20))
 
-        grade = Grade(fid=fid, uid=uid, score=score, comment=comment)
+        grade = Grade(fid=fid, uid=uid, score=score, comment=comment, speed=speed)
         self.orm_session.add(grade)
         self.orm_session.commit()
         self.write(dict(
