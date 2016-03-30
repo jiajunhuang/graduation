@@ -14,6 +14,7 @@ class Grade(ORMBase):
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     fid = Column(Integer, nullable=False, index=True)  # 食品id
     uid = Column(Integer, nullable=False)  # 评价人
+    seller = Column(Integer, nullable=False)  # 商家
     score = Column(Float, nullable=False, default=5.00)  # 食品评分
     score_at = Column(DateTime, nullable=False, default=datetime.datetime.now)  # 评价时间
     comment = Column(String(4096), nullable=False, default="")  # 评论
@@ -27,8 +28,23 @@ class Grade(ORMBase):
 
     @classmethod
     def get_avg(cls, session, fid):
+        """获取某个食品id的平均分"""
         return session.query(func.avg(Grade.score)).filter(
             Grade.fid == int(fid)
+        ).first()
+
+    @classmethod
+    def get_avg_score(cls, session, uid):
+        """获取某商家的平均评分"""
+        return session.query(func.avg(Grade.score)).filter(
+            Grade.seller == int(uid)
+        ).first()
+
+    @classmethod
+    def get_avg_speed(cls, session, uid):
+        """获取某商家的速度平均评分"""
+        return session.query(func.avg(Grade.speed)).filter(
+            Grade.seller == int(uid)
         ).first()
 
     @classmethod

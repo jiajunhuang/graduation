@@ -1,14 +1,13 @@
 # coding=utf-8
 
 import os
-import random
 import tornado.ioloop
 import tornado.web
 
-from models.user import User
-from models.food import Food
-from models.deal import Deal
-from models.grade import Grade
+from models.user import User  # noqa
+from models.food import Food  # noqa
+from models.deal import Deal  # noqa
+from models.grade import Grade  # noqa
 
 from tornado.options import define
 define("debug", default=False, help="debug=True|False")

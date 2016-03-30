@@ -21,10 +21,16 @@ class UserHandler(BaseHandler):
         @apiSuccess {Number} uid 用户uid
         @apiSuccess {String} avatar 头像
         @apiSuccess {String} name 用户名
+        @apiSuccess {Number} speed 配送时间，仅商家时出现
+        @apiSuccess {Number} sales_count 销量，仅商家出现
+        @apiSuccess {Number} lowest_money 起送价，仅商家出现
+        @apiSuccess {Boolean} invoice 是否开具发票，仅商家出现
+        @apiSuccess {Integer} distance 距离，仅商家出现
+        @apiSuccess {Boolean} new_seller 是否为新商家，仅商家出现
         @apiSuccess {Number} level 用户级别，仅获取自己信息时出现
         @apiSuccess {String} register_at 注册时间，仅获取自己信息时出现
-        @apiSuccess {String} phone 手机号
-        @apiSuccess {Array} address 配送地址
+        @apiSuccess {String} phone 手机号，仅获取自己信息时出现
+        @apiSuccess {Array} address 配送地址，仅获取自己信息时出现
         @apiSuccessExample {json} Success Response:
         {
             "uid": 1,
