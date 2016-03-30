@@ -28,7 +28,7 @@ class LoginHandler(BaseHandler):
         if user:
             uid = str(user.id)
             level = str(user.level)
-            sid = self.gen_sid(uid)
+            self.sid = sid = self.gen_sid(uid)
             self.redis_session.set(sid, ";".join([uid, level]))
             self.set_secure_cookie("sid", sid)
             if user.level == 2:

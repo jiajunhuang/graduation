@@ -10,6 +10,7 @@ from controllers.login import LoginHandler, LogoutHandler
 from controllers.user import UserHandler, RegisterHandler
 from controllers.food import FoodHandler
 from controllers.deal import DealHandler
+from controllers.grade import GradeHandler
 from controllers.admin import AdminHandler
 from config import Config
 
@@ -31,6 +32,7 @@ class Application(tornado.web.Application):
             (r"/user/new/?", RegisterHandler),
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/([0-9]+)/foods/?", FoodHandler),
+            (r"/user/([0-9]+)/foods/grades/?", GradeHandler),
             (r"/user/([0-9]+)/deals/?", DealHandler),
             # admin
             (r"/admin/?", AdminHandler),

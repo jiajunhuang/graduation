@@ -1,5 +1,7 @@
 # coding=utf-8
 
+import datetime
+
 import tornado.web
 import tornado.gen
 from models.orm import ORMSession
@@ -9,6 +11,8 @@ from utils.check import require_instance
 from models.user import User
 from models.food import Food
 from models.deal import Deal
+from models.grade import Grade
+from models.seller import Seller
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -47,7 +51,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def get_current_user(self):
         uid, level = self._get_current_user_info()
-        return int(uid) if uid else uid
+        return int(uid) if uid else None
 
     def _get_current_user_info(self):
         server_sid = self.redis_session.get(bytes(self.sid, "utf-8"))
@@ -86,13 +90,27 @@ class BaseHandler(tornado.web.RequestHandler):
     def _get_user_info(self, user):
         result = dict(
             uid=user.id,
-            avatar=user.avatar.decode("utf-8"),
+            avatar=user.avatar.decode("utf-8") or self.static_url("avatar.jpg"),
             name=user.name.decode("utf-8"),
         )
 
         # 这里没有用@require_login装饰，是因为用户信息区分简略和详细版
         # 但不要求登录
         _uid = self.get_current_user()
+        if self.is_admin or user.level == 1:
+            seller_ext_info = Seller.get_instance_by_uid(self.orm_session, user.id)
+            now = datetime.datetime.now()
+            last_week = now - datetime.timedelta(days=7)
+            result.update(dict(
+                new_seller=user.register_at > last_week,
+                speed=Grade.get_avg_speed(self.orm_session, user.id)[0] or 20,
+                avg_grade=Grade.get_avg_score(self.orm_session, user.id)[0] or 4,
+                sales_count=Deal.get_sales_count(self.orm_session, user.id),
+                lowest_money=seller_ext_info.lowest_money if seller_ext_info else 0,
+                invoice=seller_ext_info.invoice if seller_ext_info else False,
+                distance=seller_ext_info.distance if seller_ext_info else 10,
+            ))
+
         if self.is_admin or _uid == user.id:
             addresses=(user.addresses.decode("utf-8")).split(";")
             result.update(dict(
@@ -105,13 +123,16 @@ class BaseHandler(tornado.web.RequestHandler):
 
     @require_instance(Food)
     def _get_food_info(self, food):
+        fid=food.id
         return dict(
-            fid=food.id,
+            fid=fid,
             image=food.image.decode("utf-8"),
             name=food.name.decode("utf-8"),
             seller=self._get_user_info(food.seller),
             create_at=str(food.create_at),
             price=food.price,
+            grades=self._get_grade_info(fid),
+            avg_grade=Grade.get_avg(self.orm_session, fid)[0] or 4  # cause result is a tuple
         )
 
     @require_instance(Deal)
@@ -125,3 +146,33 @@ class BaseHandler(tornado.web.RequestHandler):
             sell_at=str(deal.sell_at),
             food=self._get_food_info(deal.food),
         )
+
+    def _get_grade_info(self, fid, num=30):
+        """获取食品评论和评分
+        @apiDescription 评分
+        @api {get} / 评分的字段
+        @apiGroup grade
+
+        @apiSuccess {Number} gid 评分id
+        @apiSuccess {Number} fid 食品id
+        @apiSuccess {Number} uid 评论者
+        @apiSuccess {Number} seller 商家
+        @apiSuccess {Number} score 评分
+        @apiSuccess {String} score_at 评论时间
+        @apiSuccess {String} comment 评论内容
+        @apiSuccess {Number} speed 配送速度
+        """
+        grades = Grade.get_last_n_items(self.orm_session, fid, num)
+        result = []
+        for grade in grades:
+            result.append(dict(
+                gid=grade.id,
+                fid=fid,
+                uid=grade.uid,
+                seller=grade.seller,
+                score=grade.score,
+                score_at=str(grade.score_at),
+                comment=grade.comment.decode("utf-8"),
+                speed=grade.speed,
+            ))
+        return result

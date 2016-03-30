@@ -35,3 +35,9 @@ class Deal(ORMBase):
             Deal.id == did
         ).delete()
         session.commit()
+
+    @classmethod
+    def get_sales_count(cls, session, uid):
+        return session.query(Deal).filter(
+            Deal.seller == int(uid)
+        ).count()
