@@ -11,9 +11,9 @@
         <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">JiajunHuang</a>
         <!-- <a class="user-login" v-link="{ path: '/login' }">登陆 / 注册</a> -->
         <div class="user-items" v-bind:class="{ show: isShowDropDown}">
-          <a v-link="{ path: '/ssettings' }">个人中心</a>
-          <a v-link="{ path: '/security' }">安全设置</a>
-          <a v-link="{ path: '/layout' }">退出登录</a>
+          <a v-link="{ path: '/ssettings' }"><i class="fa fa-user"></i> 个人中心</a>
+          <a v-link="{ path: '/security' }"><i class="fa fa-asterisk"></i> 安全设置</a>
+          <a v-link="{ path: '/layout' }"><i class="fa fa-power-off"></i> 退出登录</a>
         </div>
       </div>
     </div>
