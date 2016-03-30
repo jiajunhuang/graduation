@@ -35,7 +35,6 @@
 
 ```bash
 $ sudo pip3 install sqlalchemy tornado mysqlclient redis
-$ mysql -u root < sql/create_db.sql
 $ python3 init_test.py
 $ ./start.sh  # 这是debug模式
 ```
