@@ -1,19 +1,19 @@
 <template>
   <header>
     <div class="container clearfix">
-      <h1><a href="#/index" class="logo"><span>吃了么在线订餐</span><img src="../assets/logo.png" alt="吃了么在线订餐" /></a></h1>
+      <h1><a href="#!/index" class="logo" v-on:click="switchItem(0)"><span>吃了么在线订餐</span><img src="../assets/logo.png" alt="吃了么在线订餐" /></a></h1>
       <div class="navbar clearfix">
-        <a href="#/index" class="home">首页</a>
-        <a href="#/shop" >品牌商家</a>
-        <a href="#/order">我的订单</a>
+        <a href="#!/index" class="home" v-bind:class="{ focus: focusItem === 0 }" v-on:click="switchItem(0)">首页</a>
+        <a href="#!/shop" v-on:click="switchItem(1)" v-bind:class= "{ focus: focusItem === 1 }" >品牌商家</a>
+        <a href="#!/order" v-on:click="switchItem(2)" v-bind:class="{ focus: focusItem === 2 }">我的订单</a>
       </div>
       <div class="user">
         <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">JiajunHuang</a>
         <!-- <a class="user-login" v-link="{ path: '/login' }">登陆 / 注册</a> -->
         <div class="user-items" v-bind:class="{ show: isShowDropDown}">
-          <a href="#/settings"><i class="fa fa-user"></i> 个人中心</a>
-          <a href="#/security"><i class="fa fa-asterisk"></i> 安全设置</a>
-          <a href="#/layout"><i class="fa fa-power-off"></i> 退出登录</a>
+          <a href="#!/settings"><i class="fa fa-user"></i> 个人中心</a>
+          <a href="#!/security"><i class="fa fa-asterisk"></i> 安全设置</a>
+          <a href="#!/layout"><i class="fa fa-power-off"></i> 退出登录</a>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ header {
       &:hover {
         background-color: #0c77d1;
       }
-      &.v-link-active {
+      &.focus {
         background-color: #006bc7;
       }
     }
@@ -136,12 +136,17 @@ export default {
   name: 'TopHeader',
   data() {
     return {
-      isShowDropDown: false
+      isShowDropDown: false,
+      focusItem: 0
     }
   },
   methods: {
     toggleDropDown() {
       this.isShowDropDown = !this.isShowDropDown
+    },
+    switchItem(value) {
+      console.log(value)
+      this.focusItem = value
     }
   }
 }
