@@ -87,7 +87,7 @@ class BaseHandler(tornado.web.RequestHandler):
         super().write(chunk)
 
     @require_instance(User)
-    def _get_user_info(self, user):
+    def _get_user_info(self, user, shop=False):
         result = dict(
             uid=user.id,
             # avatar=user.avatar.decode("utf-8") or self.static_url("avatar.jpg"),
@@ -98,7 +98,7 @@ class BaseHandler(tornado.web.RequestHandler):
         # 这里没有用@require_login装饰，是因为用户信息区分简略和详细版
         # 但不要求登录
         _uid = self.get_current_user()
-        if self.is_admin or user.level == 1:
+        if self.is_admin or shop:
             seller_ext_info = Seller.get_instance_by_uid(self.orm_session, user.id)
             now = datetime.datetime.now()
             last_week = now - datetime.timedelta(days=7)

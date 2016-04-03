@@ -32,8 +32,6 @@ class Application(tornado.web.Application):
             # user
             (r"/user/new/?", RegisterHandler),
             (r"/user/([0-9]+)/?", UserHandler),
-            (r"/user/([0-9]+)/foods/?", FoodHandler),
-            (r"/user/([0-9]+)/foods/grades/?", GradeHandler),
             (r"/user/([0-9]+)/deals/?", DealHandler),
             # shop
             (r"/shop/([0-9]+)/?", UserHandler),
