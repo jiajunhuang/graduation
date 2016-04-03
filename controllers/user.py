@@ -8,6 +8,9 @@ from utils.check import require_login
 
 class UserHandler(BaseHandler):
     """获取用户信息"""
+    def is_shop(self):
+        return True if self.request.uri.startswith("/shop/") else False
+
     def get(self, uid):
         """
         @apiDescription 获取用户信息
@@ -46,9 +49,12 @@ class UserHandler(BaseHandler):
         @apiError UserNotExists 用户不存在
         """
         uid = int(uid)
+        # hack: 因为改url涉及面太广，所以通过查看self.require_shop 来判定吧-。-
+        shop = self.is_shop()
+
         user = User.get_instance_by_id(self.orm_session, uid)
         if user:
-            result = self._get_user_info(user)
+            result = self._get_user_info(user, shop)
             self.write(result)
         else:
             self.write(dict(

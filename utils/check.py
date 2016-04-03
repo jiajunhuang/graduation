@@ -46,7 +46,7 @@ def require_login(func):
 def require_instance(atype):
     def real_decorator(func):
         @functools.wraps(func)
-        def wrapper(obj, instance):
+        def wrapper(obj, instance, *args, **kwargs):
             if not isinstance(instance, atype):
                 instance = atype.get_instance_by_id(obj.orm_session, instance)
             if not instance:
@@ -55,6 +55,6 @@ def require_instance(atype):
                     msg="no such item",
                 )
 
-            return func(obj, instance)
+            return func(obj, instance, *args, **kwargs)
         return wrapper
     return real_decorator
