@@ -26,7 +26,7 @@
       <div class="option clearfix">
         <label ><input type="checkbox"> 新开商家</label>
         <label ><input type="checkbox"> 免费配送</label>
-        <label ><input type="checkbox"> 在线支付</label>
+        <label ><input type="checkbox"> 可开发票</label>
       </div>
     </div>
   </div>
@@ -38,6 +38,7 @@
     margin: 0 auto;
     background-color: #fff;
     border: 1px solid #e6e6e6;
+    font-size: 14px;
   }
   div.filter {
     padding: 10px 10px;
@@ -53,6 +54,7 @@
       a {
         float: left;
         padding: 0px 10px;
+        line-height: 26px;
         border-radius: 3px;
         white-space: nowrap;
         display: inline-block;
