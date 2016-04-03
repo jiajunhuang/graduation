@@ -101,7 +101,7 @@ class UserHandler(BaseHandler):
             if value:
                 setattr(user, key, value)
         self.orm_session.commit()
-        self.write()
+        self.write({})
 
     @require_login
     def delete(self, uid):
