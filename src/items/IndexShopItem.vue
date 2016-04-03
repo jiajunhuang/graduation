@@ -15,7 +15,7 @@
 </div>
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
 
 div.shop-items-container {
   width: 1000px;
@@ -30,6 +30,7 @@ div.shop-items-container {
   background-color: #FFF;
   border-bottom: 1px solid #f5f5f5;
   display: block;
+  cursor: pointer;
   &:hover {
     background-color: #f5f5f5;
   }
