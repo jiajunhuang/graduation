@@ -26,14 +26,20 @@ class Application(tornado.web.Application):
             # web
             (r"/", IndexHandler),
             (r"/upload/?", FileHandler),
-            # api
+            # login
             (r"/login/?", LoginHandler),
             (r"/logout/?", LogoutHandler),
+            # user
             (r"/user/new/?", RegisterHandler),
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/([0-9]+)/foods/?", FoodHandler),
             (r"/user/([0-9]+)/foods/grades/?", GradeHandler),
             (r"/user/([0-9]+)/deals/?", DealHandler),
+            # shop
+            (r"/shop/([0-9]+)/?", UserHandler),
+            (r"/shop/([0-9]+)/foods/?", FoodHandler),
+            (r"/shop/([0-9]+)/foods/grades/?", GradeHandler),
+            (r"/shop/([0-9]+)/deals/?", DealHandler),
             # admin
             (r"/admin/?", AdminHandler),
             (r"/admin/(deals|users|foods)?", AdminHandler),
