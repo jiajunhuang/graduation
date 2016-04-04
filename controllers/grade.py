@@ -10,7 +10,7 @@ class GradeHandler(BaseHandler):
     def post(self, uid):
         """
         @apiDescription 提交新的评分
-        @api {post} /user/([0-9]+)/foods/grades/? 提交新的评分
+        @api {post} /shop/([0-9]+)/foods/grades/? 提交新的评分
         @apiGroup grade
 
         @apiParam {Number} fid 食品id
@@ -40,7 +40,7 @@ class GradeHandler(BaseHandler):
     def delete(self, uid):
         """
         @apiDescription 删除评分
-        @api {delete} /user/([0-9]+)/foods/grades/? 删除评分
+        @api {delete} /shop/([0-9]+)/foods/grades/? 删除评分
         @apiGroup grade
 
         @apiPermission user

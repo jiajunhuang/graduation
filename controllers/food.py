@@ -10,7 +10,7 @@ class FoodHandler(BaseHandler):
     def get(self, uid):
         """
         @apiDescription 获取uid所提供的食品
-        @api {get} /user/([0-9]+)/foods/? 获取某uid提供的食品
+        @api {get} /shop/([0-9]+)/foods/? 获取某uid提供的食品
         @apiGroup food
 
         @apiPermission user
@@ -53,7 +53,7 @@ class FoodHandler(BaseHandler):
     def post(self, uid):
         """
         @apiDescription 创建食品
-        @api {post} /user/([0-9]+)/foods/? 创建食品
+        @api {post} /shop/([0-9]+)/foods/? 创建食品
         @apiGroup food
 
         @apiParam {String} image 食品图片
@@ -89,7 +89,7 @@ class FoodHandler(BaseHandler):
     def delete(self, uid):
         """
         @apiDescription 删除食品
-        @api {delete} /user/([0-9]+)/foods/? 删除
+        @api {delete} /shop/([0-9]+)/foods/? 删除
         @apiGroup food
 
         @apiParam {Number} fid 食品id
@@ -114,7 +114,7 @@ class FoodHandler(BaseHandler):
     def put(self, uid):
         """
         @apiDescription 修改食品
-        @api {put} /user/([0-9]+)/foods/? 修改
+        @api {put} /shop/([0-9]+)/foods/? 修改
         @apiGroup food
 
         @apiParam {Number} fid 食品id

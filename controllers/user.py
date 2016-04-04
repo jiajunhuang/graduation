@@ -15,7 +15,9 @@ class UserHandler(BaseHandler):
         """
         @apiDescription 获取用户信息
         @api {get} /user/([0-9]+)/? 获取用户信息
+        @api {get} /shop/([0-9]+)/? 获取商家信息
         @apiGroup user
+        @apiGroup shop
 
         @apiParam {Number} uid 用户uid
 
@@ -67,7 +69,9 @@ class UserHandler(BaseHandler):
         """
         @apiDescription 修改用户信息
         @api {put} /user/([0-9]+)/? 修改用户信息
+        @api {put} /shop/([0-9]+)/? 修改商家信息
         @apiGroup user
+        @apiGroup shop
 
         @apiParam {Number} [uid] uid
         @apiParam {Number} [level] 级别
@@ -108,7 +112,9 @@ class UserHandler(BaseHandler):
         """
         @apiDescription 删除用户信息
         @api {delete} /user/([0-9]+)/? 删除用户信息
+        @api {delete} /shop/([0-9]+)/? 删除商家信息
         @apiGroup user
+        @apiGroup shop
 
         @apiPermission user
         """
