@@ -8,6 +8,7 @@ from controllers.index import IndexHandler
 from controllers.file_upload import FileHandler
 from controllers.login import LoginHandler, LogoutHandler
 from controllers.user import UserHandler, RegisterHandler
+from controllers.shop import ShopHandler
 from controllers.food import FoodHandler
 from controllers.deal import DealHandler
 from controllers.grade import GradeHandler
@@ -34,6 +35,7 @@ class Application(tornado.web.Application):
             (r"/user/([0-9]+)/?", UserHandler),
             (r"/user/([0-9]+)/deals/?", DealHandler),
             # shop
+            (r"/shop/all/?", ShopHandler),
             (r"/shop/([0-9]+)/?", UserHandler),
             (r"/shop/([0-9]+)/foods/?", FoodHandler),
             (r"/shop/([0-9]+)/foods/grades/?", GradeHandler),

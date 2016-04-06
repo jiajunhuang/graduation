@@ -16,7 +16,7 @@ class User(ORMBase):
     passwd = Column(String(64), nullable=False)  # 密码
     phone = Column(String(11), nullable=False, unique=True)  # 注册手机号码
     name = Column(String(24), nullable=False, index=True)  # 用户名
-    register_at = Column(DateTime, nullable=False, default=datetime.datetime.now)  # 注册时间，只要插入一次，所以用now()而不是now
+    register_at = Column(DateTime, nullable=False, default=datetime.datetime.now, index=True)  # 注册时间，只要插入一次，所以用now()而不是now
     addresses = Column(String(4096), nullable=False, default="")  # 配送地址，用';'分隔
 
     @classmethod
@@ -44,3 +44,10 @@ class User(ORMBase):
         return session.query(User).filter(
             User.level != 2  # 仅返回非管理员
         ).order_by(desc(User.register_at)).all()
+
+    @classmethod
+    def get_shops_by_regtime(cls, session, start, offset_size):
+        """[start, stop)"""
+        return session.query(User).filter(
+            User.level == 1
+        ).order_by(desc(User.register_at)).offset(start).limit(offset_size)
