@@ -9,6 +9,8 @@ from models.food import Food  # noqa
 from models.deal import Deal  # noqa
 from models.grade import Grade  # noqa
 
+from sql.mock_user import gen
+
 from tornado.options import define
 define("debug", default=False, help="debug=True|False")
 define("port", default=8888, help="port=8888")
@@ -46,3 +48,5 @@ if __name__ == "__main__":
     # insert random generate data
     INSERT_RANDOM_DATA = "mysql -u root < %s" % os.path.join(CURRENT_DIR, "sql/gen_mock.sql")
     os.system(INSERT_RANDOM_DATA)
+
+    gen()

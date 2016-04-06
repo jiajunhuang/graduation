@@ -90,8 +90,7 @@ class BaseHandler(tornado.web.RequestHandler):
     def _get_user_info(self, user, shop=False):
         result = dict(
             uid=user.id,
-            # avatar=user.avatar.decode("utf-8") or self.static_url("avatar.jpg"),
-            avatar=self.static_url("avatar.jpg"),
+            avatar=user.avatar.decode("utf-8") or self.static_url("avatar.jpg"),
             name=user.name.decode("utf-8"),
         )
 

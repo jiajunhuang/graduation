@@ -4,6 +4,4 @@ load data local infile 'sql/mock_grade.csv' into table grade fields terminated b
 
 load data local infile 'sql/mock_food.csv' into table food fields terminated by ',' enclosed by '"' lines terminated by '\n' (id, image, name, seller, create_at, price);
 
-load data local infile 'sql/mock_user.csv' into table user fields terminated by ',' enclosed by '"' lines terminated by '\n' (id, avatar, level, passwd, phone, name, register_at, addresses);
-
 load data local infile 'sql/mock_deal.csv' into table deal fields terminated by ',' enclosed by '"' lines terminated by '\n' (id, seller, buyer, food, address, phone, sell_at);
