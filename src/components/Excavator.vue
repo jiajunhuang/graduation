@@ -114,6 +114,11 @@
 
 <script>
   export default {
-    name: 'Excavator'
+    name: 'Excavator',
+    vuex: {
+      getters: {
+        count: state => state.count
+      }
+    }
   }
 </script>
