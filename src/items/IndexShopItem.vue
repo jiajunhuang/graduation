@@ -1,6 +1,6 @@
 <template >
 <div class="shop-items-container clearfix">
-  <a class="item" v-for="item in items" track-by="$index">
+  <a class="item" v-for="item in items" track-by="$index" v-link="'shop/' + item.uid">
     <div class="logo">
       <img v-bind:src="item.avatar" alt="" width="70" height="70"/>
       <span class="speed">{{* item.speed}} 分钟</span>
@@ -31,6 +31,8 @@ div.shop-items-container {
   border-bottom: 1px solid #f5f5f5;
   display: block;
   cursor: pointer;
+  text-decoration: none;
+  color: #333;
   &:hover {
     background-color: #f5f5f5;
     h4 {
