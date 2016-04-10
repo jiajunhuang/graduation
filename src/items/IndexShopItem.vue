@@ -9,7 +9,7 @@
       <h4>{{* item.name }}</h4>
       <p class="grade slice">{{* item.avg_grade | transStars }}</p>
       <p class="count slice">月售{{* item.sales_count }}单</p>
-      <p class="spend slice">{{* item.lowest_money}}元起送</p>
+      <p class="spend slice">{{* item.lowest_money }}元起送</p>
     </div>
   </a>
 </div>
@@ -80,25 +80,25 @@ div.shop-items-container {
 </style>
 
 <script>
-  export default {
-    name: 'IndexShopItem',
-    data() {
-      return {
-        items: []
-      }
-    },
-    ready() {
-      fetch('/shop/all').then(response => {
-        return response.json()
-      }).then(json => {
-        this.items = json.shops
-      })
-    },
-    filters: {
-      transStars(length) {
-        return '⭐️'.repeat(length)
-      }
-    }
+import { transStars } from '../utils/filter'
 
+export default {
+  name: 'IndexShopItem',
+  data() {
+    return {
+      items: []
+    }
+  },
+  ready() {
+    fetch('/shop/all?page_size=30').then(response => {
+      return response.json()
+    }).then(json => {
+      this.items = json.shops
+    })
+  },
+  filters: {
+    transStars
   }
+
+}
 </script>
