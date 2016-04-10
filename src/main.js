@@ -15,7 +15,8 @@ router.map({
   '/index': {
     component: IndexView
   },
-  '/shop/': {
+  '/shop/:shopId': {
+    name: 'shop',
     component: ShopView
   }
 })
