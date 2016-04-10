@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header v-bind:class="{ shop: $route.params.shopId }">
     <div class="container clearfix">
       <h1><a v-link="{ path: '/index' }" class="logo"><span>吃了么在线订餐</span><img src="../assets/logo.png" alt="吃了么在线订餐" /></a></h1>
       <div class="navbar clearfix">
@@ -23,8 +23,40 @@
 <style lang='sass'>
 header {
   background-color: #1e89e0;
-
   height: 60px;
+
+  &.shop {
+    position: absolute;
+    width: 100%;
+    height: 3pc;
+    background-color: rgba(0,0,0,.4);
+    h1 {
+      height: 3pc;
+      a {
+        line-height: inherit;
+        font-size: 2pc;
+        height: 40px;
+        padding: 5px 0px;
+      }
+    }
+    div.navbar {
+      a {
+        line-height: 3pc;
+        height: 3pc;
+        &.v-link-active,
+        &:hover {
+          background-color: rgba(0,0,0,.1) !important;
+        }
+      }
+    }
+    div.user {
+      a.user-name {
+        line-height: 3pc;
+      }
+    }
+
+  }
+
   div.container {
     width: 1000px;
     margin: 0 auto;
@@ -83,9 +115,7 @@ header {
       text-decoration: none;
       cursor: pointer;
       line-height: 60px;
-      &.user-name {
-        font-weight: lighter;
-      }
+      font-weight: lighter;
 
       &.user-login {
 
