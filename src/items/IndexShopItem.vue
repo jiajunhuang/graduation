@@ -1,14 +1,14 @@
 <template >
 <div class="shop-items-container clearfix">
-  <a class="item" v-for="item in items" track-by="$index" v-link="'shop/' + item.uid">
+  <a class="item" v-for="item in items" track-by="uid" v-link="'shop/' + item.uid">
     <div class="logo">
-      <img v-bind:src="item.avatar" alt="" width="70" height="70"/>
+      <img v-bind:src="item.avatar" v-bind:alt="item.name" width="70" height="70"/>
       <span class="speed">{{* item.speed}} 分钟</span>
     </div>
     <div class="content">
       <h4>{{* item.name }}</h4>
       <p class="grade slice">{{* item.avg_grade | transStars }}</p>
-      <p class="count slice">月售{{* item.sales_count }}单</p>
+      <p class="count slice">月售 {{* item.sales_count }}单</p>
       <p class="spend slice">{{* item.lowest_money }}元起送</p>
     </div>
   </a>
@@ -90,7 +90,7 @@ export default {
     }
   },
   ready() {
-    fetch('/shop/all?page_size=30').then(response => {
+    fetch('/shop/all?page_size=100').then(response => {
       return response.json()
     }).then(json => {
       this.items = json.shops
