@@ -8,7 +8,7 @@
         <!-- <a v-link="{ path: '/order' }">我的订单</a> -->
       </div>
       <div class="user">
-        <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">JiajunHuang</a>
+        <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">Jay Chou</a>
         <!-- <a class="user-login" v-link="{ path: '/login' }">登陆 / 注册</a> -->
         <div class="user-items" v-bind:class="{ show: isShowDropDown}">
           <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
@@ -20,7 +20,7 @@
   </header>
 </template>
 
-<style lang='sass' scoped>
+<style lang='sass'>
 header {
   background-color: #1e89e0;
 
