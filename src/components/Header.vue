@@ -5,7 +5,7 @@
       <div class="navbar clearfix">
         <a v-link="{ path: '/index' }" class="home">首页</a>
         <a v-link="{ path: '/shop' }" v-show="$route.params.shopId">商家</a>
-        <a v-link="{ path: '/order' }">我的订单</a>
+        <!-- <a v-link="{ path: '/order' }">我的订单</a> -->
       </div>
       <div class="user">
         <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">JiajunHuang</a>
