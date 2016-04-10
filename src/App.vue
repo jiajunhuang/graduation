@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Store from './vuex/store'
+import store from './vuex/store'
 import TopHeader from './components/Header.vue'
 import IndexView from './views/IndexView.vue'
 import ShopView from './views/ShopView.vue'
@@ -14,7 +14,7 @@ export default {
   components: [
     TopHeader, IndexView, ShopView
   ],
-  Store
+  store
 }
 </script>
 <style lang='sass'>
