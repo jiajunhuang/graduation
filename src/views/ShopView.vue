@@ -9,7 +9,7 @@ import ShopItem from '../items/ShopItem'
 
 export default {
   name: 'ShopView',
-  components: [ FixedNavbar, Grade ]
+  components: [ FixedNavbar, ShopItem ]
 }
 
 </script>

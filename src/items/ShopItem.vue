@@ -7,7 +7,7 @@
           <div class="detail">
             <h1 v-on:click="add()">{{ shop.name  }}</h1>
             <p class="grade slice"><grade v-bind:number="shop.avg_grade"></grade></p>
-            <p class="count slice">月售{{ shop.lowest_money }} 单</p>
+            <p class="count slice">月售 {{ shop.lowest_money }} 单</p>
           </div>
         </div>
         <div class="server">
