@@ -1,3 +1,3 @@
 export function transStars(length) {
-  return '⭐️'.repeat(length)
+  return '\u2605'.repeat(length)
 }
