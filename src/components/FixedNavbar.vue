@@ -17,9 +17,9 @@
         <p>购物车空空如也</p>
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
-      <!-- <div class="list">
-
-      </div> -->
+      <div class="list">
+        <a href="#" v-for="food in cartFoods" track-by="$index">{{ food.name }}</a>
+      </div>
 
     </div>
     <div class="back-to-top" v-bind:class="{'focus': isShowBackToTop === true}">
@@ -28,6 +28,58 @@
     </div>
   </div>
 </template>
+
+<script>
+import { cartFoods } from '../vuex/getters'
+
+export default {
+  name: 'FixedNavbar',
+  created() {
+    window.addEventListener('click', this.clickHandler)
+    window.addEventListener('keyup', this.escHandler)
+    window.addEventListener('scroll', this.scrollHandler)
+  },
+  data() {
+    return {
+      isShowNavbarContent: false,
+      scrollEventTimer: null,
+      isShowBackToTop: false
+    }
+  },
+  methods: {
+    toggleNavbarContent() {
+      this.isShowNavbarContent = !this.isShowNavbarContent
+    },
+    hideNavbar() {
+      this.isShowNavbarContent = false
+    },
+    escHandler(event) {
+      event.keyCode === 27 && this.hideNavbar()
+    },
+    clickHandler() {
+      this.hideNavbar()
+    },
+    scrollHandler() {
+      clearTimeout(this.scrollEventTimer)
+      this.scrollEventTimer = setTimeout(() => {
+        this.isShowBackToTop = !!((document.body.scrollTop || document.documentElement.scrollTop) > 1500)
+      }, 500)
+    },
+    backToTop() {
+      window.scrollTo(0, 0)
+    }
+  },
+  beforeDestory() {
+    window.removeEventListener('click', this.clickHandler)
+    window.removeEventListener('keyup', this.escHandler)
+  },
+  vuex: {
+    getters: {
+      cartFoods: cartFoods
+    }
+  }
+}
+</script>
 
 <style lang='sass' scoped>
 
@@ -222,48 +274,3 @@ div.fixed-navbar {
   }
 }
 </style>
-
-<script>
-export default {
-  name: 'FixedNavbar',
-  created() {
-    window.addEventListener('click', this.clickHandler)
-    window.addEventListener('keyup', this.escHandler)
-    window.addEventListener('scroll', this.scrollHandler)
-  },
-  data() {
-    return {
-      isShowNavbarContent: false,
-      scrollEventTimer: null,
-      isShowBackToTop: false
-    }
-  },
-  methods: {
-    toggleNavbarContent() {
-      this.isShowNavbarContent = !this.isShowNavbarContent
-    },
-    hideNavbar() {
-      this.isShowNavbarContent = false
-    },
-    escHandler(event) {
-      event.keyCode === 27 && this.hideNavbar()
-    },
-    clickHandler() {
-      this.hideNavbar()
-    },
-    scrollHandler() {
-      clearTimeout(this.scrollEventTimer)
-      this.scrollEventTimer = setTimeout(() => {
-        this.isShowBackToTop = !!((document.body.scrollTop || document.documentElement.scrollTop) > 1500)
-      }, 500)
-    },
-    backToTop() {
-      window.scrollTo(0, 0)
-    }
-  },
-  beforeDestory() {
-    window.removeEventListener('click', this.clickHandler)
-    window.removeEventListener('keyup', this.escHandler)
-  }
-}
-</script>
