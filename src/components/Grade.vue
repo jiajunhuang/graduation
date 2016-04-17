@@ -14,7 +14,6 @@
     props: ['number'],
     computed: {
       gradeData: function () {
-        console.log(this.number)
         return '\u2605'.repeat(this.number)
       }
     }
