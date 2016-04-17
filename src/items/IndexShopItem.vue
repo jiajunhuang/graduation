@@ -7,7 +7,7 @@
     </div>
     <div class="content">
       <h4>{{* item.name }}</h4>
-      <p class="grade slice">{{* item.avg_grade | transStars }}</p>
+      <p class="grade slice"><grade v-bind:number="item.avg_grade"></grade></p>
       <p class="count slice">月售 {{* item.sales_count }}单</p>
       <p class="spend slice">{{* item.lowest_money }}元起送</p>
     </div>
@@ -80,10 +80,10 @@ div.shop-items-container {
 </style>
 
 <script>
-import { transStars } from '../utils/filter'
-
+import Grade from '../components/Grade'
 export default {
   name: 'IndexShopItem',
+  components: [ Grade ],
   data() {
     return {
       items: []
@@ -95,9 +95,6 @@ export default {
     }).then(json => {
       this.items = json.shops
     })
-  },
-  filters: {
-    transStars
   }
 
 }

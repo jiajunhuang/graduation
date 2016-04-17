@@ -6,7 +6,7 @@
           <img v-bind:src="shop.avatar" v-bind:alt="shop.name">
           <div class="detail">
             <h1 v-on:click="add()">{{ shop.name  }}</h1>
-            <p class="grade slice">{{ shop.avg_grade | transStars }}</p>
+            <p class="grade slice"><grade v-bind:number="shop.avg_grade"></grade></p>
             <p class="count slice">月售{{ shop.lowest_money }} 单</p>
           </div>
         </div>
@@ -161,9 +161,6 @@ div.shop-foods {
       text-overflow: ellipsis;
       color: #999;
     }
-    p.grade {
-      line-height: 1em;
-    }
   }
   div.price {
     width: 12%;
@@ -197,14 +194,13 @@ div.shop-foods {
 </style>
 
 <script>
-import { transStars } from '../utils/filter'
-
+import Grade from '../components/Grade'
 import FixedNavbar from '../components/FixedNavbar'
 import Header from '../components/Header'
 
 export default {
   name: 'ShopView',
-  components: [ FixedNavbar, Header ],
+  components: [ FixedNavbar, Header, Grade ],
   data() {
     return {
       shop: {},
@@ -224,9 +220,6 @@ export default {
     }).then(json => {
       this.foods = json.foods
     })
-  },
-  filters: {
-    transStars
   },
   methods: {
     add(foodId) {
