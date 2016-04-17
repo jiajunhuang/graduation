@@ -30,13 +30,58 @@
           </div>
           <div class="price"><span>￥</span>{{ food.price }}</div>
           <div class="add-to-cart">
-            <button v-on:click="add(food.fid)">加入购物车</button>
+            <button v-on:click="addToCart(food)">加入购物车</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import Grade from '../components/Grade'
+import { addToCart } from '../vuex/actions'
+// import { cartProducts } from '../vuex/getters'
+
+export default {
+  name: 'ShopItem',
+  components: [ Grade ],
+  data() {
+    return {
+      shop: {},
+      foods: []
+    }
+  },
+  ready() {
+    this.shopId = this.$route.params.shopId
+    fetch('/shop/' + this.shopId).then(response => {
+      return response.json()
+    }).then(json => {
+      this.shop = json
+    })
+
+    fetch('/shop/' + 12 + '/foods').then(response => {
+      return response.json()
+    }).then(json => {
+      this.foods = json.foods
+    })
+  },
+  methods: {
+    add(foodId) {
+      console.log(foodId)
+    }
+  },
+  vuex: {
+    // getters: {
+    //   cartProducts
+    // },
+    actions: {
+      addToCart
+    }
+  }
+}
+
+</script>
 
 <style lang="sass" scoped>
 
@@ -185,43 +230,6 @@ div.shop-foods {
       text-align: center;
       outline: 0;
     }
-
   }
 }
-
 </style>
-
-<script>
-import Grade from '../components/Grade'
-
-export default {
-  name: 'ShopItem',
-  components: [ Grade ],
-  data() {
-    return {
-      shop: {},
-      foods: []
-    }
-  },
-  ready() {
-    this.shopId = this.$route.params.shopId
-    fetch('/shop/' + this.shopId).then(response => {
-      return response.json()
-    }).then(json => {
-      this.shop = json
-    })
-
-    fetch('/shop/' + 12 + '/foods').then(response => {
-      return response.json()
-    }).then(json => {
-      this.foods = json.foods
-    })
-  },
-  methods: {
-    add(foodId) {
-      console.log(foodId)
-    }
-  }
-}
-
-</script>
