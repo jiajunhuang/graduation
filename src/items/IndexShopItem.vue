@@ -1,5 +1,5 @@
 <template >
-<div class="shop-items-container clearfix">
+<div class="shop-items-container clearfix" v-on:click.stop>
   <a class="item" v-for="item in items" track-by="uid" v-link="'shop/' + item.uid">
     <div class="logo">
       <img v-bind:src="item.avatar" v-bind:alt="item.name" width="70" height="70"/>

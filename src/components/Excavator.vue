@@ -1,5 +1,5 @@
 <template >
-  <div id="excavator">
+  <div id="excavator" v-on:click.stop>
     <div class="filter">
       <span class="category">商家分类：</span>
       <div class="contents clearfix">
