@@ -1,24 +1,37 @@
 <template>
-  <div class="fixed-navbar" v-on:click.stop>
+  <div class="fixed-navbar" v-on:click.stop >
     <div class="control">
       <div class="order">
         <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
-      <div class="shopping-cart">
-        <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item" v-bind:class="{'focus': isShowNavbarContent === true}">
+      <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.length !== 0 }">
+        <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
+            v-bind:class="{'focus': isShowNavbarContent === true}">
+          <i class="food-sum-number" >1</i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
     <div class="content" v-bind:class="{ show: isShowNavbarContent === true}">
       <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbarContent()">>></a></div>
-      <div class="no-list">
-        <i class="fa fa-bell"></i>
+      <div class="no-list" v-show="cartFoods.length === 0">
+        <i class="fa fa-clock-o"></i>
         <p>购物车空空如也</p>
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
-      <div class="list">
-        <a href="#" v-for="food in cartFoods" track-by="$index">{{ food.name }}</a>
+      <div class="has-list" v-show="cartFoods.length !== 0">
+        <dt class="clearfix"><a href="#">[清空]</a></dt>
+        <ul>
+          <li class="clearfix" v-for="food in cartFoods" track-by="$index">
+            <div class="name" v-text="food.name"></div>
+            <div class="quantity">
+              <span v-bind:click="">-</span>
+              <input v-bind:change="">
+              <span v-bind:click="">+</span>
+            </div>
+            <div class="price" ng-bind="">30</div>
+          </li>
+        </ul>
       </div>
 
     </div>
@@ -31,7 +44,6 @@
 
 <script>
 import { cartFoods } from '../vuex/getters'
-console.log(cartFoods)
 export default {
   name: 'Cart',
   created() {
@@ -143,6 +155,9 @@ div.fixed-navbar {
       color: #fff;
       outline: 0;
     }
+    &.has-food {
+      margin-top: 32px;
+    }
   }
 
   div.control {
@@ -181,9 +196,47 @@ div.fixed-navbar {
         @extend %line;
         bottom: -4px;
       }
+      &.has-food {
+        margin-top: 32px;
+        &:before {
+          top: -34px;
+        }
+        i.food-sum-number {
+          display: block;
+        }
+      }
       i {
         margin-bottom: 4px;
         font-size: 20px;
+      }
+      i.food-sum-number {
+        display: none;
+        font-size: 12px;
+        width: 22px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 3px;
+        color: #fff;
+        background-color: #f63;
+        top: -28px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        font-weight: 700;
+        font-style: normal;
+        &:after {
+          left: 0;
+          right: 0;
+          margin: auto;
+          position: absolute;
+          border: 6px solid;
+          border-color: #f63 transparent transparent;
+          width: 0;
+          height: 0;
+          bottom: -11px;
+          content: '';
+        }
       }
     }
     span.tips {
@@ -237,6 +290,92 @@ div.fixed-navbar {
         font-size: 12px;
       }
 
+    }
+    div.has-list {
+      padding: 10px;
+      background-color: #fff;
+      border: solid #ddd;
+      border-width: 1px 0;
+      margin-bottom: 10px;
+      dt{
+        font-size: 12px;
+        border-bottom: 1px solid #ddd;
+        padding: 2px 3px;
+        color: #666;
+        a {
+          float: right;
+          color: #0089dc;
+          font-size: 12px;
+        }
+      }
+      ul {
+        li {
+          margin: 5px 0;
+          padding: 5px 10px;
+          font-size: 12px;
+          line-height: 20px;
+          color: #666;
+          &:hover {
+            background-color: #f9f9f9;
+            div.quantity {
+              span {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          }
+          div.name {
+            float: left;
+            width: 45%;
+          }
+          div.quantity {
+            float: left;
+            width: 26%;
+            span {
+              transition: opacity .2s ease,visibility .2s ease;
+              opacity: 0;
+              visibility: hidden;
+              user-select: none;
+              background: #f5f5f5;
+              color: #999;
+              vertical-align: bottom;
+              font-size: 12px;
+              line-height: 18px;
+              cursor: pointer;
+              float: left;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              border: 1px solid #ddd;
+              &:first-child {
+                border-right: none;
+              }
+              &:hover {
+                color: #2a89cc;
+              }
+            }
+            input {
+              float: left;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              border: 1px solid #ddd;
+              font-size: 12px;
+              color: #666;
+              &+span {
+                border-left: none;
+              }
+            }
+          }
+          div.price {
+            font-weight: 700;
+            float: right;
+            color: #f17530;
+          }
+        }
+      }
     }
 
   }
