@@ -1,4 +1,5 @@
 <template >
+
   <div class="shop-item">
     <div class="shop-guide">
       <div class="container">
@@ -17,7 +18,7 @@
       </div>
     </div>
     <div class="shop-foods">
-      <div class="container">
+      <div class="foods-container">
         <h2>新品推荐</h2>
         <div class="food" v-for="food in foods" track-by="$index">
           <div class="image">
@@ -32,6 +33,12 @@
           <div class="add-to-cart">
             <button v-on:click="addToCart(food)">加入购物车</button>
           </div>
+        </div>
+      </div>
+      <div class="billboard">
+        <div class="container">
+          <h3>商家公告</h3>
+          <p>尊敬的客户订餐也可以打电话13482278323</p>
         </div>
       </div>
     </div>
@@ -156,9 +163,35 @@ div.shop-guide {
 }
 
 div.shop-foods {
-  div.container {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
+  div.foods-container {
+    width: 75%;
+    float: left;
+  }
+  div.billboard {
+    width: 23.5%;
+    float: right;
+    margin-top: 60px;
+    div.container {
+      margin-bottom: 20px;
+      border-radius: 2px 2px 0 0;
+      background-color: #fff;
+      box-shadow: 0 1px 1px rgba(0,0,0,.12);
+      h3 {
+        margin-bottom: 1em;
+        padding: 0 1em;
+        line-height: 2.8em;
+        background-color: #0089dc;
+        color: #fff;
+      }
+      p {
+        padding: 0 15px 20px;
+        line-height: 2;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed #ccc;
+      }
+    }
   }
   h2 {
     padding: 20px 0 10px 15px;
