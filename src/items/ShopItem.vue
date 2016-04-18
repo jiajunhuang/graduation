@@ -1,6 +1,5 @@
 <template >
-
-  <div class="shop-item">
+  <div class="shop-item" v-on:click.stop>
     <div class="shop-guide">
       <div class="container">
         <div class="info">
