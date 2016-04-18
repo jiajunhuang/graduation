@@ -1,15 +1,15 @@
 <template >
   <shop-item></shop-item>
-  <fixed-navbar></fixed-navbar>
+  <cart></cart>
 </template>
 
 <script>
-import FixedNavbar from '../components/FixedNavbar'
+import Cart from '../components/Cart'
 import ShopItem from '../items/ShopItem'
 
 export default {
   name: 'ShopView',
-  components: [ FixedNavbar, ShopItem ]
+  components: [ Cart, ShopItem ]
 }
 
 </script>
