@@ -8,7 +8,7 @@
       <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.length !== 0 }">
         <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
             v-bind:class="{'focus': isShowNavbarContent === true}">
-          <i class="food-sum-number" >1</i>
+          <i class="foods-sum-number" v-text="foodsSumNumber"></i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
@@ -20,16 +20,16 @@
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
       <div class="has-list" v-show="cartFoods.length !== 0">
-        <dt class="clearfix"><a href="#">[清空]</a></dt>
+        <dt class="clearfix"><a href="#" v-on:click="deleteAll()">[清空]</a></dt>
         <ul>
           <li class="clearfix" v-for="food in cartFoods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
               <span v-bind:click="">-</span>
-              <input v-bind:change="">
+              <input v-model="food.quantity">
               <span v-bind:click="">+</span>
             </div>
-            <div class="price" ng-bind="">30</div>
+            <div class="price" v-text="food.sumPrice"></div>
           </li>
         </ul>
       </div>
@@ -44,6 +44,9 @@
 
 <script>
 import { cartFoods } from '../vuex/getters'
+import { foodsSumNumber } from '../vuex/getters'
+import { deleteAll } from '../vuex/actions'
+
 export default {
   name: 'Cart',
   created() {
@@ -85,9 +88,16 @@ export default {
     window.removeEventListener('click', this.clickHandler)
     window.removeEventListener('keyup', this.escHandler)
   },
+  computed: {
+
+  },
   vuex: {
     getters: {
-      cartFoods
+      cartFoods,
+      foodsSumNumber
+    },
+    actions: {
+      deleteAll
     }
   }
 }
@@ -201,7 +211,7 @@ div.fixed-navbar {
         &:before {
           top: -34px;
         }
-        i.food-sum-number {
+        i.foods-sum-number {
           display: block;
         }
       }
@@ -209,7 +219,7 @@ div.fixed-navbar {
         margin-bottom: 4px;
         font-size: 20px;
       }
-      i.food-sum-number {
+      i.foods-sum-number {
         display: none;
         font-size: 12px;
         width: 22px;
@@ -327,6 +337,9 @@ div.fixed-navbar {
           div.name {
             float: left;
             width: 45%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
           }
           div.quantity {
             float: left;
