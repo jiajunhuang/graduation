@@ -38,5 +38,5 @@ class Food(ORMBase):
         session.commit()
 
     @classmethod
-    def get_all_items(cls, session):
-        return session.query(Food).order_by(desc(Food.create_at)).all()
+    def get_all_items(cls, session, count=999):
+        return session.query(Food).order_by(desc(Food.create_at)).limit(count)

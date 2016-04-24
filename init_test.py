@@ -37,6 +37,7 @@ def main():
         name="我叫admin",
         level=2,
     ))
+    orm_session.commit()
 
 if __name__ == "__main__":
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))

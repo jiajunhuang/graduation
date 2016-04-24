@@ -29,5 +29,5 @@ class AdminHandler(BaseHandler):
         if category not in ("deals", "users", "foods"):
             self.redirect("/")  # redirect for security
             return
-        items = map(self.__category_mapper[category], self.__class_mapper[category].get_all_items(self.orm_session))
+        items = map(self.__category_mapper[category], self.__class_mapper[category].get_all_items(self.orm_session, count=100))
         self.render("admin/{}.html".format(category), active=category, items=items, sid=self.sid)

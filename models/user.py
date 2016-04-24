@@ -40,10 +40,10 @@ class User(ORMBase):
         session.commit()
 
     @classmethod
-    def get_all_items(cls, session):
+    def get_all_items(cls, session, count=999):
         return session.query(User).filter(
             User.level != 2  # 仅返回非管理员
-        ).order_by(desc(User.register_at)).all()
+        ).order_by(desc(User.register_at)).limit(count)
 
     @classmethod
     def get_shops_by_regtime(cls, session, start, offset_size):

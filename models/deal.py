@@ -26,8 +26,8 @@ class Deal(ORMBase):
         ).order_by(desc(Deal.sell_at)).all()
 
     @classmethod
-    def get_all_items(cls, session):
-        return session.query(Deal).order_by(desc(Deal.sell_at)).all()
+    def get_all_items(cls, session, count=999):
+        return session.query(Deal).order_by(desc(Deal.sell_at)).limit(count)
 
     @classmethod
     def delete(cls, session, did):
