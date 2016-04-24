@@ -30,6 +30,7 @@ class UserHandler(BaseHandler):
         @apiSuccess {Number} sales_count 销量，仅商家出现
         @apiSuccess {Number} lowest_money 起送价，仅商家出现
         @apiSuccess {Boolean} invoice 是否开具发票，仅商家出现
+        @apiSuccess {Boolean} free_send 是否免费配送，如果非免费配送，统一收配送费1元
         @apiSuccess {Integer} distance 距离，仅商家出现
         @apiSuccess {Boolean} new_seller 是否为新商家，仅商家出现
         @apiSuccess {Number} level 用户级别，仅获取自己信息时出现

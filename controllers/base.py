@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import datetime
+import random
 
 import tornado.web
 import tornado.gen
@@ -98,7 +99,6 @@ class BaseHandler(tornado.web.RequestHandler):
         # 但不要求登录
         _uid = self.get_current_user()
         if self.is_admin or shop:
-            seller_ext_info = Seller.get_instance_by_uid(self.orm_session, user.id)
             now = datetime.datetime.now()
             last_week = now - datetime.timedelta(days=7)
             result.update(dict(
@@ -106,9 +106,10 @@ class BaseHandler(tornado.web.RequestHandler):
                 speed=Grade.get_avg_speed(self.orm_session, user.id)[0] or 20,
                 avg_grade=Grade.get_avg_score(self.orm_session, user.id)[0] or 4,
                 sales_count=Deal.get_sales_count(self.orm_session, user.id),
-                lowest_money=seller_ext_info.lowest_money if seller_ext_info else 0,
-                invoice=seller_ext_info.invoice if seller_ext_info else False,
-                distance=seller_ext_info.distance if seller_ext_info else 10,
+                lowest_money=random.choice([0, 20, 30, 50]),  # 起送价格
+                invoice=random.choice([True, False]),  # 是否开发票
+                distance=random.choice(list(range(100, 10000))),  # 米
+                free_send=random.choice([True, False]),  # 是否免费配送
             ))
 
         if self.is_admin or _uid == user.id:
