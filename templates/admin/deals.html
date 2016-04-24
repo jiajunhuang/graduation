@@ -16,13 +16,15 @@
         <tbody>
             {% for item in items %}
             <tr>
-                <input type="hidden" name="buyer_id" value={{ item["buyer"]["uid"] }} />
-                <td name="did">{{ item["did"] }}</td>
-                <td>{{ item["buyer"]["name"] }}</td>
-                <td>{{ item["seller"]["name"] }}</td>
-                <td>{{ item["food"]["name"] }}</td>
-                <td>{{ item["sell_at"] }}</td>
-                <td><button class="btn btn-danger">删除</button></td>
+                {% if item["buyer"].get("uid", None) %}
+                    <input type="hidden" name="buyer_id" value={{ item["buyer"]["uid"] }} />
+                    <td name="did">{{ item["did"] }}</td>
+                    <td>{{ item["buyer"]["name"] }}</td>
+                    <td>{{ item["seller"]["name"] }}</td>
+                    <td>{{ item["food"]["name"] }}</td>
+                    <td>{{ item["sell_at"] }}</td>
+                    <td><button class="btn btn-danger">删除</button></td>
+                {% end %}
             </tr>
             {% end %}
         </tbody>
