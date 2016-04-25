@@ -1,5 +1,6 @@
 <template >
 <div class="shop-items-container clearfix" v-on:click.stop>
+  <loading :is-show-loading="isShowLoading"></loading>
   <a class="item" v-for="item in items" track-by="uid" v-link="'shop/' + item.uid">
     <div class="logo">
       <img v-bind:src="item.avatar" v-bind:alt="item.name" width="70" height="70"/>
@@ -8,7 +9,7 @@
     <div class="content">
       <h4>{{* item.name }}</h4>
       <p class="grade slice"><grade v-bind:number="item.avg_grade"></grade></p>
-      <p class="count slice">月售 {{* item.sales_count }}单</p>
+      <p class="count slice">月售 {{* item.sales_count }} 单</p>
       <p class="spend slice">{{* item.lowest_money }}元起送</p>
     </div>
   </a>
@@ -76,23 +77,25 @@ div.shop-items-container {
   }
 }
 
-
 </style>
 
 <script>
-import Grade from '../components/Grade'
+import Grade from 'components/Grade'
+import Loading from 'components/Loading'
 export default {
   name: 'IndexShopItem',
-  components: [ Grade ],
+  components: [ Grade, Loading ],
   data() {
     return {
-      items: []
+      items: [],
+      isShowLoading: true
     }
   },
   ready() {
     fetch('/shop/all?page_size=100').then(response => {
       return response.json()
     }).then(json => {
+      this.isShowLoading = false
       this.items = json.shops
     })
   }
