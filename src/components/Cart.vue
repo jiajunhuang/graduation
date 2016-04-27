@@ -286,7 +286,7 @@ div.fixed-navbar {
     }
     div.no-list {
       text-align: center;
-      i.fa-bell {
+      i.fa-clock-o {
         margin-top: 40px;
         font-size: 60px;
       }
