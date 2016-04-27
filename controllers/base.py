@@ -103,9 +103,9 @@ class BaseHandler(tornado.web.RequestHandler):
             last_week = now - datetime.timedelta(days=7)
             result.update(dict(
                 new_seller=user.register_at > last_week,
-                speed=Grade.get_avg_speed(self.orm_session, user.id)[0] or 20,
-                avg_grade=Grade.get_avg_score(self.orm_session, user.id)[0] or 4,
-                sales_count=Deal.get_sales_count(self.orm_session, user.id),
+                speed=random.choice(list(range(20, 50))),
+                avg_grade=random.choice(list(range(3, 5))),
+                sales_count=random.choice(list(range(30))),
                 lowest_money=random.choice([0, 20, 30, 50]),  # 起送价格
                 invoice=random.choice([True, False]),  # 是否开发票
                 distance=random.choice(list(range(100, 10000))),  # 米
@@ -133,7 +133,7 @@ class BaseHandler(tornado.web.RequestHandler):
             create_at=str(food.create_at),
             price=food.price,
             grades=self._get_grade_info(fid),
-            avg_grade=Grade.get_avg(self.orm_session, fid)[0] or 4  # cause result is a tuple
+            avg_grade= random.choice(list(range(3, 5)))
         )
 
     @require_instance(Deal)
