@@ -1,5 +1,5 @@
 <template >
-  <div id="excavator" v-on:click.stop>
+  <div id="excavator" @click.stop>
     <div class="filter">
       <span class="category">商家分类：</span>
       <div class="contents clearfix">
@@ -12,21 +12,21 @@
     </div>
     <div class="control clearfix">
       <div class="sort clearfix">
-        <a href="#" class="focus">默认排序</a>
-        <a href="#" >销量好</a>
-        <a href="#">评价好</a>
+        <a href="#" class="focus" @click.prevent="sortByDefault()">默认排序</a>
+        <a href="#" @click.prevent="sortBySalesCount()">销量好</a>
+        <a href="#" @click.prevent="sortByGrade()">评价好</a>
         <a href="#">
           <span>其他排序</span>
           <div class="others">
 
           </div>
         </a>
-        <a href="#">起送价格</a>
+        <a href="#" @click.prevent="sortByLowestMoney()">起送价格</a>
       </div>
       <div class="option clearfix">
-        <label ><input type="checkbox"> 新开商家</label>
-        <label ><input type="checkbox"> 免费配送</label>
-        <label ><input type="checkbox"> 可开发票</label>
+        <label ><input type="checkbox" @click.prevent="filterByIsNewer()"> 新开商家</label>
+        <label ><input type="checkbox" @click.prevent="filterByFreeDeliver()"> 免费配送</label>
+        <label ><input type="checkbox" @click.prevent="filterByIsInvoice()"> 可开发票</label>
       </div>
     </div>
   </div>
@@ -113,12 +113,31 @@
 </style>
 
 <script>
-  export default {
-    name: 'Excavator',
-    vuex: {
-      getters: {
-        count: state => state.count
-      }
+import {
+  sortByDefault,
+  sortBySalesCount,
+  sortByGrade,
+  sortByLowestMoney,
+  filterByIsNewer,
+  filterByFreeDeliver,
+  filterByIsInvoice
+} from '../vuex/actions'
+
+export default {
+  name: 'Excavator',
+  vuex: {
+    getters: {
+      count: state => state.count
+    },
+    actions: {
+      sortByDefault,
+      sortBySalesCount,
+      sortByGrade,
+      sortByLowestMoney,
+      filterByIsNewer,
+      filterByFreeDeliver,
+      filterByIsInvoice
     }
   }
+}
 </script>
