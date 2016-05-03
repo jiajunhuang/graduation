@@ -82,22 +82,24 @@ div.shop-items-container {
 <script>
 import Grade from 'components/Grade'
 import Loading from 'components/Loading'
+import { indexShops } from '../vuex/getters'
 export default {
   name: 'IndexShopItem',
   components: [ Grade, Loading ],
   data() {
     return {
-      items: [],
       isShowLoading: true
     }
   },
   ready() {
-    fetch('/shop/all?page_size=100').then(response => {
-      return response.json()
-    }).then(json => {
-      this.isShowLoading = false
-      this.items = json.shops
-    })
+
+  },
+  vuex: {
+    actions: {
+    },
+    getters: {
+      items: indexShops
+    }
   }
 
 }
