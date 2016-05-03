@@ -22,7 +22,7 @@ export default {
 @import './assets/base';
 
 body {
-  height: 5000px;
+  // height: 5000px;
   background-color: #f7f7f7;
 }
 
