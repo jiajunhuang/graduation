@@ -10,11 +10,26 @@ import Sliders from '../components/Sliders'
 import Cart from '../components/Cart'
 import Excavator from '../components/Excavator'
 import IndexShopItem from '../items/IndexShopItem'
-
-
+import { updateState } from '../vuex/actions'
+// import { indexShops } from '../vuex/getters'
 export default {
   name: 'IndexView',
-  components: [ Sliders, Cart, Excavator, IndexShopItem ]
+  components: [ Sliders, Cart, Excavator, IndexShopItem ],
+  ready() {
+    fetch('/shop/all?page_size=100').then(response => {
+      return response.json()
+    }).then((json) => {
+      this.updateState(json)
+    })
+  },
+  vuex: {
+    actions: {
+      updateState
+    },
+    getters: {
+
+    }
+  }
 }
 </script>
 
