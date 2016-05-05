@@ -1,16 +1,16 @@
 <template >
 <div class="shop-items-container clearfix" v-on:click.stop>
-  <loading :is-show-loading="isShowLoading"></loading>
-  <a class="item" v-for="item in items" track-by="uid" v-link="'shop/' + item.uid">
+  <loading :is-show-loading="shops.length === 0"></loading>
+  <a class="item" v-for="shop in shops" track-by="uid" v-link="'shop/' + shop.uid">
     <div class="logo">
-      <img v-bind:src="item.avatar" v-bind:alt="item.name" width="70" height="70"/>
-      <span class="speed">{{* item.speed}} 分钟</span>
+      <img v-bind:src="shop.avatar" v-bind:alt="shop.name" width="70" height="70"/>
+      <span class="speed">{{* shop.speed}} 分钟</span>
     </div>
     <div class="content">
-      <h4>{{* item.name }}</h4>
-      <p class="grade slice"><grade v-bind:number="item.avg_grade"></grade></p>
-      <p class="count slice">月售 {{* item.sales_count }} 单</p>
-      <p class="spend slice">{{* item.lowest_money }}元起送</p>
+      <h4>{{* shop.name }}</h4>
+      <p class="grade slice"><grade v-bind:number="shop.avg_grade"></grade></p>
+      <p class="count slice">月售 {{* shop.sales_count }} 单</p>
+      <p class="spend slice">{{* shop.lowest_money }}元起送</p>
     </div>
   </a>
 </div>
@@ -91,16 +91,10 @@ export default {
       isShowLoading: true
     }
   },
-  ready() {
-
-  },
   vuex: {
-    actions: {
-    },
     getters: {
-      items: indexShops
+      shops: indexShops
     }
   }
-
 }
 </script>
