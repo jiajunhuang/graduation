@@ -12,8 +12,8 @@ export const updateState = ({ dispatch }, data) => {
   dispatch(types.UPDATE_STATE, data)
 }
 
-export const sortByDefault = ({ dispatch }, shops) => {
-  dispatch(types.SORT_BY_DEFAULT, shops)
+export const sortByDefault = ({ dispatch }) => {
+  dispatch(types.SORT_BY_DEFAULT)
 }
 
 export const sortBySalesCount = ({ dispatch }) => {
