@@ -12,16 +12,10 @@
     </div>
     <div class="control clearfix">
       <div class="sort clearfix">
-        <a href="#" class="focus" @click.prevent="sortByDefault()">默认排序</a>
-        <a href="#" @click.prevent="sortBySalesCount()">销量好</a>
-        <a href="#" @click.prevent="sortByGrade()">评价好</a>
-        <a href="#">
-          <span>其他排序</span>
-          <div class="others">
-
-          </div>
-        </a>
-        <a href="#" @click.prevent="sortByLowestMoney()">起送价格</a>
+        <a href="#" :class="{ 'focus': focusItem === 1 }" @click.prevent="sortByDefaultLocal()">默认排序</a>
+        <a href="#" :class="{ 'focus': focusItem === 2 }" @click.prevent="sortBySalesCountLocal()">销量好</a>
+        <a href="#" :class="{ 'focus': focusItem === 3 }" @click.prevent="sortByGradeLocal()">评价好</a>
+        <a href="#" :class="{ 'focus': focusItem === 4 }" @click.prevent="sortByLowestMoneyLocal()">起送价格</a>
       </div>
       <div class="option clearfix">
         <label ><input type="checkbox" @click.prevent="filterByIsNewer()"> 新开商家</label>
@@ -125,6 +119,33 @@ import {
 
 export default {
   name: 'Excavator',
+  data() {
+    return {
+      focusItem: 1
+    }
+  },
+  methods: {
+    sortByDefaultLocal() {
+      if (this.focusItem === 1) return false
+      this.focusItem = 1
+      this.sortByDefault()
+    },
+    sortBySalesCountLocal() {
+      if (this.focusItem === 2) return false
+      this.focusItem = 2
+      this.sortBySalesCount()
+    },
+    sortByGradeLocal() {
+      if (this.focusItem === 3) return false
+      this.focusItem = 3
+      this.sortByGrade()
+    },
+    sortByLowestMoneyLocal() {
+      if (this.focusItem === 4) return false
+      this.focusItem = 4
+      this.sortByLowestMoney()
+    }
+  },
   vuex: {
     getters: {
       count: state => state.count
