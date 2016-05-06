@@ -4,9 +4,7 @@ import {
   SORT_BY_SALES_COUNT,
   SORT_BY_GRADE,
   SORT_BY_LOWEST_MONEY,
-  FILTER_BY_IS_NEWER,
-  FILTER_BY_IS_FREE_DELIVER,
-  FILTER_BY_IS_INVOICE
+  FILTER_SHOPS
 } from '../mutation-types'
 import Immutable from 'immutable'
 
@@ -34,14 +32,17 @@ const mutations = {
   [SORT_BY_LOWEST_MONEY](state) {
     state.shops = state.initialShops.toArray().sort((a, b) => a.lowest_money >= b.lowest_money ? 1 : -1)
   },
-  [FILTER_BY_IS_NEWER](state) {
-    console.log(state)
-  },
-  [FILTER_BY_IS_FREE_DELIVER](state) {
-    console.log(state)
-  },
-  [FILTER_BY_IS_INVOICE](state) {
-    console.log(state)
+  [FILTER_SHOPS](state, sortKeys) {
+    state.shops = state.initialShops.toArray()
+    if (sortKeys.indexOf('newer') > -1) {
+      state.shops = state.shops.filter(shop => shop.new_seller === true)
+    }
+    if (sortKeys.indexOf('free') > -1) {
+      state.shops = state.shops.filter(shop => shop.free_send === true)
+    }
+    if (sortKeys.indexOf('invoice') > -1) {
+      state.shops = state.shops.filter(shop => shop.invoice === true)
+    }
   }
 }
 
