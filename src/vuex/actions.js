@@ -29,6 +29,5 @@ export const sortByLowestMoney = ({ dispatch }) => {
 }
 
 export const filterShops = ({ dispatch }, sortKeys) => {
-  console.log(sortKeys)
   dispatch(types.FILTER_SHOPS, sortKeys)
 }
