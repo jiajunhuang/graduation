@@ -28,14 +28,7 @@ export const sortByLowestMoney = ({ dispatch }) => {
   dispatch(types.SORT_BY_LOWEST_MONEY)
 }
 
-export const filterByIsNewer = ({ dispatch }) => {
-  dispatch(types.FILTER_BY_IS_NEWER)
-}
-
-export const filterByFreeDeliver = ({ dispatch }) => {
-  dispatch(types.FILTER_BY_IS_FREE_DELIVER)
-}
-
-export const filterByIsInvoice = ({ dispatch }) => {
-  dispatch(types.FILTER_BY_IS_INVOICE)
+export const filterShops = ({ dispatch }, sortKeys) => {
+  console.log(sortKeys)
+  dispatch(types.FILTER_SHOPS, sortKeys)
 }

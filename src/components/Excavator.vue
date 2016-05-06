@@ -18,9 +18,9 @@
         <a href="#" :class="{ 'focus': focusItem === 4 }" @click.prevent="sortByLowestMoneyLocal()">起送价格</a>
       </div>
       <div class="option clearfix">
-        <label ><input type="checkbox" @click.prevent="filterByIsNewer()"> 新开商家</label>
-        <label ><input type="checkbox" @click.prevent="filterByFreeDeliver()"> 免费配送</label>
-        <label ><input type="checkbox" @click.prevent="filterByIsInvoice()"> 可开发票</label>
+        <label ><input type="checkbox" value="newer" v-model="checkedNames"> 新开商家</label>
+        <label ><input type="checkbox"  value="free" v-model="checkedNames"> 免费配送</label>
+        <label ><input type="checkbox"  value="invoice" v-model="checkedNames"> 可开发票</label>
       </div>
     </div>
   </div>
@@ -112,16 +112,15 @@ import {
   sortBySalesCount,
   sortByGrade,
   sortByLowestMoney,
-  filterByIsNewer,
-  filterByFreeDeliver,
-  filterByIsInvoice
+  filterShops
 } from '../vuex/actions'
 
 export default {
   name: 'Excavator',
   data() {
     return {
-      focusItem: 1
+      focusItem: 1,
+      checkedNames: []
     }
   },
   methods: {
@@ -146,6 +145,11 @@ export default {
       this.sortByLowestMoney()
     }
   },
+  watch: {
+    checkedNames(value) {
+      this.filterShops(value)
+    }
+  },
   vuex: {
     getters: {
       count: state => state.count
@@ -155,9 +159,7 @@ export default {
       sortBySalesCount,
       sortByGrade,
       sortByLowestMoney,
-      filterByIsNewer,
-      filterByFreeDeliver,
-      filterByIsInvoice
+      filterShops
     }
   }
 }
