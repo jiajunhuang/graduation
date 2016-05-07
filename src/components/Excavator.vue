@@ -4,10 +4,10 @@
       <span class="category">商家分类：</span>
       <div class="contents clearfix">
         <a href="" class="focus">全部商家</a>
-        <a href="" class="hot">品牌商家</a>
+        <!-- <a href="" class="hot">品牌商家</a>
         <a href="">快餐类</a>
         <a href="">正餐类</a>
-        <a href="">小零食</a>
+        <a href="">小零食</a> -->
       </div>
     </div>
     <div class="control clearfix">
@@ -18,7 +18,7 @@
         <a href="#" :class="{ 'focus': focusItem === 4 }" @click.prevent="sortByLowestMoneyLocal()">起送价格</a>
       </div>
       <div class="option clearfix">
-        <label ><input type="checkbox" value="newer" v-model="checkedNames"> 新开商家</label>
+        <!-- <label ><input type="checkbox" value="newer" v-model="checkedNames"> 新开商家</label> -->
         <label ><input type="checkbox"  value="free" v-model="checkedNames"> 免费配送</label>
         <label ><input type="checkbox"  value="invoice" v-model="checkedNames"> 可开发票</label>
       </div>
