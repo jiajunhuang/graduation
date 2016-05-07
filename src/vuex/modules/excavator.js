@@ -12,7 +12,8 @@ import Immutable from 'immutable'
 const state = {
   type: SORT_BY_DEFAULT,
   shops: [],
-  initialShops: []
+  initialShops: [],
+  sortKeys: []
 }
 
 const mutations = {
@@ -21,28 +22,36 @@ const mutations = {
     state.shops = state.initialShops.toArray()
   },
   [SORT_BY_DEFAULT](state) {
-    state.shops = state.initialShops.toArray()
+    filter(state, state.sortKeys)
   },
   [SORT_BY_SALES_COUNT](state) {
-    state.shops = state.initialShops.toArray().sort((a, b) => a.sales_count >= b.sales_count ? -1 : 1)
+    filter(state, state.sortKeys)
+    state.shops = state.shops.sort((a, b) => a.sales_count >= b.sales_count ? -1 : 1)
   },
   [SORT_BY_GRADE](state) {
-    state.shops = state.initialShops.toArray().sort((a, b) => a.avg_grade >= b.avg_grade ? -1 : 1)
+    filter(state, state.sortKeys)
+    state.shops = state.shops.sort((a, b) => a.avg_grade >= b.avg_grade ? -1 : 1)
   },
   [SORT_BY_LOWEST_MONEY](state) {
-    state.shops = state.initialShops.toArray().sort((a, b) => a.lowest_money >= b.lowest_money ? 1 : -1)
+    filter(state, state.sortKeys)
+    state.shops = state.shops.sort((a, b) => a.lowest_money >= b.lowest_money ? 1 : -1)
   },
   [FILTER_SHOPS](state, sortKeys) {
-    state.shops = state.initialShops.toArray()
-    if (sortKeys.indexOf('newer') > -1) {
-      state.shops = state.shops.filter(shop => shop.new_seller === true)
-    }
-    if (sortKeys.indexOf('free') > -1) {
-      state.shops = state.shops.filter(shop => shop.free_send === true)
-    }
-    if (sortKeys.indexOf('invoice') > -1) {
-      state.shops = state.shops.filter(shop => shop.invoice === true)
-    }
+    state.sortKeys = sortKeys
+    filter(state, sortKeys)
+  }
+}
+
+function filter(state, keys) {
+  state.shops = state.initialShops.toArray()
+  if (keys.indexOf('newer') > -1) {
+    state.shops = state.shops.filter(shop => shop.new_seller === true)
+  }
+  if (keys.indexOf('free') > -1) {
+    state.shops = state.shops.filter(shop => shop.free_send === true)
+  }
+  if (keys.indexOf('invoice') > -1) {
+    state.shops = state.shops.filter(shop => shop.invoice === true)
   }
 }
 
