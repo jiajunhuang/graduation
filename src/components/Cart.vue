@@ -8,7 +8,7 @@
       <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.length !== 0 }">
         <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
             v-bind:class="{'focus': isShowNavbarContent === true}">
-          <i class="foods-sum-number" v-text="foodsSumNumber"></i>
+          <i class="foods-sum-number" v-text="cartFoods.length"></i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
@@ -22,14 +22,14 @@
       <div class="has-list" v-show="cartFoods.length !== 0">
         <dt class="clearfix"><a href="#" v-on:click="deleteAll()">[清空]</a></dt>
         <ul>
-          <li class="clearfix" v-for="food in cartFoods" track-by="$index">
+          <li class="clearfix" v-for="food in cartFoods.foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
               <span v-bind:click="">-</span>
               <input v-model="food.quantity">
               <span v-bind:click="">+</span>
             </div>
-            <div class="price" v-text="food.sumPrice"></div>
+            <div class="price" v-text="'￥'+ (food.price * food.quantity)"></div>
           </li>
         </ul>
       </div>
@@ -44,7 +44,6 @@
 
 <script>
 import { cartFoods } from '../vuex/getters'
-import { foodsSumNumber } from '../vuex/getters'
 import { deleteAll } from '../vuex/actions'
 
 export default {
@@ -88,13 +87,9 @@ export default {
     window.removeEventListener('click', this.clickHandler)
     window.removeEventListener('keyup', this.escHandler)
   },
-  computed: {
-
-  },
   vuex: {
     getters: {
-      cartFoods,
-      foodsSumNumber
+      cartFoods
     },
     actions: {
       deleteAll
