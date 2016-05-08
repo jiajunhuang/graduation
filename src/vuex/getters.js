@@ -1,10 +1,8 @@
-export const cartFoods = state => {
-  return state.cart.foods
-}
+export const cartFoods = state => (
+  state.cart.foods.map(({ name, quantity, price }) => ({ name, quantity, price }))
+)
 
-export const foodsSumNumber = state => {
-  return state.cart.sum
-}
+export const foodsSumNumber = state => (state.cart.sum)
 
 export const indexShops = state => {
   return state.excavator.shops
