@@ -1,5 +1,5 @@
 <template >
-  <div class="shop-item" v-on:click.stop>
+  <div class="shop-item clearfix" v-on:click.stop>
     <div class="shop-guide">
       <div class="container">
         <div class="info">
@@ -19,6 +19,7 @@
     <div class="shop-foods">
       <div class="foods-container">
         <h2>新品推荐</h2>
+        <loading :is-show-loading="foods.length === 0"></loading>
         <div class="food" v-for="food in foods" track-by="$index">
           <div class="image">
             <img v-bind:src="food.image" v-bind:alt="food.name">
@@ -45,13 +46,14 @@
 </template>
 
 <script>
-import Grade from '../components/Grade'
+import Loading from 'components/Loading'
+import Grade from 'components/Grade'
 import { addToCart } from '../vuex/actions'
 // import { cartProducts } from '../vuex/getters'
 
 export default {
   name: 'ShopItem',
-  components: [ Grade ],
+  components: [ Grade, Loading ],
   data() {
     return {
       shop: {},
