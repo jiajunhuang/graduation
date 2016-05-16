@@ -34,7 +34,7 @@
 - 安装依赖的包
 
 ```bash
-$ sudo pip3 install sqlalchemy tornado mysqlclient redis
+$ pip3 install -r requirements.txt
 $ python3 init_test.py
 $ ./start.sh  # 这是debug模式
 ```

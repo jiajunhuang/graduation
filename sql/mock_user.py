@@ -24,7 +24,10 @@ def gen():
             orm_session.commit()
 
             for item in requests.get(Foods.format(result["id"])).json():
-                for food in item["foods"]:
-                    f = Food(image=food["image_path"], name=food["name"], seller=user.id, price=random.choice(list(range(10, 20))))
-                    orm_session.add(f)
-                    orm_session.commit()
+                try:
+                    for food in item["foods"]:
+                        f = Food(image=food["image_path"], name=food["name"], seller=user.id, price=random.choice(list(range(10, 20))))
+                        orm_session.add(f)
+                        orm_session.commit()
+                except TypeError:
+                    pass
