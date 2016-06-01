@@ -33,7 +33,10 @@
           </li>
         </ul>
       </div>
-
+      <div class="summary" v-show="cartFoods.sum !== 0">
+        <p>共<span> {{ cartFoods.sum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
+        <button>去结算</button>
+      </div>
     </div>
     <div class="back-to-top" v-bind:class="{'focus': isShowBackToTop === true}">
       <a href="#" class="item" v-on:click.prevent="backToTop()" ><i class="fa fa-arrow-up"></i></a>
@@ -57,7 +60,8 @@ export default {
     return {
       isShowNavbarContent: false,
       scrollEventTimer: null,
-      isShowBackToTop: false
+      isShowBackToTop: false,
+      sumPrice: 0
     }
   },
   methods: {
@@ -90,6 +94,9 @@ export default {
   watch: {
     cartFoods: {
       handler(value) {
+        this.sumPrice = value.foods.reduce((previous, current) => {
+          return (previous + current.price * current.quantity)
+        }, 0)
         return value
       },
       deep: true
@@ -393,7 +400,35 @@ div.fixed-navbar {
         }
       }
     }
+    div.summary {
+      padding: 20px 10px;
+      text-align: right;
+      border-top: 1px solid #ddd;
+      width: 295px;
+      left: 35px;
+      bottom: 0;
+      background: #fff;
+      opacity: .95;
+      position: absolute;
+      p {
+        font-size: 14px;
+        text-align: right;
+        span {
+          color: #f74342;
+        }
+      }
+      button {
+        display: block;
+        border: 0;
+        margin-top: 10px;
+        line-height: 32px;
+        width: 100%;
+        text-align: center;
+        background: #fa5858;
+        color: #fff;
+      }
 
+    }
   }
   div.back-to-top {
     position: relative;
