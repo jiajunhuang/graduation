@@ -1,7 +1,7 @@
 export const cartFoods = state => {
   return {
     foods: state.cart.foods,
-    length: state.cart.sum
+    sum: state.cart.sum
   }
 }
 
