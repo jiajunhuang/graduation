@@ -87,6 +87,14 @@ export default {
     window.removeEventListener('click', this.clickHandler)
     window.removeEventListener('keyup', this.escHandler)
   },
+  watch: {
+    cartFoods: {
+      handler(value) {
+        return value
+      },
+      deep: true
+    }
+  },
   vuex: {
     getters: {
       cartFoods
