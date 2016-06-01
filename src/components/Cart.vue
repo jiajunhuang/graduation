@@ -20,7 +20,7 @@
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
       <div class="has-list" v-show="cartFoods.sum !== 0">
-        <dt class="clearfix"><a href="#" v-on:click="deleteAll()">[清空]</a></dt>
+        <dt class="clearfix"><a v-on:click.prevent="deleteAll()">[清空]</a></dt>
         <ul>
           <li class="clearfix" v-for="food in cartFoods.foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
@@ -317,7 +317,7 @@ div.fixed-navbar {
       border: solid #ddd;
       border-width: 1px 0;
       margin-bottom: 10px;
-      dt{
+      dt {
         font-size: 12px;
         border-bottom: 1px solid #ddd;
         padding: 2px 3px;
@@ -326,6 +326,7 @@ div.fixed-navbar {
           float: right;
           color: #0089dc;
           font-size: 12px;
+          cursor: pointer;
         }
       }
       ul {
