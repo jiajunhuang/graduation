@@ -4,7 +4,7 @@
       <h1><a v-link="{ path: '/index' }" class="logo"><span>吃了么在线订餐</span><img src="../assets/logo.png" alt="吃了么在线订餐" /></a></h1>
       <div class="navbar clearfix">
         <a v-link="{ path: '/index' }" class="home">首页</a>
-        <a v-link="{ path: '/shop' }" v-show="$route.shop === true">商家</a>
+        <a v-link="{ path: $route.path }" v-show="$route.shop === true">商家</a>
         <!-- <a v-link="{ path: '/order' }">我的订单</a> -->
       </div>
       <div class="user">
