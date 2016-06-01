@@ -68,7 +68,7 @@ export default {
       this.shop = json
     })
 
-    fetch('/shop/' + 12 + '/foods').then(response => {
+    fetch('/shop/' + this.shopId + '/foods').then(response => {
       return response.json()
     }).then(json => {
       this.foods = json.foods
