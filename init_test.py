@@ -42,7 +42,7 @@ def main():
 if __name__ == "__main__":
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
     # first, create db
-    CREATE_DB = "mysql < %s" % os.path.join(CURRENT_DIR, "sql/create_db.sql")
+    CREATE_DB = "mysql -u root < %s" % os.path.join(CURRENT_DIR, "sql/create_db.sql")
     os.system(CREATE_DB)
     # insert some pre-defined data
     main()
