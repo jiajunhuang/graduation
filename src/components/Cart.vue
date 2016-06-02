@@ -22,7 +22,7 @@
       <div class="has-list" v-show="cartFoods.sum !== 0">
         <dt class="clearfix"><a v-on:click.prevent="deleteAll()">[清空]</a></dt>
         <ul>
-          <li class="clearfix" v-for="food in cartFoods.foods" track-by="$index">
+          <li class="clearfix" v-for="food in foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
               <span v-bind:click="">-</span>
@@ -61,7 +61,8 @@ export default {
       isShowNavbarContent: false,
       scrollEventTimer: null,
       isShowBackToTop: false,
-      sumPrice: 0
+      sumPrice: 0,
+      foods: []
     }
   },
   methods: {
@@ -97,6 +98,8 @@ export default {
         this.sumPrice = value.foods.reduce((previous, current) => {
           return (previous + current.price * current.quantity)
         }, 0)
+        this.foods = []
+        this.foods = value.foods
         return value
       },
       deep: true
