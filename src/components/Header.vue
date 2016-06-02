@@ -143,6 +143,7 @@ header {
       width: 122px;
       padding: 4px 6px;
       box-shadow: 0 1px 2px rgba(0,0,0,.5);
+      z-index: 99;
       a {
         color: #999;
         line-height: 32px;
