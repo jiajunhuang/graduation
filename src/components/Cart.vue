@@ -95,11 +95,9 @@ export default {
   watch: {
     cartFoods: {
       handler(value) {
-        this.sumPrice = value.foods.reduce((previous, current) => {
-          return (previous + current.price * current.quantity)
-        }, 0)
         this.foods = []
         this.foods = value.foods
+        this.sumPrice = value.sumPrice
         return value
       }
     }
@@ -107,6 +105,7 @@ export default {
   ready() {
     // fix watch dont trigger when router change
     this.foods = this.cartFoods.foods
+    this.sumPrice = this.cartFoods.sumPrice
   },
   vuex: {
     getters: {
