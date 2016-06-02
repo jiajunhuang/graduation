@@ -101,9 +101,12 @@ export default {
         this.foods = []
         this.foods = value.foods
         return value
-      },
-      deep: true
+      }
     }
+  },
+  ready() {
+    // fix watch dont trigger when router change
+    this.foods = this.cartFoods.foods
   },
   vuex: {
     getters: {
