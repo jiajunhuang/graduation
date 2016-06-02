@@ -25,9 +25,9 @@
           <li class="clearfix" v-for="food in foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
-              <span v-bind:click="">-</span>
+              <span v-on:click="">-</span>
               <input v-model="food.quantity">
-              <span v-bind:click="">+</span>
+              <span v-on:click="plus(food)">+</span>
             </div>
             <div class="price" v-text="'￥'+ (food.price * food.quantity)"></div>
           </li>
@@ -86,6 +86,12 @@ export default {
     },
     backToTop() {
       window.scrollTo(0, 0)
+    },
+    plus(food) {
+      let index = this.foods.indexOf(food)
+      food.quantity = food.quantity + 1
+      this.foods.splice(index, 1, food)
+
     }
   },
   beforeDestory() {
