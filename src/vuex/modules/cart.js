@@ -5,7 +5,7 @@ import {
 
 const state = {
   foods: [],
-  sum: 0
+  num: 0
 }
 
 const mutations = {
@@ -17,11 +17,11 @@ const mutations = {
     } else {
       food.quantity = food.quantity + 1
     }
-    state.sum = state.sum + 1
+    state.num = state.num + 1
   },
   [DELETE_ALL](state) {
     state.foods.length = 0
-    state.sum = 0
+    state.num = 0
   }
 }
 

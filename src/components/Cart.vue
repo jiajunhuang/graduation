@@ -5,21 +5,21 @@
         <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
-      <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.sum !== 0 }">
+      <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.sumNum !== 0 }">
         <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
             v-bind:class="{'focus': isShowNavbarContent === true}">
-          <i class="foods-sum-number" v-text="cartFoods.sum"></i>
+          <i class="foods-sum-number" v-text="cartFoods.sumNum"></i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
     <div class="content" v-bind:class="{ show: isShowNavbarContent === true}">
       <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbarContent()">>></a></div>
-      <div class="no-list" v-show="cartFoods.sum === 0">
+      <div class="no-list" v-show="cartFoods.sumNum === 0">
         <i class="fa fa-clock-o"></i>
         <p>购物车空空如也</p>
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
-      <div class="has-list" v-show="cartFoods.sum !== 0">
+      <div class="has-list" v-show="cartFoods.sumNum !== 0">
         <dt class="clearfix"><a v-on:click.prevent="deleteAll()">[清空]</a></dt>
         <ul>
           <li class="clearfix" v-for="food in foods" track-by="$index">
@@ -33,8 +33,8 @@
           </li>
         </ul>
       </div>
-      <div class="summary" v-show="cartFoods.sum !== 0">
-        <p>共<span> {{ cartFoods.sum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
+      <div class="summary" v-show="cartFoods.sumNum !== 0">
+        <p>共<span> {{ cartFoods.sumNum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
         <button>去结算</button>
       </div>
     </div>
