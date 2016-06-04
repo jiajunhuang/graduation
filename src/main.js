@@ -12,7 +12,8 @@ import App from './App'
 Vue.use(Router)
 Vue.use(Vuex)
 Vue.use(Resource)
-
+// fix post https://github.com/vuejs/vue-resource/blob/master/docs/config.md
+Vue.http.options.emulateJSON = true
 // routing
 var router = new Router()
 
