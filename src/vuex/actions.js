@@ -12,6 +12,10 @@ export const minusFoodQuantity = ({ dispatch }, food) => {
   dispatch(types.MINUS_FOOD_QUANTITY, food)
 }
 
+export const updateFoodQuantity = ({ dispatch }, food) => {
+  dispatch(types.UPDATE_FOOD_QUANTITY, food)
+}
+
 export const deleteAll = ({ dispatch }) => {
   dispatch(types.DELETE_ALL)
 }
