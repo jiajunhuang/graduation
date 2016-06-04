@@ -1,7 +1,8 @@
 import {
   ADD_TO_CART,
   DELETE_ALL,
-  PLUS_FOOD_QUANTITY
+  PLUS_FOOD_QUANTITY,
+  MINUS_FOOD_QUANTITY
 } from '../mutation-types'
 
 const state = {
@@ -25,6 +26,14 @@ const mutations = {
     food.quantity = food.quantity + 1
     state.num = state.num + 1
     state.foods.splice(index, 1, food)
+  },
+  [MINUS_FOOD_QUANTITY](state, food) {
+    let index = state.foods.indexOf(food)
+    food.quantity = food.quantity - 1
+    state.num = state.num - 1
+    if (food.quantity === 0) {
+      state.foods.splice(index, 1)
+    }
   },
   [DELETE_ALL](state) {
     state.foods.length = 0

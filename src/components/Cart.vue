@@ -25,7 +25,7 @@
           <li class="clearfix" v-for="food in foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
-              <span v-on:click="">-</span>
+              <span v-on:click="minusFoodQuantity(food)">-</span>
               <input v-model="food.quantity">
               <span v-on:click="plusFoodQuantity(food)">+</span>
             </div>
@@ -47,8 +47,10 @@
 
 <script>
 import { cartFoods } from '../vuex/getters'
-import { deleteAll } from '../vuex/actions'
-import { plusFoodQuantity } from '../vuex/actions'
+import { deleteAll,
+         plusFoodQuantity,
+         minusFoodQuantity
+          } from '../vuex/actions'
 export default {
   name: 'Cart',
   created() {
@@ -116,7 +118,8 @@ export default {
     },
     actions: {
       deleteAll,
-      plusFoodQuantity
+      plusFoodQuantity,
+      minusFoodQuantity
     }
   }
 }
