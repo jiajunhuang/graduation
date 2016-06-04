@@ -5,21 +5,21 @@
         <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
-      <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.sumNum !== 0 }">
+      <div class="shopping-cart" v-bind:class="{ 'has-food': sumNum !== 0 }">
         <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
             v-bind:class="{'focus': isShowNavbarContent === true}">
-          <i class="foods-sum-number" v-text="cartFoods.sumNum"></i>
+          <i class="foods-sum-number" v-text="sumNum"></i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
     <div class="content" v-bind:class="{ show: isShowNavbarContent === true}">
       <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbarContent()">>></a></div>
-      <div class="no-list" v-show="cartFoods.sumNum === 0">
+      <div class="no-list" v-show="sumNum === 0">
         <i class="fa fa-clock-o"></i>
         <p>购物车空空如也</p>
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
-      <div class="has-list" v-show="cartFoods.sumNum !== 0">
+      <div class="has-list" v-show="sumNum !== 0">
         <dt class="clearfix"><a v-on:click.prevent="deleteAll()">[清空]</a></dt>
         <ul>
           <li class="clearfix" v-for="food in foods" track-by="$index">
@@ -27,14 +27,14 @@
             <div class="quantity">
               <span v-on:click="">-</span>
               <input v-model="food.quantity">
-              <span v-on:click="plus(food)">+</span>
+              <span v-on:click="plusFoodQuantity(food)">+</span>
             </div>
             <div class="price" v-text="'￥'+ (food.price * food.quantity)"></div>
           </li>
         </ul>
       </div>
-      <div class="summary" v-show="cartFoods.sumNum !== 0">
-        <p>共<span> {{ cartFoods.sumNum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
+      <div class="summary" v-show="sumNum !== 0">
+        <p>共<span> {{ sumNum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
         <button>去结算</button>
       </div>
     </div>
@@ -48,7 +48,7 @@
 <script>
 import { cartFoods } from '../vuex/getters'
 import { deleteAll } from '../vuex/actions'
-
+import { plusFoodQuantity } from '../vuex/actions'
 export default {
   name: 'Cart',
   created() {
@@ -62,6 +62,7 @@ export default {
       scrollEventTimer: null,
       isShowBackToTop: false,
       sumPrice: 0,
+      sumNum: 0,
       foods: []
     }
   },
@@ -86,12 +87,6 @@ export default {
     },
     backToTop() {
       window.scrollTo(0, 0)
-    },
-    plus(food) {
-      let index = this.foods.indexOf(food)
-      food.quantity = food.quantity + 1
-      this.foods.splice(index, 1, food)
-
     }
   },
   beforeDestory() {
@@ -104,6 +99,7 @@ export default {
         this.foods = []
         this.foods = value.foods
         this.sumPrice = value.sumPrice
+        this.sumNum = value.sumNum
         return value
       }
     }
@@ -112,13 +108,15 @@ export default {
     // fix watch dont trigger when router change
     this.foods = this.cartFoods.foods
     this.sumPrice = this.cartFoods.sumPrice
+    this.sumNum = this.cartFoods.sumNum
   },
   vuex: {
     getters: {
       cartFoods
     },
     actions: {
-      deleteAll
+      deleteAll,
+      plusFoodQuantity
     }
   }
 }

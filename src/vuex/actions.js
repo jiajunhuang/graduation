@@ -4,6 +4,10 @@ export const addToCart = ({ dispatch }, food) => {
   dispatch(types.ADD_TO_CART, food)
 }
 
+export const plusFoodQuantity = ({ dispatch }, food) => {
+  dispatch(types.PLUS_FOOD_QUANTITY, food)
+}
+
 export const deleteAll = ({ dispatch }) => {
   dispatch(types.DELETE_ALL)
 }
