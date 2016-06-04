@@ -65,6 +65,7 @@
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.2.0",
+    "vue-resource": "^0.7.2",
     "vue-router": "^0.7.11",
     "vue-style-loader": "^1.0.0",
     "vue-validator": "^2.0.0-alpha.22",
