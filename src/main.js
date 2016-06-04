@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import Router from 'vue-router'
 import IndexView from './views/IndexView.vue'
 import ShopView from './views/ShopView.vue'
+import OrderView from './views/OrderView.vue'
 import App from './App'
 
 Vue.use(Router)
@@ -19,6 +20,9 @@ router.map({
     name: 'shop',
     component: ShopView,
     shop: true
+  },
+  '/order': {
+    component: OrderView
   }
 })
 

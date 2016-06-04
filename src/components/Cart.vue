@@ -2,7 +2,7 @@
   <div class="fixed-navbar" v-on:click.stop >
     <div class="control">
       <div class="order">
-        <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
+        <a class="item" v-link="{  path: '/order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
       <div class="shopping-cart" v-bind:class="{ 'has-food': sumNum !== 0 }">
