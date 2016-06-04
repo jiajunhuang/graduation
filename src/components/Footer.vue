@@ -14,9 +14,11 @@
   }
   div.container {
     width: 1000px;
-    margin: 30px auto;
+    margin: 0 auto;
+    height: 80px;
     p {
       text-align: center;
+      line-height: 80px;
     }
   }
 </style>
