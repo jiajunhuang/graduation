@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Router from 'vue-router'
-import IndexView from './views/IndexView.vue'
-import ShopView from './views/ShopView.vue'
-import OrderView from './views/OrderView.vue'
+import IndexView from './views/IndexView'
+import ShopView from './views/ShopView'
+import OrderView from './views/OrderView'
+import LoginView from './views/LoginView'
+import Register from './views/RegisterView'
 import App from './App'
 
 Vue.use(Router)
@@ -23,6 +25,12 @@ router.map({
   },
   '/order': {
     component: OrderView
+  },
+  '/user_login': {
+    component: LoginView
+  },
+  '/register': {
+    component: Register
   }
 })
 
