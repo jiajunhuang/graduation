@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Router from 'vue-router'
+import Resource from 'vue-resource'
 import IndexView from './views/IndexView'
 import ShopView from './views/ShopView'
 import OrderView from './views/OrderView'
@@ -10,6 +11,7 @@ import App from './App'
 
 Vue.use(Router)
 Vue.use(Vuex)
+Vue.use(Resource)
 
 // routing
 var router = new Router()
