@@ -6,7 +6,7 @@ import tornado.web
 
 from controllers.index import IndexHandler
 from controllers.file_upload import FileHandler
-from controllers.login import LoginHandler, LogoutHandler
+from controllers.login import LoginHandler, LogoutHandler, LoginChecker
 from controllers.user import UserHandler, RegisterHandler
 from controllers.shop import ShopHandler
 from controllers.food import FoodHandler
@@ -29,6 +29,7 @@ class Application(tornado.web.Application):
             (r"/upload/?", FileHandler),
             # login
             (r"/login/?", LoginHandler),
+            (r"/login/status/?", LoginChecker),
             (r"/logout/?", LogoutHandler),
             # user
             (r"/user/new/?", RegisterHandler),

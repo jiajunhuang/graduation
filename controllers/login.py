@@ -71,3 +71,17 @@ class LogoutHandler(BaseHandler):
         self.redis_session.delete(self.sid)
         self.clear_cookie("sid")
         self.write({})
+
+
+class LoginChecker(BaseHandler):
+    def get(self):
+        _uid = self.get_current_user()
+        if _uid:
+            self.write(dict(
+                uid=_uid,
+            ))
+        else:
+            self.write(dict(
+                status=1,
+                msg="user doesn't logined yet!"
+            ))
