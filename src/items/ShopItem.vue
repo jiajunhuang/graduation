@@ -20,7 +20,7 @@
       <div class="foods-container">
         <h2>新品推荐</h2>
         <loading :is-show-loading="foods.length === 0"></loading>
-        <div class="food" v-for="food in foods" track-by="$index">
+        <div class="food" v-for="food in foods | limitBy 10" track-by="$index">
           <div class="image">
             <img v-bind:src="food.image" v-bind:alt="food.name">
           </div>
@@ -68,7 +68,7 @@ export default {
       this.shop = json
     })
 
-    fetch('/shop/' + 12 + '/foods').then(response => {
+    fetch('/shop/' + this.shopId + '/foods').then(response => {
       return response.json()
     }).then(json => {
       this.foods = json.foods

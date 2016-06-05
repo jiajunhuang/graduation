@@ -56,7 +56,7 @@ module.exports = {
     'func-style': 0,
     'func-names': 0,
     'consistent-this': [2, 'that'],
-    'linebreak-style': [2, 'unix'],
+    // 'linebreak-style': [2, 'unix'],
     'key-spacing': [2, {
       'beforeColon': false,
       'afterColon': true

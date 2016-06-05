@@ -1,11 +1,12 @@
 export const cartFoods = state => {
   return {
     foods: state.cart.foods,
-    length: state.cart.sum
+    sumNum: state.cart.num,
+    sumPrice: state.cart.foods.reduce((previous, current) => (
+      previous + current.price * current.quantity
+    ), 0)
   }
 }
-
-export const foodsSumNumber = state => (state.cart.sum)
 
 export const indexShops = state => {
   return state.excavator.shops

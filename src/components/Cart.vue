@@ -2,38 +2,41 @@
   <div class="fixed-navbar" v-on:click.stop >
     <div class="control">
       <div class="order">
-        <a class="item" v-link="{  path: 'order' }"><i class="fa fa-list"></i></a>
+        <a class="item" v-link="{  path: '/order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
-      <div class="shopping-cart" v-bind:class="{ 'has-food': cartFoods.length !== 0 }">
+      <div class="shopping-cart" v-bind:class="{ 'has-food': sumNum !== 0 }">
         <a href="#"  v-on:click.prevent="toggleNavbarContent()" class="item"
             v-bind:class="{'focus': isShowNavbarContent === true}">
-          <i class="foods-sum-number" v-text="cartFoods.length"></i>
+          <i class="foods-sum-number" v-text="sumNum"></i>
           <i class="fa fa-shopping-cart"></i> 购物车</a>
       </div>
     </div>
     <div class="content" v-bind:class="{ show: isShowNavbarContent === true}">
       <div class="title clearfix"><h4>购物车</h4><a href="#" v-on:click.prevent="toggleNavbarContent()">>></a></div>
-      <div class="no-list" v-show="cartFoods.length === 0">
+      <div class="no-list" v-show="sumNum === 0">
         <i class="fa fa-clock-o"></i>
         <p>购物车空空如也</p>
         <p>快去订餐吧，总有你心仪的美食</p>
       </div>
-      <div class="has-list" v-show="cartFoods.length !== 0">
-        <dt class="clearfix"><a href="#" v-on:click="deleteAll()">[清空]</a></dt>
+      <div class="has-list" v-show="sumNum !== 0">
+        <dt class="clearfix"><a v-on:click.prevent="deleteAll()">[清空]</a></dt>
         <ul>
-          <li class="clearfix" v-for="food in cartFoods.foods" track-by="$index">
+          <li class="clearfix" v-for="food in foods" track-by="$index">
             <div class="name" v-text="food.name"></div>
             <div class="quantity">
-              <span v-bind:click="">-</span>
+              <span v-on:click="minusFoodQuantity(food)">-</span>
               <input v-model="food.quantity">
-              <span v-bind:click="">+</span>
+              <span v-on:click="plusFoodQuantity(food)">+</span>
             </div>
             <div class="price" v-text="'￥'+ (food.price * food.quantity)"></div>
           </li>
         </ul>
       </div>
-
+      <div class="summary" v-show="sumNum !== 0">
+        <p>共<span> {{ sumNum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
+        <button>去结算</button>
+      </div>
     </div>
     <div class="back-to-top" v-bind:class="{'focus': isShowBackToTop === true}">
       <a href="#" class="item" v-on:click.prevent="backToTop()" ><i class="fa fa-arrow-up"></i></a>
@@ -44,8 +47,10 @@
 
 <script>
 import { cartFoods } from '../vuex/getters'
-import { deleteAll } from '../vuex/actions'
-
+import { deleteAll,
+         plusFoodQuantity,
+         minusFoodQuantity
+          } from '../vuex/actions'
 export default {
   name: 'Cart',
   created() {
@@ -57,7 +62,10 @@ export default {
     return {
       isShowNavbarContent: false,
       scrollEventTimer: null,
-      isShowBackToTop: false
+      isShowBackToTop: false,
+      sumPrice: 0,
+      sumNum: 0,
+      foods: []
     }
   },
   methods: {
@@ -87,12 +95,31 @@ export default {
     window.removeEventListener('click', this.clickHandler)
     window.removeEventListener('keyup', this.escHandler)
   },
+  watch: {
+    cartFoods: {
+      handler(value) {
+        this.foods = []
+        this.foods = value.foods
+        this.sumPrice = value.sumPrice
+        this.sumNum = value.sumNum
+        return value
+      }
+    }
+  },
+  ready() {
+    // fix watch dont trigger when router change
+    this.foods = this.cartFoods.foods
+    this.sumPrice = this.cartFoods.sumPrice
+    this.sumNum = this.cartFoods.sumNum
+  },
   vuex: {
     getters: {
       cartFoods
     },
     actions: {
-      deleteAll
+      deleteAll,
+      plusFoodQuantity,
+      minusFoodQuantity
     }
   }
 }
@@ -302,7 +329,7 @@ div.fixed-navbar {
       border: solid #ddd;
       border-width: 1px 0;
       margin-bottom: 10px;
-      dt{
+      dt {
         font-size: 12px;
         border-bottom: 1px solid #ddd;
         padding: 2px 3px;
@@ -311,6 +338,7 @@ div.fixed-navbar {
           float: right;
           color: #0089dc;
           font-size: 12px;
+          cursor: pointer;
         }
       }
       ul {
@@ -385,7 +413,35 @@ div.fixed-navbar {
         }
       }
     }
+    div.summary {
+      padding: 20px 10px;
+      text-align: right;
+      border-top: 1px solid #ddd;
+      width: 295px;
+      left: 35px;
+      bottom: 0;
+      background: #fff;
+      opacity: .95;
+      position: absolute;
+      p {
+        font-size: 14px;
+        text-align: right;
+        span {
+          color: #f74342;
+        }
+      }
+      button {
+        display: block;
+        border: 0;
+        margin-top: 10px;
+        line-height: 32px;
+        width: 100%;
+        text-align: center;
+        background: #fa5858;
+        color: #fff;
+      }
 
+    }
   }
   div.back-to-top {
     position: relative;
