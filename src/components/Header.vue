@@ -8,13 +8,16 @@
         <a v-link="{ path: '/order' }">我的订单</a>
       </div>
       <div class="user">
-        <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">Jay Chou</a>
-        <!-- <a class="user-login" v-link="{ path: '/login' }">登陆 / 注册</a> -->
-        <div class="user-items" v-bind:class="{ show: isShowDropDown}">
-          <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
-          <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
-          <a v-link="{ path: '/layout'}"<i class="fa fa-power-off"></i> 退出登录</a>
+        <a v-show="isLogin === false" class="user-login" v-link="{ path: '/user_login' }">登陆 / 注册</a>
+        <div class="is-login" v-show="isLogin === true">
+          <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">{{ userName }}</a>
+          <div class="user-items" v-bind:class="{ show: isShowDropDown}">
+            <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
+            <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
+            <a v-link="{ path: '/layout'}"<i class="fa fa-power-off"></i> 退出登录</a>
+          </div>
         </div>
+        
       </div>
     </div>
   </header>
@@ -110,7 +113,7 @@ header {
     position: relative;
     border-radius: 2px;
     margin-right: 35px;
-    a.user-name {
+    a {
       color: white;
       text-decoration: none;
       cursor: pointer;
@@ -182,14 +185,17 @@ export default {
       if (uid === undefined) return false
       this.$http.get('/user/' + uid)
         .then(response => {
-          console.log(response)
+          let data = response.data
+          this.isLogin = true
+          this.userName = data.name
         })
     })
   },
   data() {
     return {
       isShowDropDown: false,
-      userName: ''
+      userName: '',
+      isLogin: false
     }
   },
   methods: {
