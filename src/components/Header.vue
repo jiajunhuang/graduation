@@ -165,10 +165,31 @@ header {
 <script>
 export default {
   name: 'TopHeader',
+  ready() {
+    this.$http.get(
+      '/login/status'
+    ).then((response) => {
+      let data = response.data
+      if (data.status === 1) {
+        return undefined
+      }
+      if (data.status === 0) {
+        return data.uid
+      }
+    }, (err) => {
+      console.log(err)
+    }).then(uid => {
+      if (uid === undefined) return false
+      this.$http.get('/user/' + uid)
+        .then(response => {
+          console.log(response)
+        })
+    })
+  },
   data() {
     return {
       isShowDropDown: false,
-      focusItem: 0
+      userName: ''
     }
   },
   methods: {
