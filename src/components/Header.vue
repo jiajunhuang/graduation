@@ -14,7 +14,7 @@
           <div class="user-items" v-bind:class="{ show: isShowDropDown}">
             <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
             <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
-            <a v-link="{ path: '/layout'}"<i class="fa fa-power-off"></i> 退出登录</a>
+            <a ><i class="fa fa-power-off"></i> 退出登录</a>
           </div>
         </div>
         
@@ -136,13 +136,13 @@ header {
         position: absolute;
         top: -10px;
         border-color: transparent transparent #fff;
-        right: 58px;
+        right: 10px;
       }
       background-color: #FFF;
       display: none;
       position: absolute;
       top: 50px;
-      left: -20px;
+      right: 0px;
       width: 122px;
       padding: 4px 6px;
       box-shadow: 0 1px 2px rgba(0,0,0,.5);
