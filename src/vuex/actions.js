@@ -47,3 +47,7 @@ export const filterShops = ({ dispatch }, sortKeys) => {
 export const setUid = ({ dispatch }, uid) => {
   dispatch(types.SET_UID, uid)
 }
+
+export const setUname = ({ dispatch }, name) => {
+  dispatch(types.SET_UNAME, name)
+}

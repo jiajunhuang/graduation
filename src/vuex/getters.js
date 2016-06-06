@@ -12,5 +12,10 @@ export const indexShops = state => {
   return state.excavator.shops
 }
 
-export const uid = state => state.user.uid
+export const user = state => {
+  return {
+    uid: state.user.uid,
+    uname: state.user.uname
+  }
+}
 

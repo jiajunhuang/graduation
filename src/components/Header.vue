@@ -5,12 +5,12 @@
       <div class="navbar clearfix">
         <a v-link="{ path: '/index' }" class="home">首页</a>
         <a v-link="{ path: $route.path }" v-show="$route.shop === true">商家</a>
-        <a v-show="isLogin === true">我的订单</a>
+        <a v-link="{ path: '/order' }"v-show="isLogin === true">我的订单</a>
       </div>
       <div class="user">
         <a v-show="isLogin === false" class="user-login" v-link="{ path: '/user_login' }">登陆 / 注册</a>
         <div class="is-login" v-show="isLogin === true">
-          <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">{{ userName }}</a>
+          <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">{{ user.uname }}</a>
           <div class="user-items" v-bind:class="{ show: isShowDropDown}">
             <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
             <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
@@ -169,40 +169,18 @@ header {
 </style>
 
 <script>
-import { setUid } from '../vuex/actions'
-
+import { user } from '../vuex/getters'
 export default {
   name: 'TopHeader',
-  ready() {
-    this.$http.get(
-      '/login/status'
-    ).then((response) => {
-      let data = response.data
-      if (data.status === 1) {
-        return undefined
-      }
-      if (data.status === 0) {
-        let uid = data.uid
-        this.setUid(uid)
-        return uid
-      }
-    }, (err) => {
-      console.log(err)
-    }).then(uid => {
-      if (uid === undefined) return false
-      this.$http.get('/user/' + uid)
-        .then(response => {
-          let data = response.data
-          this.isLogin = true
-          this.userName = data.name
-        })
-    })
-  },
   data() {
     return {
       isShowDropDown: false,
-      userName: '',
-      isLogin: false
+      userName: ''
+    }
+  },
+  computed: {
+    isLogin() {
+      return this.user.uid !== 0
     }
   },
   methods: {
@@ -211,20 +189,20 @@ export default {
     },
     logout() {
       this.$http.get(
-      '/logout/'
-    ).then((response) => {
-      let data = response.data
-      if (data.status === 0) {
-        window.location = '/'
-      }
-    }, (err) => {
-      console.log(err)
-    })
+        '/logout/'
+      ).then((response) => {
+        let data = response.data
+        if (data.status === 0) {
+          window.location = '/'
+        }
+      }, (err) => {
+        console.log(err)
+      })
     }
   },
   vuex: {
-    actions: {
-      setUid
+    getters: {
+      user
     }
   }
 }
