@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-navbar" v-on:click.stop >
     <div class="control">
-      <div class="order"  v-show="uid !== 0" >
+      <div class="order"  v-show="user.uid !== 0" >
         <a class="item" v-link="{  path: '/order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import { cartFoods, uid } from '../vuex/getters'
+import { cartFoods, user } from '../vuex/getters'
 import { deleteAll,
          plusFoodQuantity,
          minusFoodQuantity
@@ -91,7 +91,7 @@ export default {
       window.scrollTo(0, 0)
     },
     takeOrder() {
-      if (this.uid === 0) {
+      if (this.user.uid === 0) {
         let target = '/user_login?' + window.location.hash
         this.$route.router.go(target)
       }
@@ -121,7 +121,7 @@ export default {
   vuex: {
     getters: {
       cartFoods,
-      uid
+      user
     },
     actions: {
       deleteAll,
