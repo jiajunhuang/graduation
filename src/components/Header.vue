@@ -14,7 +14,7 @@
           <div class="user-items" v-bind:class="{ show: isShowDropDown}">
             <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
             <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
-            <a ><i class="fa fa-power-off"></i> 退出登录</a>
+            <a v-on:click="logout()"><i class="fa fa-power-off"></i> 退出登录</a>
           </div>
         </div>
         
@@ -54,6 +54,9 @@ header {
     }
     div.user {
       a.user-name {
+        line-height: 3pc;
+      }
+      a.user-login {
         line-height: 3pc;
       }
     }
@@ -201,6 +204,18 @@ export default {
   methods: {
     toggleDropDown() {
       this.isShowDropDown = !this.isShowDropDown
+    },
+    logout() {
+      this.$http.get(
+      '/logout/'
+    ).then((response) => {
+      let data = response.data
+      if (data.status === 0) {
+        window.location = '/'
+      }
+    }, (err) => {
+      console.log(err)
+    })
     }
   }
 }
