@@ -5,7 +5,7 @@
       <div class="navbar clearfix">
         <a v-link="{ path: '/index' }" class="home">首页</a>
         <a v-link="{ path: $route.path }" v-show="$route.shop === true">商家</a>
-        <a v-link="{ path: '/order' }">我的订单</a>
+        <a v-show="isLogin === true">我的订单</a>
       </div>
       <div class="user">
         <a v-show="isLogin === false" class="user-login" v-link="{ path: '/user_login' }">登陆 / 注册</a>
@@ -169,6 +169,8 @@ header {
 </style>
 
 <script>
+import { setUid } from '../vuex/actions'
+
 export default {
   name: 'TopHeader',
   ready() {
@@ -180,7 +182,9 @@ export default {
         return undefined
       }
       if (data.status === 0) {
-        return data.uid
+        let uid = data.uid
+        this.setUid(uid)
+        return uid
       }
     }, (err) => {
       console.log(err)
@@ -216,6 +220,11 @@ export default {
     }, (err) => {
       console.log(err)
     })
+    }
+  },
+  vuex: {
+    actions: {
+      setUid
     }
   }
 }

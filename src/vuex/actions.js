@@ -43,3 +43,7 @@ export const sortByLowestMoney = ({ dispatch }) => {
 export const filterShops = ({ dispatch }, sortKeys) => {
   dispatch(types.FILTER_SHOPS, sortKeys)
 }
+
+export const setUid = ({ dispatch }, uid) => {
+  dispatch(types.SET_UID, uid)
+}

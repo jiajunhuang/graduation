@@ -11,3 +11,6 @@ export const cartFoods = state => {
 export const indexShops = state => {
   return state.excavator.shops
 }
+
+export const uid = state => state.user.uid
+

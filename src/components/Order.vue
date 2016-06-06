@@ -40,7 +40,18 @@
 </style>
 
 <script>
+import { uid } from '../vuex/getters'
 export default {
-  name: 'Order'
+  name: 'Order',
+  ready() {
+    this.$http.get('/user/' + this.uid + '/deals').then((response) => {
+      console.log(response)
+    })
+  },
+  vuex: {
+    getters: {
+      uid
+    }
+  }
 }
 </script>
