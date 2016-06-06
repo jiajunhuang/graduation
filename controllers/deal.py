@@ -72,7 +72,7 @@ class DealHandler(BaseHandler):
         @apiGroup deal
 
         @apiParam {Number} seller 买家
-        @apiParam {Number} fid 食品id
+        @apiParam {Number List} fid 食品id, 以英文逗号分隔
         @apiParam {String} address 配送地址
         @apiParam {String} phone 手机号
 
@@ -81,20 +81,21 @@ class DealHandler(BaseHandler):
         @apiSuccess {Number} did 交易订单号
         """
         seller = int(self.get_argument("seller"))
-        fid = int(self.get_argument("food"))
+        fids = self.get_argument("food").split(",")
         address = self.get_argument("address")
         phone = self.get_argument("phone")
 
-        deal = Deal(
-            seller=seller,
-            buyer=uid,
-            food=fid,
-            address=address,
-            phone=phone,
-        )
+        for fid in fids:
+            deal = Deal(
+                seller=seller,
+                buyer=uid,
+                food=int(fid),
+                address=address,
+                phone=phone,
+            )
 
-        self.orm_session.add(deal)
-        self.orm_session.commit()
+            self.orm_session.add(deal)
+            self.orm_session.commit()
 
         self.write(dict(
             deal=deal.id,

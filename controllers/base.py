@@ -133,7 +133,7 @@ class BaseHandler(tornado.web.RequestHandler):
             create_at=str(food.create_at),
             price=food.price,
             grades=self._get_grade_info(fid),
-            avg_grade= random.choice(list(range(3, 5)))
+            avg_grade=random.choice(list(range(3, 5)))
         )
 
     @require_instance(Deal)
