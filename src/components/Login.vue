@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { getUserInfo } from '../utils/api'
+import { setUname, setUid } from '../vuex/actions'
 export default {
   name: 'Login',
   data() {
@@ -46,16 +48,41 @@ export default {
         }
       ).then((response) => {
         let data = response.data
+        let hashArray = window.location.hash.split('#!')
+        let previous = hashArray.length > 2 ? hashArray[hashArray.length - 1] : false
+
         if (data.status === 1) {
           window.alert('请填写正确的手机号和密码！')
           return false
         }
         if (data.status === 0) {
-          window.location = '/'
+          let uid = data.sid.split(';')[1]
+          getUserInfo(uid).then((data) => {
+            if (data.status === 1) {
+              alert('登录失败')
+              return false
+            }
+            if (data.status === 0) {
+              this.setUname(data.name)
+              this.setUid(data.uid)
+            }
+          }).then(() => {
+            if (previous === false) {
+              this.$route.router.go('/')
+            } else {
+              this.$route.router.go(previous)
+            }
+          })
         }
       }, (err) => {
         console.log(err)
       })
+    }
+  },
+  vuex: {
+    actions: {
+      setUname,
+      setUid
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-navbar" v-on:click.stop >
     <div class="control">
-      <div class="order">
+      <div class="order"  v-show="user.uid !== 0" >
         <a class="item" v-link="{  path: '/order' }"><i class="fa fa-list"></i></a>
         <span class="tips">我的订单</span>
       </div>
@@ -35,7 +35,7 @@
       </div>
       <div class="summary" v-show="sumNum !== 0">
         <p>共<span> {{ sumNum }} </span>份，总计<span> {{ sumPrice }} </span>元</p>
-        <button>去结算</button>
+        <button v-on:click.prevent="takeOrder(foods)">去结算</button>
       </div>
     </div>
     <div class="back-to-top" v-bind:class="{'focus': isShowBackToTop === true}">
@@ -46,11 +46,11 @@
 </template>
 
 <script>
-import { cartFoods } from '../vuex/getters'
+import { cartFoods, user } from '../vuex/getters'
 import { deleteAll,
          plusFoodQuantity,
          minusFoodQuantity
-          } from '../vuex/actions'
+        } from '../vuex/actions'
 export default {
   name: 'Cart',
   created() {
@@ -89,6 +89,12 @@ export default {
     },
     backToTop() {
       window.scrollTo(0, 0)
+    },
+    takeOrder() {
+      if (this.user.uid === 0) {
+        let target = '/user_login?' + window.location.hash
+        this.$route.router.go(target)
+      }
     }
   },
   beforeDestory() {
@@ -114,7 +120,8 @@ export default {
   },
   vuex: {
     getters: {
-      cartFoods
+      cartFoods,
+      user
     },
     actions: {
       deleteAll,

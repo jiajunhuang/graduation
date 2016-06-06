@@ -5,16 +5,19 @@
       <div class="navbar clearfix">
         <a v-link="{ path: '/index' }" class="home">首页</a>
         <a v-link="{ path: $route.path }" v-show="$route.shop === true">商家</a>
-        <a v-link="{ path: '/order' }">我的订单</a>
+        <a v-link="{ path: '/order' }"v-show="isLogin === true">我的订单</a>
       </div>
       <div class="user">
-        <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">Jay Chou</a>
-        <!-- <a class="user-login" v-link="{ path: '/login' }">登陆 / 注册</a> -->
-        <div class="user-items" v-bind:class="{ show: isShowDropDown}">
-          <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
-          <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
-          <a v-link="{ path: '/layout'}"<i class="fa fa-power-off"></i> 退出登录</a>
+        <a v-show="isLogin === false" class="user-login" v-link="{ path: '/user_login' }">登陆 / 注册</a>
+        <div class="is-login" v-show="isLogin === true">
+          <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">{{ user.uname }}</a>
+          <div class="user-items" v-bind:class="{ show: isShowDropDown}">
+            <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
+            <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
+            <a v-on:click="logout()"><i class="fa fa-power-off"></i> 退出登录</a>
+          </div>
         </div>
+        
       </div>
     </div>
   </header>
@@ -51,6 +54,9 @@ header {
     }
     div.user {
       a.user-name {
+        line-height: 3pc;
+      }
+      a.user-login {
         line-height: 3pc;
       }
     }
@@ -110,7 +116,7 @@ header {
     position: relative;
     border-radius: 2px;
     margin-right: 35px;
-    a.user-name {
+    a {
       color: white;
       text-decoration: none;
       cursor: pointer;
@@ -133,13 +139,13 @@ header {
         position: absolute;
         top: -10px;
         border-color: transparent transparent #fff;
-        right: 58px;
+        right: 10px;
       }
       background-color: #FFF;
       display: none;
       position: absolute;
       top: 50px;
-      left: -20px;
+      right: 0px;
       width: 122px;
       padding: 4px 6px;
       box-shadow: 0 1px 2px rgba(0,0,0,.5);
@@ -163,17 +169,40 @@ header {
 </style>
 
 <script>
+import { user } from '../vuex/getters'
 export default {
   name: 'TopHeader',
   data() {
     return {
       isShowDropDown: false,
-      focusItem: 0
+      userName: ''
+    }
+  },
+  computed: {
+    isLogin() {
+      return this.user.uid !== 0
     }
   },
   methods: {
     toggleDropDown() {
       this.isShowDropDown = !this.isShowDropDown
+    },
+    logout() {
+      this.$http.get(
+        '/logout/'
+      ).then((response) => {
+        let data = response.data
+        if (data.status === 0) {
+          window.location = '/'
+        }
+      }, (err) => {
+        console.log(err)
+      })
+    }
+  },
+  vuex: {
+    getters: {
+      user
     }
   }
 }
