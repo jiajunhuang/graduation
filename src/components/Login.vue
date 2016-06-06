@@ -57,23 +57,22 @@ export default {
         }
         if (data.status === 0) {
           let uid = data.sid.split(';')[1]
-          console.log(previous)
-          if (previous === false) {
-            window.location = '/'
-          } else {
-            getUserInfo(uid).then((data) => {
-              if (data.status === 1) {
-                alert('登录失败')
-                return false
-              }
-              if (data.status === 0) {
-                this.setUname(data.name)
-                this.setUid(data.uid)
-              }
-            }).then(() => {
+          getUserInfo(uid).then((data) => {
+            if (data.status === 1) {
+              alert('登录失败')
+              return false
+            }
+            if (data.status === 0) {
+              this.setUname(data.name)
+              this.setUid(data.uid)
+            }
+          }).then(() => {
+            if (previous === false) {
+              this.$route.router.go('/')
+            } else {
               this.$route.router.go(previous)
-            })
-          }
+            }
+          })
         }
       }, (err) => {
         console.log(err)
