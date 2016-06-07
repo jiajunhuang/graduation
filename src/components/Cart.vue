@@ -90,11 +90,28 @@ export default {
     backToTop() {
       window.scrollTo(0, 0)
     },
-    takeOrder() {
+    takeOrder(foods) {
       if (this.user.uid === 0) {
         let target = '/user_login?' + window.location.hash
         this.$route.router.go(target)
+        return false
       }
+      if (this.user.address === '') {
+        this.$route.router.go('/address')
+        return false
+      }
+      let foodIds = foods.reduce((previous, current) => {
+        previous.push(current.fid)
+        return previous
+      }, []).join(',')
+      this.$http.post('/user/' + this.user.uid + '/deals/', {
+        seller: this.$route.params.shopId,
+        buyer: this.user.uid,
+        food: foodIds,
+        phone: this.user.uname
+      }).then((response) => {
+        console.log(response)
+      })
     }
   },
   beforeDestory() {
