@@ -107,10 +107,19 @@ export default {
       this.$http.post('/user/' + this.user.uid + '/deals/', {
         seller: this.$route.params.shopId,
         buyer: this.user.uid,
+        address: this.user.address,
         food: foodIds,
         phone: this.user.uname
       }).then((response) => {
-        console.log(response)
+        let data = response.data
+        if (data.status === 0) {
+          window.alert('订餐成功！')
+          this.deleteAll()
+          this.$route.router.go('/index')
+        }
+        if (data.status === 1) {
+          window.alert('网络错误，请重新下单！')
+        }
       })
     }
   },
