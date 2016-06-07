@@ -7,6 +7,7 @@ import ShopView from './views/ShopView'
 import OrderView from './views/OrderView'
 import LoginView from './views/LoginView'
 import Register from './views/RegisterView'
+import Address from './views/AddressView'
 import App from './App'
 
 Vue.use(Router)
@@ -34,6 +35,9 @@ router.map({
   },
   '/register': {
     component: Register
+  },
+  '/address': {
+    component: Address
   }
 })
 
