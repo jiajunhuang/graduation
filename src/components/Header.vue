@@ -12,8 +12,7 @@
         <div class="is-login" v-show="isLogin === true">
           <a herf="#" class="user-name" v-on:click.prevent="toggleDropDown()">{{ user.uname }}</a>
           <div class="user-items" v-bind:class="{ show: isShowDropDown}">
-            <a v-link="{ path: '/settings'}"><i class="fa fa-user"></i> 个人中心</a>
-            <a v-link="{ path: '/security'}"><i class="fa fa-asterisk"></i> 安全设置</a>
+            <a v-link="{ path: '/address'}"><i class="fa fa-user"></i> 我的地址</a>
             <a v-on:click="logout()"><i class="fa fa-power-off"></i> 退出登录</a>
           </div>
         </div>
