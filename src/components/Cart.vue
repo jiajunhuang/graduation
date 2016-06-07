@@ -105,7 +105,7 @@ export default {
         return previous
       }, []).join(',')
       this.$http.post('/user/' + this.user.uid + '/deals/', {
-        seller: this.$route.params.shopId,
+        seller: foods[0].seller.uid,
         buyer: this.user.uid,
         address: this.user.address,
         food: foodIds,
