@@ -1,11 +1,13 @@
 import {
   SET_UID,
-  SET_UNAME
+  SET_UNAME,
+  SET_ADDRESS
 } from '../mutation-types'
 
 const state = {
   uid: 0,
-  uname: ''
+  uname: '',
+  address: ''
 }
 
 const mutations = {
@@ -14,6 +16,9 @@ const mutations = {
   },
   [SET_UNAME](state, name) {
     state.uname = name
+  },
+  [SET_ADDRESS](state, address) {
+    state.address = address
   }
 }
 

@@ -51,3 +51,7 @@ export const setUid = ({ dispatch }, uid) => {
 export const setUname = ({ dispatch }, name) => {
   dispatch(types.SET_UNAME, name)
 }
+
+export const setAddress = ({ dispatch }, address) => {
+  dispatch(types.SET_ADDRESS, address)
+}

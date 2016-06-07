@@ -15,7 +15,8 @@ export const indexShops = state => {
 export const user = state => {
   return {
     uid: state.user.uid,
-    uname: state.user.uname
+    uname: state.user.uname,
+    address: state.user.address
   }
 }
 
