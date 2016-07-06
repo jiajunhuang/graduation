@@ -1,3 +1,5 @@
+# Deprecated. Just keep it as a souvenir.
+
 # 网上订餐系统的设计与实现
 
 ## 介绍 & 安装
